@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                操作系统笔记（四）：网络编程
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2018-07-14</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">8.8 mins</a></span>
+                                <span class="post-words">words:<a href="#">1954</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/9GxOyscbPh">Linux</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/FlYaqKQKfn">操作系统</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2018-07-14</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">8.8 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">1954</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/9GxOyscbPh">Linux</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/FlYaqKQKfn">操作系统</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="网络编程">网络编程</h2>
+<h3 id="ip-internet">IP Internet</h3>
+<h4 id="ip-地址">IP 地址</h4>
+<p>一个 IP 地址是一个 32 位无符号整数。</p>
+<pre><code class="language-c">struct in_addr {
+    unsigned int s_addr;
+}
+</code></pre>
+<blockquote>
+<p><strong>为什么要用结构体来存放标量 IP 地址？</strong></p>
+<p>把一个标量地址存放在结构中，是套接字接口早期实现的不幸产物。为 IP地址定义一个标量类型应该更有意义，但是现在更改已经太迟了，因为已经有大量应用是基于此的了。</p>
+</blockquote>
+<p>因为因特网主机可以有不同的主机字节顺序，TCP/IP 为任意整数数据项定义了统一的网络字节顺序，大端字节顺序。</p>
+<p>Unix 提供了下面的函数在网络和主机字节顺序之间实现转换：</p>
+<pre><code class="language-c">#include &lt;netinet/in.h&gt;
+
+unsigned long int htonl(unsigned long int hostlong);
+unsigned short int htons(unsigned short int hostshort);
+unsigned long int ntohl(unsigned long int netlong);
+unsigned short int ntohs(unsigned long int netshort);
+</code></pre>
+<h4 id="因特网域名">因特网域名</h4>
+<p>我们可以通过调用<code>gethostbyname</code>和<code>gethostbyaddr</code>，从 DNS 数据库中检索任意的主机条目。</p>
+<pre><code class="language-c">#include &lt;netdb.h&gt;
+
+struct hostent *gethostbyname(const char *name);
+struct hostent *gethostbyaddr(const char *addr, int len, 0);
+</code></pre>
+<p><code>gethostname</code>返回与域名<code>name</code>相关的主机条目，<code>gethostbyaddr</code>返回与 IP 地址<code>addr</code>相关的主机条目。第二个参数给出了一个 IP 地址的字节长度。</p>
+<h3 id="套接字接口">套接字接口</h3>
+<p>套接字接口是一组函数，他们和 Unix I/O 函数结合，用以创建网络应用。</p>
+<p>从 Unix 内核的角度看，套接字是通信的一个端点，从 Unix 程序的角度看，套接字就是一个有相应描述符的打开文件。</p>
+<p>因特网的套接字地址存放在类型为<code>sockaddr_in</code>的 16 字节结构中。</p>
+<pre><code class="language-c">struct sockaddr {
+    unsigned short sa_family;
+    char sa_data[14];
+} // socket.h
+
+struct socketaddr_in {
+    unsigned short sin_family; // AF_INET
+    unsigned short sin_port;   // Port number
+    struct in_addr sin_addr;   // IP address
+    unsigned char sin_zero[8]; // Pad to sizeof(struct sockaddr)
+} // netinet/in.h
+</code></pre>
+<p><code>connect</code>、<code>bind</code>、<code>accept</code>函数要求一个指向与协议相关的套接字地址结构的指针。</p>
+<h4 id="socket函数"><code>socket</code>函数</h4>
+<p>客户端和服务器使用<code>socket</code>函数来创建一个套接字描述符。</p>
+<pre><code class="language-c">#include &lt;sys/types.h&gt;
+#include &lt;sys/socket.h&gt;
+
+int socket(int domain, int type, int protocol);
+
+clientfd = Socket(AF_INET, SOCK_STREAM, 0);
+</code></pre>
+<p><code>AF_INET</code>表示使用 IPv4 协议，<code>SOCK_STREAM</code>表示套接字是因特网连接的一个端点。现在获得的描述符并不能读写。读写之前，客户端和服务器有着分别的打开工作。</p>
+<h4 id="connect函数"><code>connect</code>函数</h4>
+<p>客户端通过<code>connect</code>函数来建立与服务器的连接。</p>
+<pre><code class="language-c">#include &lt;sys/socket.h&gt;
+
+int connect(int sockfd, struct sockaddr *serv_addr, int addrlen);
+</code></pre>
+<p>试图连接时，<code>connect</code>函数会阻塞，一直到连接成功或是发生错误。得到的连接是：<code>(x:y, serv_addr.sin_addr:serv_addr.sin_port)</code>。</p>
+<h4 id="open_clientfd函数"><code>open_clientfd</code>函数</h4>
+<p>将<code>socket</code>和<code>connect</code>函数包装成一个<code>open_clientfd</code>的辅助函数是很方便的，客户端可以用它来和服务器建立连接。</p>
+<pre><code class="language-c">#include &quot;csapp.h&quot;
+
+int open_clientfd(char *hostname, int port);
+
+int open_clientfd(char *hostname, int port) {
+    int clientfd;
+    struct hostent *hp;
+    struct sockaddr_in serveraddr;
+    
+    if ((clientfd = socket(AF_INEF, SOCK_STREAM, 0)) &lt; 0)
+        return -1;
+    
+    if ((hp = gethostbyname(hostname)) == NULL)
+        return -2;
+    
+    bzero((char *) &amp;serveraddr, sizeof(serveraddr));
+    serveraddr.sin_family = AF_INET;
+    bcopy((char *)hp-&gt;h_addr_list[0],
+          (char *)&amp;serveraddr.sin_addr.s_addr, hp-&gt;h_length);
+    serveraddr.sin_port = htons(port);
+    
+    if (connect(clientfd, (SA *)&amp;serveraddr, sizeof(serveraddr)) &lt; 0)
+        return -1;
+    return clientfd;
+}
+</code></pre>
+<h4 id="bind-listen-accept"><code>bind</code>、<code>listen</code>、<code>accept</code></h4>
+<p>这三个函数用于服务器端和客户端之间建立连接。</p>
+<pre><code class="language-c">#include &lt;sys/socket.h&gt;
+
+int bind(int sockfd, struct sockaddr *my_addr, int addrlen);
+int listen(int sockfd, int backlog);
+int accept(int listenfd, struct sockaddr *addr, int *addrlen);
+</code></pre>
+<p><code>bind</code>函数告诉内核将<code>my_addr</code>中的服务器套接字和套接字描述符<code>sockfd</code>联系起来，参数<code>addrlen</code>就是<code>sizeof(sockaddr_in)</code>。</p>
+<p><code>listen</code>函数告知内核，使用套接字的是服务器而非客户端，将<code>sockfd</code>从主动套接字转化为监听套接字，<code>backlog</code>暗示了内核在开始拒绝连接请求之前，应该放入队列中等待的未完成连接的数量。</p>
+<p>我们可以用<code>open_listenfd</code>函数来整合<code>socket\bind\listen</code>三个函数。</p>
+<pre><code class="language-c">#include &quot;csapp.h&quot;
+
+int open_listenfd(int port);
+
+int open_listenfd(int port) {
+    int listenfd, optval=1;
+    struct sockaddr_in serveraddr;
+    
+    if ((listenfd = socket(AF_INET, SOCK_STREAM, 0)) &lt; 0)
+        return -1;
+    
+    if (setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, (const void *)&amp;optval, sizeof(int)) &lt; 0)
+        return -1;
+    
+    bzero((char *)&amp;serveraddr, sizeof(serveraddr));
+    serveraddr.sin_family = AF_INET;
+    serveraddr.sin_addr.s_addr = htonl(INADDR_ANY);
+    serveraddr.sin_port = htons((unsigned short)port);
+    if (bind(listenfd, (SA *)&amp;serveraddr, sizeof(serveraddr)) &lt; 0)
+        return -1;
+    if (listen(listenfd, LISTENQ) &lt; 0)
+        return -1;
+    return listenfd;
+}
+</code></pre>
+<p><code>accept</code>函数用于等待客户端的连接请求到达监听描述符<code>listenfd</code>，然后在<code>addr</code>中填写客户端的套接字地址，返回一个已连接描述符，可以用来利用 Unix I/O 函数与客户端通信。</p>
+<ol>
+<li>服务器调用<code>accept</code>，等待连接；</li>
+<li>客户端调用<code>connect</code>，发送一个连接请求到<code>listenfd</code>；</li>
+<li><code>accept</code>打开了一个新的已连接描述符<code>connfd</code>，在<code>clientfd</code>和<code>connfd</code>之间建立连接，随后返回<code>connfd</code>给应用程序。客户端页从<code>connect</code>返回。</li>
+</ol>
+<blockquote>
+<p><strong>监听描述符和已连接描述符的区别</strong></p>
+<p>之所以<code>accept</code>要重新打开一个已连接描述符，是为了支持服务器的并发访问。如果只有一个监听描述符，就无法<code>fork</code>新的进程。</p>
+</blockquote>
+<h3 id="web-server">Web Server</h3>
+<p>WEB 传输的内容是 MIME 类型相关的字节序列。WEB 服务器以两种不同的方式向客户端提供内容：</p>
+<ol>
+<li>取一个磁盘文件，将内容返回给客户端，磁盘文件称为静态内容。</li>
+<li>运行一个可执行文件，将输出返回给客户端，运行时产生的输出称为动态内容。</li>
+</ol>
+<p>要实现一个简单的 Web Server，只有简单的几步要完成：</p>
+<ol>
+<li>打开监听套接字：</li>
+</ol>
+<pre><code class="language-c">listenfd = Open_listenfd(port);
+</code></pre>
+<ol start="2">
+<li>进入无限循环，打开已连接套接字，开始处理 HTTP 事务：</li>
+</ol>
+<pre><code class="language-c">while (1) {
+    clientlen = sizeof(clientaddr);
+    connfd = Accept(listenfd, (SA *)&amp;clientaddr, &amp;clientlen); // 打开已连接套接字
+    doit(connfd); // 处理 HTTP 事务
+    Close(connfd);
+}
+</code></pre>
+<ol start="3">
+<li>处理 HTTP 事务，对 HTTP 请求进行解析，获取 METHOD、URI、协议版本：</li>
+</ol>
+<pre><code class="language-c">Rio_readinitb(rio, fb); // 初始化 rio 读写缓冲区
+Rio_readlineb(rio, buf, MAXLINE);
+sscanf(buf, &quot;%s %s %s&quot;, method, uri, version);
+</code></pre>
+<ol start="4">
+<li>解析 HTTP METHOD，对 GET 以外的请求返回 501；解析 URI，判断静态请求或动态请求，解析 CGI 参数，对不存在的静态文件返回 404；解析请求头，不作处理，直接输出：</li>
+</ol>
+<pre><code class="language-c">if (strcasecmp(method, &quot;GET&quot;)) { // 当遇到 GET 以外的 METHOD 时，给出 501
+    clienterror(fd, method, &quot;501&quot;, &quot;Not Implemented&quot;,
+                &quot;Tiny does not implement this method&quot;);
+    return;
+}
+read_requesthdrs(&amp;rio); // 获取 Request Headers
+is_static = parse_uri(uri, filename, cgiargs); // 获取 CGI 需要的参数以及静态文件名
+if (stat(filename, &amp;sbuf) &lt; 0) { // 查看文件状态
+    clienterror(fd, filename, &quot;404&quot;, &quot;Not found&quot;,
+                &quot;Tiny couldn't find this file&quot;);
+    return;
+}
+</code></pre>
+<p>这里使用到了返回错误的<code>clienterror</code>，直接向<code>socket</code>写入报错信息即可：</p>
+<pre><code class="language-c">void clienterror(int fd, char *cause, char *errnum, 
+		 char *shortmsg, char *longmsg)
+{
+    char buf[MAXLINE], body[MAXBUF];
+
+    /* Build the HTTP response body */
+    sprintf(body, &quot;&lt;html&gt;&lt;title&gt;Tiny Error&lt;/title&gt;&quot;);
+    sprintf(body, &quot;%s&lt;body bgcolor=&quot;&quot;ffffff&quot;&quot;&gt;\r\n&quot;, body);
+    sprintf(body, &quot;%s%s: %s\r\n&quot;, body, errnum, shortmsg);
+    sprintf(body, &quot;%s&lt;p&gt;%s: %s\r\n&quot;, body, longmsg, cause);
+    sprintf(body, &quot;%s&lt;hr&gt;&lt;em&gt;The Tiny Web server&lt;/em&gt;\r\n&quot;, body);
+
+    /* Print the HTTP response */
+    sprintf(buf, &quot;HTTP/1.0 %s %s\r\n&quot;, errnum, shortmsg);
+    Rio_writen(fd, buf, strlen(buf));
+    sprintf(buf, &quot;Content-type: text/html\r\n&quot;);
+    Rio_writen(fd, buf, strlen(buf));
+    sprintf(buf, &quot;Content-length: %d\r\n\r\n&quot;, (int)strlen(body));
+    Rio_writen(fd, buf, strlen(buf));
+    Rio_writen(fd, body, strlen(body));
+}
+</code></pre>
+<ol start="5">
+<li>对于静态文件，直接打开并写入<code>socket</code>即可，无法访问返回 403：</li>
+</ol>
+<pre><code class="language-c">if (is_static) { /* Serve static content */
+    if (!(S_ISREG(sbuf.st_mode)) || !(S_IRUSR &amp; sbuf.st_mode)) {
+        clienterror(fd, filename, &quot;403&quot;, &quot;Forbidden&quot;,
+                    &quot;Tiny couldn't read the file&quot;);
+        return;
+    }
+    serve_static(fd, filename, sbuf.st_size);
+}
+</code></pre>
+<ol start="6">
+<li>对于动态请求处理，运行相应的<code>cgi-bin</code>目录下的程序，给出参数即可：</li>
+</ol>
+<pre><code class="language-c">else { /* Serve dynamic content */
+    if (!(S_ISREG(sbuf.st_mode)) || !(S_IXUSR &amp; sbuf.st_mode)) {
+        clienterror(fd, filename, &quot;403&quot;, &quot;Forbidden&quot;,
+                    &quot;Tiny couldn't run the CGI program&quot;);
+        return;
+    }
+    serve_dynamic(fd, filename, cgiargs);
+}
+</code></pre>
+<p>至此，一个简单的本地 Web Server 就完成了。</p>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B">网络编程</a>
+<ul>
+<li><a href="#ip-internet">IP Internet</a>
+<ul>
+<li><a href="#ip-%E5%9C%B0%E5%9D%80">IP 地址</a></li>
+<li><a href="#%E5%9B%A0%E7%89%B9%E7%BD%91%E5%9F%9F%E5%90%8D">因特网域名</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A5%97%E6%8E%A5%E5%AD%97%E6%8E%A5%E5%8F%A3">套接字接口</a>
+<ul>
+<li><a href="#socket%E5%87%BD%E6%95%B0"><code>socket</code>函数</a></li>
+<li><a href="#connect%E5%87%BD%E6%95%B0"><code>connect</code>函数</a></li>
+<li><a href="#open_clientfd%E5%87%BD%E6%95%B0"><code>open_clientfd</code>函数</a></li>
+<li><a href="#bind-listen-accept"><code>bind</code>、<code>listen</code>、<code>accept</code></a></li>
+</ul>
+</li>
+<li><a href="#web-server">Web Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2018-7-14-网络编程">https://wzhzzmzzy.github.io/post/2018-7-14-网络编程</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2018-7-14-网络编程">https://wzhzzmzzy.github.io/post/2018-7-14-网络编程</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/9GxOyscbPh"># Linux</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/FlYaqKQKfn"># 操作系统</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/9GxOyscbPh"># Linux</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/FlYaqKQKfn"># 操作系统</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2018-7-14-网站架构及其演变">
+                                    网站架构及其演变过程
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2018-7-13-虚拟存储器">
+                                            操作系统笔记（三）：虚拟存储器
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                初试 GraphQL
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2019-03-19</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">8.1 mins</a></span>
+                                <span class="post-words">words:<a href="#">2019</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX">Python</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/410l-FOjbe">后端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/4-g79IM8ym">GraphQL</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-03-19</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">8.1 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">2019</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX">Python</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/410l-FOjbe">后端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/4-g79IM8ym">GraphQL</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <blockquote>
+<p><a href="http://graphql.cn/learn">GraphQL 中文文档</a></p>
+</blockquote>
+<h2 id="语法">语法</h2>
+<p>GraphQL 在服务端和客户端之间设定了一套全新的语法，这套语法非常简洁明了，不过有些地方还是需要仔细的研读文档才能理解。我们来整理一下吧。</p>
+<h3 id="入口">入口</h3>
+<p>名为 Query 的类型是 GraphQL 的查询入口，指定了我们写的查询中可以包含的字段，以及字段的类型。</p>
+<pre><code>type Query {
+    hero: Charactor
+}
+</code></pre>
+<p>这里表示我们的查询中可以包含<code>hero</code>这个字段，这个字段的类型是<code>Charactor</code>。</p>
+<h3 id="查询和变更">查询和变更</h3>
+<p>在 GraphQL 中，Client 可以使用非常简单的语法进行查询，发送的查询与需要的结果非常一致：</p>
+<pre><code># query
+{
+    hero {
+        name
+    }
+}
+
+# response
+{
+    &quot;data&quot;: {
+        &quot;hero&quot;: {
+            &quot;name&quot;: &quot;R2-D2&quot;
+        }
+    }
+}
+</code></pre>
+<p>这是 GraphQL 最重要的特性，这样可以保证你总是能得到想要的数据，服务器也能精准地了解到客户端需要哪些字段。</p>
+<p>GraphQL 还有一个非常重要的特性：次级选择，即是说，当你进行查询时，可以对查询的嵌套对象进行字段指定，GraphQL 能够遍历相关对象和其字段，而不需要像 REST 一样多次往返查询。</p>
+<h4 id="参数">参数</h4>
+<p>指定字段查询之外，GraphQL 还支持指定参数查询：</p>
+<pre><code># query
+{
+    human(id: &quot;1000&quot;) {
+        name
+        height
+    }
+}
+
+# response
+{
+    &quot;data&quot;: {
+        &quot;human&quot;: {
+            &quot;name&quot;: &quot;&quot;,
+            &quot;height&quot;: 1.72
+        }
+    }
+}
+</code></pre>
+<p>在类似 REST 的系统中，只能传递一组简单参数，但是在 GraphQL 中，每个字段和嵌套对象都能有自己的一组参数，从而使得 GraphQL 可以完美替代多次 API 获取请求。甚至你也可以给标量字段传递参数，用于实现服务端的一次转换，而不用每个客户端分别转换。</p>
+<p>参数可以是多种不同的类型，例如枚举类型等。</p>
+<h4 id="别名">别名</h4>
+<p>为了让客户端可以更加方便地将数据转化为需要的格式，客户端可以在查询中指定别名：</p>
+<pre><code># query
+{
+  empireHero: hero(episode: EMPIRE) {
+    name
+  }
+  jediHero: hero(episode: JEDI) {
+    name
+  }
+}
+
+# response
+{
+  &quot;data&quot;: {
+    &quot;empireHero&quot;: {
+      &quot;name&quot;: &quot;Luke Skywalker&quot;
+    },
+    &quot;jediHero&quot;: {
+      &quot;name&quot;: &quot;R2-D2&quot;
+    }
+  }
+}
+</code></pre>
+<h4 id="片段">片段</h4>
+<p>当你需要复用一个片段时，可以声明一个<code>fragment</code>，用于复用，使用的语法和ES6的对象扩展很像：</p>
+<pre><code>{
+  leftComparison: hero(episode: EMPIRE) {
+    ...comparisonFields
+  }
+  rightComparison: hero(episode: JEDI) {
+    ...comparisonFields
+  }
+}
+
+fragment comparisonFields on Character {
+  name
+  appearsIn
+  friends {
+    name
+  }
+}
+</code></pre>
+<p>片段可以使用变量：</p>
+<pre><code>query HeroComparison($first: Int = 3) {
+  leftComparison: hero(episode: EMPIRE) {
+    ...comparisonFields
+  }
+  rightComparison: hero(episode: JEDI) {
+    ...comparisonFields
+  }
+}
+
+fragment comparisonFields on Character {
+  name
+  friendsConnection(first: $first) {
+    totalCount
+    edges {
+      node {
+        name
+      }
+    }
+  }
+}
+</code></pre>
+<p>操作名称</p>
+<p>上面的都是简写语法，省略了<code>query</code>关键字，我们可以给我们的查询添加名称：</p>
+<pre><code>query HeroNameAndFriends {
+  hero {
+    name
+    friends {
+      name
+    }
+  }
+}
+</code></pre>
+<h4 id="变量">变量</h4>
+<p>在查询中，我们同样可以使用变量，当使用查询时，需要将<code>valName: value</code>传入。</p>
+<pre><code>query HeroNameAndFriends($episode: Episode = &quot;JEDI&quot;) {
+  hero(episode: $episode) {
+    name
+    friends {
+      name
+    }
+  }
+}
+</code></pre>
+<p>变量的前缀需要有<code>$</code>。</p>
+<p>我们也可以使用指令来指定是否需要查询一个字段：</p>
+<pre><code>query Hero($episode: Episode, $withFriends: Boolean!) {
+  hero(episode: $episode) {
+    name
+    friends @include(if: $withFriends) {
+      name
+    }
+  }
+}
+</code></pre>
+<h4 id="变更">变更</h4>
+<p>除了查询之外，我们也需要让客户端有变更服务端数据的能力。</p>
+<pre><code>mutation CreateReviewForEpisode($ep: Episode!, $review: ReviewInput!) {
+  createReview(episode: $ep, review: $review) {
+    stars
+    commentary
+  }
+}
+</code></pre>
+<h3 id="内联片段">内联片段</h3>
+<p>在查询的时候，我们可以在查询中添加对收到的不同类型的字段进行分别查询，可能这样说有点不直观，那就看个例子：</p>
+<pre><code>// query
+query HeroForEpisode($ep: Episode!) {
+  hero(episode: $ep) {
+    name
+    ... on Droid {
+      primaryFunction
+    }
+    ... on Human {
+      height
+    }
+  }
+}
+
+// response
+{
+  &quot;data&quot;: {
+    &quot;hero&quot;: {
+      &quot;name&quot;: &quot;R2-D2&quot;,
+      &quot;primaryFunction&quot;: &quot;Astromech&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="元字段">元字段</h3>
+<p>某些时候，你可能不知道从服务端获得的类型是什么，这时候你就需要一些方法在客户端来决定如何处理数据。我们可以在查询中请求<code>__typename</code>，然后结果中可以看到对应的类型。</p>
+<pre><code>// query
+{
+  search(text: &quot;an&quot;) {
+    __typename
+    ... on Human {
+      name
+    }
+    ... on Droid {
+      name
+    }
+    ... on Starship {
+      name
+    }
+  }
+}
+
+// response
+{
+  &quot;data&quot;: {
+    &quot;search&quot;: [
+      {
+        &quot;__typename&quot;: &quot;Human&quot;,
+        &quot;name&quot;: &quot;Han Solo&quot;
+      },
+      {
+        &quot;__typename&quot;: &quot;Human&quot;,
+        &quot;name&quot;: &quot;Leia Organa&quot;
+      },
+      {
+        &quot;__typename&quot;: &quot;Starship&quot;,
+        &quot;name&quot;: &quot;TIE Advanced x1&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<h2 id="schema和类型">Schema和类型</h2>
+<p>我们可以把GraphQL当做是一门强类型语言，每一个量都需要声明其不同的类型。</p>
+<h3 id="对象类型和字段">对象类型和字段</h3>
+<p>我们可以在GraphQL中声明对象类型及其字段。</p>
+<pre><code class="language-graphql">type Character {
+  name: String!
+  appearsIn: [Episode!]!
+}
+</code></pre>
+<p><code>!</code>表示非空的字段，在GraphQL中，任何字段默认都是可以为空的。</p>
+<p><code>[]</code>表示列表字段。</p>
+<p>每一个字段可以带有零个或多个参数：</p>
+<pre><code class="language-graphql">type Starship {
+  id: ID!
+  name: String!
+  length(unit: LengthUnit = METER): Float
+}
+</code></pre>
+<p>每个参数都是具名参数，需要一一对应。单数可以是可选的，也可以是必选的，如果是可选的话需要设置一个默认值。</p>
+<h3 id="查询和变更类型">查询和变更类型</h3>
+<p>有两张特别的类型：<code>Query</code>和<code>Mutation</code>。<code>Query</code>是你的Schema的查询入口，<code>Mutation</code>是你修改数据状态的入口。当然，除了他们两个是Schema的入口之外，他们和其他类型的构建方法别无二致。</p>
+<h3 id="标量类型">标量类型</h3>
+<p>GraphQL预设了标量类型：<code>Int</code>、<code>Float</code>、<code>String</code>、<code>Boolean</code>、<code>ID</code>。</p>
+<p>其中，<code>Int</code>是有符号三十二位整数，<code>Float</code>是有符号双精度浮点数，<code>ID</code>本质上与<code>String</code>相同，但是它并不要求可读性。我们同样可以自定义标量类型：</p>
+<pre><code class="language-graphql">scalar Date
+</code></pre>
+<p>我们自定义的标量类型需要我们自行实现如何将其序列化、反序列化和验证。</p>
+<h3 id="枚举类型">枚举类型</h3>
+<p>与一般的枚举类型并无差别。</p>
+<pre><code class="language-graphql">enum Episod {
+    NEWHOPE
+    EMPIRE
+    JEDI
+}
+</code></pre>
+<h3 id="接口">接口</h3>
+<p>GraphQL支持接口，一个接口是一个抽象类型，对象类型可以实现一个接口。</p>
+<pre><code class="language-graphql">interface Character {
+  id: ID!
+  name: String!
+  friends: [Character]
+  appearsIn: [Episode]!
+}
+
+type Human implements Character {
+  id: ID!
+  name: String!
+  friends: [Character]
+  appearsIn: [Episode]!
+  starships: [Starship]
+  totalCredits: Int
+}
+
+type Droid implements Character {
+  id: ID!
+  name: String!
+  friends: [Character]
+  appearsIn: [Episode]!
+  primaryFunction: String
+}
+</code></pre>
+<p>和Java中一样，一个被声明为接口类型的字段无法访问实现了接口的子类的专有字段。所以我们这里应该使用<a href="#%E5%86%85%E8%81%94%E7%89%87%E6%AE%B5">内联片段</a>。</p>
+<h3 id="联合类型">联合类型</h3>
+<p>这个十分好理解，一个字段不止可以是一个类型，也可以是其他类型。但是在查询联合类型的字段时，需要通过内联片段才可以。</p>
+<pre><code class="language-graphql">union SearchResult = Human | Droid | Starship
+</code></pre>
+<pre><code class="language-graphql">{
+  search(text: &quot;an&quot;) {
+    ... on Human {
+      name
+      height
+    }
+    ... on Droid {
+      name
+      primaryFunction
+    }
+    ... on Starship {
+      name
+      length
+    }
+  }
+}
+</code></pre>
+<h3 id="输入类型">输入类型</h3>
+<p>在<code>Mutation</code>中，我们可能需要传递一整个对象，而不是一个个传参。<code>Input</code>类型可以帮助我们做到这一点。</p>
+<pre><code class="language-graphql">input ReviewInput {
+  stars: Int!
+  commentary: String
+}
+</code></pre>
+<pre><code class="language-graphql">mutation CreateReviewForEpisode($ep: Episode!, $review: ReviewInput!) {
+  createReview(episode: $ep, review: $review) {
+    stars
+    commentary
+  }
+}
+</code></pre>
+<h2 id="执行">执行</h2>
+<p>GraphQL的每一个类型的每一个字段都需要在服务器上实现其<code>resolver</code>，当一个字段被执行的时候，相应的<code>resolver</code>被调用以产生下一个值。如果字段产生的是一个对象，那么这个查询还需要继续执行其对应字段的解析器，直到生成标量值。</p>
+<p>在GraphQL服务端的顶层，是整个API的入口点：<code>Query</code>。解析器函数接受4个参数：<code>obj</code>、<code>args</code>、<code>context</code>、<code>info</code>。</p>
+<h3 id="异步解析">异步解析</h3>
+<p>我们来分析一下下面这个解析器里面发生了什么：</p>
+<pre><code class="language-js">human(obj, args, context, info) {
+  return context.db.loadHumanByID(args.id).then(
+    userData =&gt; new Human(userData)
+  )
+}
+</code></pre>
+<p><code>context</code>提供一个数据库访问对象，用来通过查询中传递的参数<code>id</code>来查询数据，因为从数据库拉取数据的过程是一个一步操作，所以返回了一个<code>Promise</code>对象。</p>
+<h2 id="内省">内省</h2>
+<p>我们有时候需要问GraphQL Schema支持哪些查询，通过<code>__schema</code>字段可以查到有哪些类型可用：</p>
+<pre><code class="language-graphql">{
+  __schema {
+    types {
+      name
+    }
+  }
+}
+</code></pre>
+<p>内省系统支持的字段有：<code>__Schema</code>、<code>__Type</code>、<code>__TypeKind</code>、<code>__Field</code>、<code>__InputValue</code>、<code>__EnumValue</code>、<code>__Directive</code>。</p>
+<p><code>__Type</code>字段可以用来查询对应对象类型的类型和字段：</p>
+<pre><code class="language-graphql">{
+  __type(name: &quot;Droid&quot;) {
+    name
+    fields {
+      name
+      type {
+        name
+        kind
+        ofType {
+          name
+          kind
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<p>在查询<code>__Type</code>的时候，可能会发现有些类型显示为<code>NON_NULL</code>或者<code>LIST</code>，而类型名称为<code>null</code>，这是因为是包装类型，需要通过<code>ofType</code>来获取其更详细的类型。</p>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%AF%AD%E6%B3%95">语法</a>
+<ul>
+<li><a href="#%E5%85%A5%E5%8F%A3">入口</a></li>
+<li><a href="#%E6%9F%A5%E8%AF%A2%E5%92%8C%E5%8F%98%E6%9B%B4">查询和变更</a>
+<ul>
+<li><a href="#%E5%8F%82%E6%95%B0">参数</a></li>
+<li><a href="#%E5%88%AB%E5%90%8D">别名</a></li>
+<li><a href="#%E7%89%87%E6%AE%B5">片段</a></li>
+<li><a href="#%E5%8F%98%E9%87%8F">变量</a></li>
+<li><a href="#%E5%8F%98%E6%9B%B4">变更</a></li>
+</ul>
+</li>
+<li><a href="#%E5%86%85%E8%81%94%E7%89%87%E6%AE%B5">内联片段</a></li>
+<li><a href="#%E5%85%83%E5%AD%97%E6%AE%B5">元字段</a></li>
+</ul>
+</li>
+<li><a href="#schema%E5%92%8C%E7%B1%BB%E5%9E%8B">Schema和类型</a>
+<ul>
+<li><a href="#%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%AD%97%E6%AE%B5">对象类型和字段</a></li>
+<li><a href="#%E6%9F%A5%E8%AF%A2%E5%92%8C%E5%8F%98%E6%9B%B4%E7%B1%BB%E5%9E%8B">查询和变更类型</a></li>
+<li><a href="#%E6%A0%87%E9%87%8F%E7%B1%BB%E5%9E%8B">标量类型</a></li>
+<li><a href="#%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B">枚举类型</a></li>
+<li><a href="#%E6%8E%A5%E5%8F%A3">接口</a></li>
+<li><a href="#%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B">联合类型</a></li>
+<li><a href="#%E8%BE%93%E5%85%A5%E7%B1%BB%E5%9E%8B">输入类型</a></li>
+</ul>
+</li>
+<li><a href="#%E6%89%A7%E8%A1%8C">执行</a>
+<ul>
+<li><a href="#%E5%BC%82%E6%AD%A5%E8%A7%A3%E6%9E%90">异步解析</a></li>
+</ul>
+</li>
+<li><a href="#%E5%86%85%E7%9C%81">内省</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-3-19-GraphQL">https://wzhzzmzzy.github.io/post/2019-3-19-GraphQL</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-3-19-GraphQL">https://wzhzzmzzy.github.io/post/2019-3-19-GraphQL</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX"># Python</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/410l-FOjbe"># 后端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/4-g79IM8ym"># GraphQL</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX"># Python</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/410l-FOjbe"># 后端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/4-g79IM8ym"># GraphQL</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2019-4-3-Web开发基础复习">
+                                    Web 开发基础知识复习 —— HTML
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2019-3-13-Vue聊天室">
+                                            WebSocket聊天室（Vue + Tornado）
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

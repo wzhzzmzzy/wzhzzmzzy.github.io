@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                TypeScript 类型系统
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2019-05-16</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">17.6 mins</a></span>
+                                <span class="post-words">words:<a href="#">4465</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Ww2JGjz2CK">TypeScript</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-05-16</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">17.6 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">4465</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Ww2JGjz2CK">TypeScript</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="类型推论">类型推论</h2>
+<p>TypeScript中的类型是在哪里、如何被推断的呢？理解这个有助于我们在编写代码时更好地预测编译器的行为，避免一些难以被发现的Bug的出现。</p>
+<h3 id="简单例子">简单例子</h3>
+<p>没有明确指出类型的地方，类型推论会帮助提供类型：</p>
+<pre><code class="language-typescript">let x = 3; // x: Int
+</code></pre>
+<p>这种推断发生在初始化变量和成员，设置默认参数值和决定函数返回值时。大多数情况下，类型推论是直截了当地。后面我们来看一些细微的差别。</p>
+<h3 id="最佳通用类型">最佳通用类型</h3>
+<p>我们很多时候会写出类型有些难以推断的混合表达式，最简单的例子就是同时包含的不同类型的元素的列表：</p>
+<pre><code class="language-typescript">let x = [0, 1, null];
+</code></pre>
+<p>由于需要推断<code>x</code>的类型，编译器会检查列表中所有元素的类型，然后选择能覆盖所有类型的选项。没有找到最佳通用类型的情况下，类型推断的结果是联合数组类型。</p>
+<h3 id="上下文类型">上下文类型</h3>
+<p>TypeScript类型推论也可能按照相反的方向进行。 这被叫做“按上下文归类”。按上下文归类会发生在表达式的类型与所处的位置相关时。比如：</p>
+<pre><code class="language-typescript">window.onmousedown = function(mouseEvent) {
+    console.log(mouseEvent.button);  //&lt;- Error
+};
+</code></pre>
+<p>这里，编译器会抛出一个类型错误。TypeScript 通过<code>window.onmousedown</code>来判断了<code>mouseEvent</code>的类型。你可以手动指定<code>mouseEvent: Any</code>，这样就不会报错了。</p>
+<pre><code class="language-typescript">window.onmousedown = function(mouseEvent: any) {
+    console.log(mouseEvent.button);  //&lt;- Now, no error is given
+};
+</code></pre>
+<p>这个函数表达式有明确的参数类型注解，上下文类型被忽略。 这样的话就不报错了，因为这里不会使用到上下文类型。</p>
+<h2 id="类型兼容性">类型兼容性</h2>
+<p>TypeScript 的类型兼容是基于结构中的子类型的，而不是基于类型名义的。也就是说，只要结构子类型相同或包含，就可以使用。TypeScript的结构性子类型是根据JavaScript代码的典型写法来设计的。 因为JavaScript里广泛地使用匿名对象，例如函数表达式和对象字面量，所以使用结构类型系统来描述这些类型比使用名义类型系统更好。</p>
+<pre><code class="language-typescript">interface Named {
+    name: string;
+}
+
+class Person {
+    name: string;
+}
+
+let p: Named;
+// OK, because of structural typing
+p = new Person();
+</code></pre>
+<blockquote>
+<h4 id="关于可靠性的注意事项">关于可靠性的注意事项</h4>
+<p>TypeScript的类型系统允许某些在编译阶段无法确认其安全性的操作。下面会解释何时会发生这种情况，以及它有利的一面。</p>
+</blockquote>
+<h3 id="开始">开始</h3>
+<p>TypeScript 结构化类型系统的基本规则是，如果<code>x</code>要兼容<code>y</code>，那么<code>y</code>至少具有与<code>x</code>相同的属性。</p>
+<pre><code class="language-typescript">interface Named {
+    name: string;
+}
+
+let x: Named;
+// y's inferred type is { name: string; location: string; }
+let y = { name: 'Alice', location: 'Seattle' };
+x = y;
+</code></pre>
+<p>这里要检查<code>y</code>是否能赋值给<code>x</code>，编译器检查<code>x</code>中的每个属性，看是否能在<code>y</code>中也找到对应属性。 在这个例子中，<code>y</code>必须包含名字是<code>name</code>的<code>string</code>类型成员。<code>y</code>满足条件，因此赋值正确。检查函数参数时也会使用相同的规则。</p>
+<p>这个比较过程是递归进行的，检查每个成员及子成员。</p>
+<h3 id="比较两个函数">比较两个函数</h3>
+<p>相对来讲，在比较原始类型和对象类型的时候是比较容易理解的，问题是如何判断两个函数是兼容的。 下面我们从两个简单的函数入手，它们仅是参数列表略有不同：</p>
+<pre><code class="language-ts">let x = (a: number) =&gt; 0;
+let y = (b: number, s: string) =&gt; 0;
+
+y = x; // OK
+x = y; // Error
+</code></pre>
+<p>要查看<code>x</code>是否能赋值给<code>y</code>，首先看它们的参数列表。 <code>x</code>的每个参数必须能在<code>y</code>里找到对应类型的参数。 注意的是参数的名字相同与否无所谓，只看它们的类型。 这里，<code>x</code>的每个参数在<code>y</code>中都能找到对应的参数，所以允许赋值。</p>
+<p>第二个赋值错误，因为<code>y</code>有个必需的第二个参数，但是<code>x</code>并没有，所以不允许赋值。</p>
+<p>你可能会疑惑为什么允许<code>忽略</code>参数，像例子<code>y = x</code>中那样。 原因是忽略额外的参数在JavaScript里是很常见的。 例如，<code>Array#forEach</code>给回调函数传3个参数：数组元素，索引和整个数组。 尽管如此，传入一个只使用第一个参数的回调函数也是很有用的：</p>
+<pre><code class="language-ts">let items = [1, 2, 3];
+
+// Don't force these extra arguments
+items.forEach((item, index, array) =&gt; console.log(item));
+
+// Should be OK!
+items.forEach((item) =&gt; console.log(item));
+</code></pre>
+<p>下面来看看如何处理返回值类型，创建两个仅是返回值类型不同的函数：</p>
+<pre><code class="language-ts">let x = () =&gt; ({name: 'Alice'});
+let y = () =&gt; ({name: 'Alice', location: 'Seattle'});
+
+x = y; // OK
+y = x; // Error, because x() lacks a location property
+</code></pre>
+<p>类型系统强制源函数的返回值类型必须是目标函数返回值类型的子类型。</p>
+<h4 id="函数参数双向协变">函数参数双向协变</h4>
+<p>当比较函数参数类型时，只有当源函数参数能够赋值给目标函数或者反过来时才能赋值成功。 这是不稳定的，因为调用者可能传入了一个具有更精确类型信息的函数，但是调用这个传入的函数的时候却使用了不是那么精确的类型信息。 实际上，这极少会发生错误，并且能够实现很多JavaScript里的常见模式。</p>
+<h4 id="可选参数及剩余参数">可选参数及剩余参数</h4>
+<p>比较函数兼容性的时候，可选参数与必须参数是可互换的。 源类型上有额外的可选参数不是错误，目标类型的可选参数在源类型里没有对应的参数也不是错误。</p>
+<p>当一个函数有剩余参数时，它被当做无限个可选参数。</p>
+<p>这对于类型系统来说是不稳定的，但从运行时的角度来看，可选参数一般来说是不强制的，因为对于大多数函数来说相当于传递了一些<code>undefinded</code>。</p>
+<p>有一个好的例子，常见的函数接收一个回调函数并用对于程序员来说是可预知的参数但对类型系统来说是不确定的参数来调用：</p>
+<pre><code class="language-ts">function invokeLater(args: any[], callback: (...args: any[]) =&gt; void) {
+    /* ... Invoke callback with 'args' ... */
+}
+
+// Unsound - invokeLater &quot;might&quot; provide any number of arguments
+invokeLater([1, 2], (x, y) =&gt; console.log(x + ', ' + y));
+
+// Confusing (x and y are actually required) and undiscoverable
+invokeLater([1, 2], (x?, y?) =&gt; console.log(x + ', ' + y));
+</code></pre>
+<h4 id="函数重载">函数重载</h4>
+<p>对于有重载的函数，源函数的每个重载都要在目标函数上找到对应的函数签名。 这确保了目标函数可以在所有源函数可调用的地方调用。</p>
+<h3 id="枚举">枚举</h3>
+<p>不同类型的枚举不兼容。枚举类型与数字类型兼容。</p>
+<h3 id="类">类</h3>
+<p>类与对象字面量和接口差不多，但有一点不同：类有静态部分和实例部分的类型。比较两个类类型的对象时，只有实例的成员会被比较。 静态成员和构造函数不在比较的范围内。</p>
+<h4 id="类的私有成员和受保护成员">类的私有成员和受保护成员</h4>
+<p>类的私有成员和受保护成员会影响兼容性。 当检查类实例的兼容时，如果目标类型包含一个私有成员，那么源类型必须包含来自同一个类的这个私有成员。 同样地，这条规则也适用于包含受保护成员实例的类型检查。 这允许子类赋值给父类，但是不能赋值给其它有同样类型的类。</p>
+<h3 id="泛型">泛型</h3>
+<p>因为TypeScript是结构性的类型系统，类型参数只影响使用其做为类型一部分的结果类型。比如，</p>
+<pre><code class="language-ts">interface Empty&lt;T&gt; {
+}
+let x: Empty&lt;number&gt;;
+let y: Empty&lt;string&gt;;
+
+x = y;  // OK, because y matches structure of x
+</code></pre>
+<p>上面代码里，<code>x</code>和<code>y</code>是兼容的，因为它们的结构使用类型参数时并没有什么不同。 把这个例子改变一下，增加一个成员，就能看出是如何工作的了：</p>
+<pre><code class="language-ts">interface NotEmpty&lt;T&gt; {
+    data: T;
+}
+let x: NotEmpty&lt;number&gt;;
+let y: NotEmpty&lt;string&gt;;
+
+x = y;  // Error, because x and y are not compatible
+</code></pre>
+<p>在这里，泛型类型在使用时就好比不是一个泛型类型。</p>
+<p>对于没指定泛型类型的泛型参数时，会把所有泛型参数当成<code>any</code>比较。 然后用结果类型进行比较，就像上面第一个例子。</p>
+<h2 id="高级类型">高级类型</h2>
+<h3 id="交叉类型intersection-types">交叉类型（Intersection Types）</h3>
+<p>交叉类型是将多个类型合并为一个类型。 例如， <code>Person &amp; Serializable &amp; Loggable</code>同时是 <code>Person</code> <em>和</em><code>Serializable</code> <em>和</em> <code>Loggable</code>。 就是说这个类型的对象同时拥有了这三种类型的成员。我们大多是在混入（mixins）或其它不适合典型面向对象模型的地方看到交叉类型的使用。</p>
+<h3 id="联合类型union-types">联合类型（Union Types）</h3>
+<p>联合类型与交叉类型很有关联，但是使用上却完全不同。联合类型表示一个值可以是几种类型之一。 我们用竖线（ <code>|</code>）分隔每个类型，所以 <code>number | string | boolean</code>表示一个值可以是 <code>number</code>， <code>string</code>，或 <code>boolean</code>。</p>
+<p>如果一个值是联合类型，我们只能访问此联合类型的所有类型里共有的成员。</p>
+<pre><code class="language-ts">interface Bird {
+    fly();
+    layEggs();
+}
+
+interface Fish {
+    swim();
+    layEggs();
+}
+
+function getSmallPet(): Fish | Bird {
+    // ...
+}
+
+let pet = getSmallPet();
+pet.layEggs(); // okay
+pet.swim();    // errors
+</code></pre>
+<p>这里的联合类型可能有点复杂，但是你很容易就习惯了。 如果一个值的类型是 <code>A | B</code>，我们能够 <em>确定</em>的是它包含了 <code>A</code> <em>和</em> <code>B</code>中共有的成员。 这个例子里， <code>Bird</code>具有一个 <code>fly</code>成员。 我们不能确定一个<code>Bird | Fish</code>类型的变量是否有 <code>fly</code>方法。 如果变量在运行时是 <code>Fish</code>类型，那么调用<code>pet.fly()</code>就出错了。</p>
+<h3 id="类型保护与区分类型type-guards-and-differentiating-types">类型保护与区分类型（Type Guards and Differentiating Types）</h3>
+<p>联合类型适合于那些值可以为不同类型的情况。但当我们想确切地了解是否为 <code>Fish</code>时怎么办？ 使用类型断言：</p>
+<pre><code class="language-ts">let pet = getSmallPet();
+
+if ((&lt;Fish&gt;pet).swim) {
+    (&lt;Fish&gt;pet).swim();
+}
+else {
+    (&lt;Bird&gt;pet).fly();
+}
+</code></pre>
+<h4 id="用户自定义的类型保护">用户自定义的类型保护</h4>
+<p>我们不得不多次使用类型断言去判断类型。如果我们只需要检查一次，在两个分支中都能知道类型就好了。这里可以使用类型保护机制：</p>
+<pre><code class="language-ts">function isFish(pet: Fish | Bird): pet is Fish {
+    return (&lt;Fish&gt;pet).swim !== undefined;
+}
+
+if (isFish(pet)) {
+    pet.swim();
+}
+else {
+    pet.fly();
+}
+</code></pre>
+<p>每当使用一些变量调用 <code>isFish</code>时，TypeScript会将变量缩减为那个具体的类型，只要这个类型与变量的原始类型是兼容的。注意TypeScript不仅知道在 <code>if</code>分支里 <code>pet</code>是 <code>Fish</code>类型； 它还清楚在 <code>else</code>分支里，一定 <em>不是</em><code>Fish</code>类型，一定是 <code>Bird</code>类型。</p>
+<h4 id="typeof与instanceof类型保护"><code>typeof</code>与<code>instanceof</code>类型保护</h4>
+<p>这两个关键字 JavaScript 中常用的判断类型的关键字，在使用联合类型与类型保护时也有用途。</p>
+<pre><code class="language-ts">// typeof
+function padLeft(value: string, padding: string | number) {
+    if (typeof padding === &quot;number&quot;) {
+        return Array(padding + 1).join(&quot; &quot;) + value;
+    }
+    if (typeof padding === &quot;string&quot;) {
+        return padding + value;
+    }
+    throw new Error(`Expected string or number, got '${padding}'.`);
+}
+
+// instanceof
+// 类型为 XObject | YObject
+let padder: Padder = getRandomObject();
+
+if (padder instanceof XObject) {
+    padder; // 类型细化为'XObject'
+}
+if (padder instanceof YObject) {
+    padder; // 类型细化为'YObject'
+}
+</code></pre>
+<h3 id="可以为null的类型">可以为<code>null</code>的类型</h3>
+<p>TypeScript具有两种特殊的类型， <code>null</code>和 <code>undefined</code>。默认情况下，类型检查器认为 <code>null</code>与 <code>undefined</code>可以赋值给任何类型。这也意味着，你阻止不了将它们赋值给其它类型，就算是你想要阻止这种情况也不行。 <code>null</code>的发明者，Tony Hoare，称它为 <a href="https://en.wikipedia.org/wiki/Null_pointer#History">价值亿万美金的错误</a>。</p>
+<p><code>--strictNullChecks</code>标记可以解决此错误：当你声明一个变量时，它不会自动地包含 <code>null</code>或 <code>undefined</code>。 你可以使用联合类型明确的包含它们：</p>
+<pre><code class="language-ts">let s = &quot;foo&quot;;
+s = null; // 错误, 'null'不能赋值给'string'
+let sn: string | null = &quot;bar&quot;;
+sn = null; // 可以
+
+sn = undefined; // error, 'undefined'不能赋值给'string | null'
+</code></pre>
+<p>注意，按照JavaScript的语义，TypeScript会把 <code>null</code>和 <code>undefined</code>区别对待。 <code>string | null</code>， <code>string | undefined</code>和 <code>string | undefined | null</code>是不同的类型。</p>
+<h4 id="可选参数和可选属性">可选参数和可选属性</h4>
+<p>使用了 <code>--strictNullChecks</code>，可选参数会被自动地加上 <code>| undefined</code>:</p>
+<pre><code class="language-ts">function f(x: number, y?: number) {
+    return x + (y || 0);
+}
+f(1, 2);
+f(1);
+f(1, undefined);
+f(1, null); // error, 'null' is not assignable to 'number | undefined'
+</code></pre>
+<p>可选属性也会有同样的处理：</p>
+<pre><code class="language-ts">class C {
+    a: number;
+    b?: number;
+}
+let c = new C();
+c.a = 12;
+c.a = undefined; // error, 'undefined' is not assignable to 'number'
+c.b = 13;
+c.b = undefined; // ok
+c.b = null; // error, 'null' is not assignable to 'number | undefined'
+</code></pre>
+<h4 id="类型保护和类型断言">类型保护和类型断言</h4>
+<p>由于可以为null的类型是通过联合类型实现，那么你需要使用类型保护来去除 <code>null</code>。 幸运地是这与在JavaScript里写的代码一致：</p>
+<pre><code class="language-ts">function f(sn: string | null): string {
+    if (sn == null) {
+        return &quot;default&quot;;
+    }
+    else {
+        return sn;
+    }
+}
+</code></pre>
+<p>这里很明显地去除了 <code>null</code>，你也可以使用短路运算符：</p>
+<pre><code class="language-ts">function f(sn: string | null): string {
+    return sn || &quot;default&quot;;
+}
+</code></pre>
+<p>如果编译器不能够去除 <code>null</code>或 <code>undefined</code>，你可以使用类型断言手动去除。 语法是添加 <code>!</code>后缀：<code>identifier!</code>从 <code>identifier</code>的类型里去除了 <code>null</code>和 <code>undefined</code>：</p>
+<pre><code class="language-ts">function broken(name: string | null): string {
+  function postfix(epithet: string) {
+    return name.charAt(0) + '.  the ' + epithet; // error, 'name' is possibly null
+  }
+  name = name || &quot;Bob&quot;;
+  return postfix(&quot;great&quot;);
+}
+
+function fixed(name: string | null): string {
+  function postfix(epithet: string) {
+    return name!.charAt(0) + '.  the ' + epithet; // ok
+  }
+  name = name || &quot;Bob&quot;;
+  return postfix(&quot;great&quot;);
+}
+</code></pre>
+<p>本例使用了嵌套函数，因为编译器无法去除嵌套函数的null（除非是立即调用的函数表达式）。 因为它无法跟踪所有对嵌套函数的调用，尤其是你将内层函数做为外层函数的返回值。 如果无法知道函数在哪里被调用，就无法知道调用时 <code>name</code>的类型。</p>
+<h3 id="类型别名">类型别名</h3>
+<p>类型别名会给一个类型起个新名字。 类型别名有时和接口很像，但是可以作用于原始值，联合类型，元组以及其它任何你需要手写的类型。起别名不会新建一个类型 - 它创建了一个新 <em>名字</em>来引用那个类型。 给原始类型起别名通常没什么用，尽管可以做为文档的一种形式使用。</p>
+<p>同接口一样，类型别名也可以是泛型 - 我们可以添加类型参数并且在别名声明的右侧传入：</p>
+<pre><code class="language-ts">type Container&lt;T&gt; = { value: T };
+</code></pre>
+<p>我们也可以使用类型别名来在属性里引用自己：</p>
+<pre><code class="language-ts">type Tree&lt;T&gt; = {
+    value: T;
+    left: Tree&lt;T&gt;;
+    right: Tree&lt;T&gt;;
+}
+</code></pre>
+<p>与交叉类型一起使用，我们可以创建出一些十分稀奇古怪的类型。</p>
+<pre><code class="language-ts">type LinkedList&lt;T&gt; = T &amp; { next: LinkedList&lt;T&gt; };
+
+interface Person {
+    name: string;
+}
+
+var people: LinkedList&lt;Person&gt;;
+var s = people.name;
+var s = people.next.name;
+var s = people.next.next.name;
+var s = people.next.next.next.name;
+</code></pre>
+<p>然而，类型别名不能出现在声明右侧的任何地方。</p>
+<pre><code class="language-ts">type Yikes = Array&lt;Yikes&gt;; // error
+</code></pre>
+<h4 id="接口-vs-类型别名">接口 vs. 类型别名</h4>
+<p>类型别名可以像接口一样；然而，仍有一些细微差别。</p>
+<p>其一，接口创建了一个新的名字，可以在其它任何地方使用。其二，类型别名不能被 <code>extends</code>和 <code>implements</code>（自己也不能 <code>extends</code>和<code>implements</code>其它类型）。</p>
+<p>另一方面，如果你无法通过接口来描述一个类型并且需要使用联合类型或元组类型，这时通常会使用类型别名。</p>
+<h3 id="字符串字面量类型">字符串字面量类型</h3>
+<p>字符串字面量类型允许你指定字符串必须的固定值。</p>
+<pre><code class="language-ts">type Easing = &quot;ease-in&quot; | &quot;ease-out&quot; | &quot;ease-in-out&quot;;
+</code></pre>
+<p>你只能从三种允许的字符中选择其一来做为参数传递，传入其它值则会产生错误。</p>
+<pre><code class="language-text">Argument of type '&quot;uneasy&quot;' is not assignable to parameter of type '&quot;ease-in&quot; | &quot;ease-out&quot; | &quot;ease-in-out&quot;'
+</code></pre>
+<p>字符串字面量类型还可以用于区分函数重载：</p>
+<pre><code class="language-ts">function createElement(tagName: &quot;img&quot;): HTMLImageElement;
+function createElement(tagName: &quot;input&quot;): HTMLInputElement;
+// ... more overloads ...
+function createElement(tagName: string): Element {
+    // ... code goes here ...
+}
+</code></pre>
+<h3 id="数字字面量类型">数字字面量类型</h3>
+<p>TypeScript还具有数字字面量类型。</p>
+<pre><code class="language-ts">function rollDie(): 1 | 2 | 3 | 4 | 5 | 6 {
+    // ...
+}
+</code></pre>
+<p>我们很少直接这样使用，但它们可以用在缩小范围调试bug的时候：</p>
+<pre><code class="language-ts">function foo(x: number) {
+    if (x !== 1 || x !== 2) {
+        //         ~~~~~~~
+        // Operator '!==' cannot be applied to types '1' and '2'.
+    }
+}
+</code></pre>
+<p>换句话说，当 <code>x</code>与 <code>2</code>进行比较的时候，它的值必须为 <code>1</code>，这就意味着上面的比较检查是非法的。</p>
+<h3 id="可辨识联合discriminated-unions">可辨识联合（Discriminated Unions）</h3>
+<p>你可以合并单例类型，联合类型，类型保护和类型别名来创建一个叫做 <em>可辨识联合</em>的高级模式，它也称做 <em>标签联合</em>或 <em>代数数据类型</em>。 可辨识联合在函数式编程很有用处。 一些语言会自动地为你辨识联合；而TypeScript则基于已有的JavaScript模式。 它具有3个要素：</p>
+<ol>
+<li>具有普通的单例类型属性— <em>可辨识的特征</em>。</li>
+<li>一个类型别名包含了那些类型的联合— <em>联合</em>。</li>
+<li>此属性上的类型保护。</li>
+</ol>
+<pre><code class="language-ts">interface Square {
+    kind: &quot;square&quot;;
+    size: number;
+}
+interface Rectangle {
+    kind: &quot;rectangle&quot;;
+    width: number;
+    height: number;
+}
+interface Circle {
+    kind: &quot;circle&quot;;
+    radius: number;
+}
+</code></pre>
+<p>首先我们声明了将要联合的接口。 每个接口都有 <code>kind</code>属性但有不同的字符串字面量类型。 <code>kind</code>属性称做 <em>可辨识的特征</em>或 <em>标签</em>。 其它的属性则特定于各个接口。 注意，目前各个接口间是没有联系的。 下面我们把它们联合到一起：</p>
+<pre><code class="language-ts">type Shape = Square | Rectangle | Circle;
+</code></pre>
+<p>现在我们使用可辨识联合:</p>
+<pre><code class="language-ts">function area(s: Shape) {
+    switch (s.kind) {
+        case &quot;square&quot;: return s.size * s.size;
+        case &quot;rectangle&quot;: return s.height * s.width;
+        case &quot;circle&quot;: return Math.PI * s.radius ** 2;
+    }
+}
+</code></pre>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%B1%BB%E5%9E%8B%E6%8E%A8%E8%AE%BA">类型推论</a>
+<ul>
+<li><a href="#%E7%AE%80%E5%8D%95%E4%BE%8B%E5%AD%90">简单例子</a></li>
+<li><a href="#%E6%9C%80%E4%BD%B3%E9%80%9A%E7%94%A8%E7%B1%BB%E5%9E%8B">最佳通用类型</a></li>
+<li><a href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%B1%BB%E5%9E%8B">上下文类型</a></li>
+</ul>
+</li>
+<li><a href="#%E7%B1%BB%E5%9E%8B%E5%85%BC%E5%AE%B9%E6%80%A7">类型兼容性</a><br>
+*
+<ul>
+<li><a href="#%E5%85%B3%E4%BA%8E%E5%8F%AF%E9%9D%A0%E6%80%A7%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">关于可靠性的注意事项</a></li>
+<li><a href="#%E5%BC%80%E5%A7%8B">开始</a></li>
+<li><a href="#%E6%AF%94%E8%BE%83%E4%B8%A4%E4%B8%AA%E5%87%BD%E6%95%B0">比较两个函数</a>
+<ul>
+<li><a href="#%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E5%8F%8C%E5%90%91%E5%8D%8F%E5%8F%98">函数参数双向协变</a></li>
+<li><a href="#%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0%E5%8F%8A%E5%89%A9%E4%BD%99%E5%8F%82%E6%95%B0">可选参数及剩余参数</a></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD">函数重载</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9E%9A%E4%B8%BE">枚举</a></li>
+<li><a href="#%E7%B1%BB">类</a>
+<ul>
+<li><a href="#%E7%B1%BB%E7%9A%84%E7%A7%81%E6%9C%89%E6%88%90%E5%91%98%E5%92%8C%E5%8F%97%E4%BF%9D%E6%8A%A4%E6%88%90%E5%91%98">类的私有成员和受保护成员</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B3%9B%E5%9E%8B">泛型</a></li>
+</ul>
+</li>
+<li><a href="#%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B">高级类型</a>
+<ul>
+<li><a href="#%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8Bintersection-types">交叉类型（Intersection Types）</a></li>
+<li><a href="#%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8Bunion-types">联合类型（Union Types）</a></li>
+<li><a href="#%E7%B1%BB%E5%9E%8B%E4%BF%9D%E6%8A%A4%E4%B8%8E%E5%8C%BA%E5%88%86%E7%B1%BB%E5%9E%8Btype-guards-and-differentiating-types">类型保护与区分类型（Type Guards and Differentiating Types）</a>
+<ul>
+<li><a href="#%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E7%B1%BB%E5%9E%8B%E4%BF%9D%E6%8A%A4">用户自定义的类型保护</a></li>
+<li><a href="#typeof%E4%B8%8Einstanceof%E7%B1%BB%E5%9E%8B%E4%BF%9D%E6%8A%A4"><code>typeof</code>与<code>instanceof</code>类型保护</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%AF%E4%BB%A5%E4%B8%BAnull%E7%9A%84%E7%B1%BB%E5%9E%8B">可以为<code>null</code>的类型</a>
+<ul>
+<li><a href="#%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0%E5%92%8C%E5%8F%AF%E9%80%89%E5%B1%9E%E6%80%A7">可选参数和可选属性</a></li>
+<li><a href="#%E7%B1%BB%E5%9E%8B%E4%BF%9D%E6%8A%A4%E5%92%8C%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80">类型保护和类型断言</a></li>
+</ul>
+</li>
+<li><a href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D">类型别名</a>
+<ul>
+<li><a href="#%E6%8E%A5%E5%8F%A3-vs-%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D">接口 vs. 类型别名</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%97%E9%9D%A2%E9%87%8F%E7%B1%BB%E5%9E%8B">字符串字面量类型</a></li>
+<li><a href="#%E6%95%B0%E5%AD%97%E5%AD%97%E9%9D%A2%E9%87%8F%E7%B1%BB%E5%9E%8B">数字字面量类型</a></li>
+<li><a href="#%E5%8F%AF%E8%BE%A8%E8%AF%86%E8%81%94%E5%90%88discriminated-unions">可辨识联合（Discriminated Unions）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript类型系统">https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript类型系统</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript类型系统">https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript类型系统</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Ww2JGjz2CK"># TypeScript</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Ww2JGjz2CK"># TypeScript</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2019-5-20-Pandora-2nd-记录">
+                                    魔盒挑战第二期判题系统制作日志
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript语法">
+                                            TypeScript 语法深入
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

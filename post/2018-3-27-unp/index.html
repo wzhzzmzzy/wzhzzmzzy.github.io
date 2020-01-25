@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Python - mitsuhiko/unp Note
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2018-03-27</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">2.4 mins</a></span>
+                                <span class="post-words">words:<a href="#">636</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX">Python</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2018-03-27</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">2.4 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">636</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX">Python</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="unp">unp</h2>
+<h3 id="click">click</h3>
+<p>Python 的一个命令行参数库，用于生成命令行程序。</p>
+<ul>
+<li><code>@click.command()</code>，指定函数为命令行接口。</li>
+<li><code>@click.option('--param', default=default_val, prompt='Val Name', help='description')</code>，指定参数。</li>
+<li><code>@click.argument('param', nargs=-1)</code>，简单参数，<code>-1</code>表示不定参数。</li>
+<li><code>@click.group()</code>，指定函数为命令行接口组，可以使用<code>@func.command()</code>，可以使用<code>func.add_command()</code>。</li>
+<li><code>@click.password_option()</code>，直接获取<code>--password</code>参数，隐藏并允许重复输入。</li>
+<li><code>@click.version_option()</code>，当获取到<code>--version</code>时，直接调用<code>print_version()</code>函数。</li>
+<li><code>click.echo('')</code>，控制台输出。</li>
+</ul>
+<p>装饰器可以叠加。作为主函数的函数需要加上<code>@click.command()</code>。对于每一个参数，被装饰的函数都需要有一个对应的参数。</p>
+<h3 id="option-的参数">option 的参数</h3>
+<ul>
+<li>定位参数，表示直接输入参数时的参数名。不定数量。</li>
+<li><code>callback</code>，当输入该参数时，会调用<code>callback</code>指定的函数，而不是被装饰的主函数。</li>
+<li><code>type</code>，参数的类型，可以使用<code>click.Choice(['1', '2'])</code>指定可选值。</li>
+<li><code>nargs</code>，参数数量，-1 表示不定数量。</li>
+<li><code>required</code>，是否必须。</li>
+<li><code>help</code>，描述信息。</li>
+<li><code>hide_input</code>，隐藏输入信息。</li>
+<li><code>confirmation_prompt</code>，是否允许重复输入。</li>
+<li><code>default</code>，设定默认值。</li>
+<li><code>is_flag</code>, 设定当标明该参数时的布尔值。</li>
+</ul>
+<h3 id="subprocess">subprocess</h3>
+<h4 id="popen"><code>Popen</code></h4>
+<p>开启一个子进程，执行一些命令行程序。第一个参数是一个可迭代对象，包含命令和参数。之后可以指定输入输出和错误流，执行的目录，如果不指定目录默认为当前目录，也可以指定环境变量。</p>
+<p>使用<code>Popen().communicate()</code>可以等待进程结束。可以直接获取返回值。</p>
+<p>使用<code>stdin</code>、<code>stdout</code>、<code>stderr</code>可以指定流，返回一个<code>Popen</code>对象，可以其中包含输入输出流。</p>
+<h3 id="总结">总结</h3>
+<p>还是学到了一点有意思的东西。</p>
+<h4 id="常量设置">常量设置</h4>
+<p>可以通过<code>object()</code>和<code>is</code>来判断常量标记，很方便也很轻量。</p>
+<pre><code class="language-python">PWD = object()
+
+def getItem(arg):
+    if arg is PWD:
+        return './'
+</code></pre>
+<h4 id="文件操作">文件操作</h4>
+<p>获取文件名、针对文件名寻找 PATH 中的可执行命令、目录之间的操作、当前目录下有重名时的处理，都是需要做好的。</p>
+<h4 id="工厂模式">工厂模式</h4>
+<p><code>unp</code>处理方式是针对每个压缩包创建一个对应的解压类实例，使用实例进行解压。所有的解压类都来自<code>UnpackerBase</code>。实际解压工序不同，所以<code>real_unpacker</code>方法单独获得重载。</p>
+<p>为了便于选择文件对应的解压类，<code>UnpackerBase</code>有一个<code>id</code>属性，并且使用了<code>@register_unpacker</code>将所有的类都放入一个列表中。</p>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#unp">unp</a>
+<ul>
+<li><a href="#click">click</a></li>
+<li><a href="#option-%E7%9A%84%E5%8F%82%E6%95%B0">option 的参数</a></li>
+<li><a href="#subprocess">subprocess</a>
+<ul>
+<li><a href="#popen"><code>Popen</code></a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a>
+<ul>
+<li><a href="#%E5%B8%B8%E9%87%8F%E8%AE%BE%E7%BD%AE">常量设置</a></li>
+<li><a href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C">文件操作</a></li>
+<li><a href="#%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F">工厂模式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2018-3-27-unp">https://wzhzzmzzy.github.io/post/2018-3-27-unp</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2018-3-27-unp">https://wzhzzmzzy.github.io/post/2018-3-27-unp</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX"># Python</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX"># Python</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2018-4-21-Python科学计算">
+                                    NumPy 学习笔记
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2018-3-7-SQL入门">
+                                            SQL 语法详解
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

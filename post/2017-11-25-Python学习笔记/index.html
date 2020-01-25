@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Python 函数、装饰器
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2017-11-25</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">12.9 mins</a></span>
+                                <span class="post-words">words:<a href="#">3323</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX">Python</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2017-11-25</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">12.9 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">3323</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX">Python</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h3 id="一等函数">一等函数</h3>
+<p>在Python中，整数、字符串、字典等等都是一等对象，没什么特别的。与其他语言不太一样的地方就是，Python中，函数也是对象。当然，接触过JavaScript的同学肯定不会对此感到陌生。</p>
+<p>在命令行中测试一下我们就能发现这件事了：</p>
+<pre><code class="language-python">&gt;&gt;&gt; def f(n):
+...     '''return n!'''
+...     return 1 if n &lt; 2 else n*f(n-1)
+... 
+&gt;&gt;&gt; type(f)
+&lt;class 'function'&gt;
+&gt;&gt;&gt; f.__doc__
+'return n!'
+</code></pre>
+<h4 id="把函数视作对象">把函数视作对象</h4>
+<p>其实我们早就这样做了。在Python的<code>sorted</code>方法中，对于<code>key</code>，这个参数，我们就会传进去一个函数名作为参数，在<code>map</code>中，第一个参数就是一个函数。</p>
+<pre><code class="language-python">&gt;&gt;&gt; fact = f
+&gt;&gt;&gt; fact(2)
+2
+</code></pre>
+<p>接着上面那个样例我们测试了一下，可以把函数赋值给一个变量，然后通过变量来调用函数。</p>
+<h5 id="高阶函数">高阶函数</h5>
+<p>接受函数为参数，或者返回结果是一个函数的函数是高阶函数。<code>map</code>函数就是一个例子。最为人熟知的高阶函数有<code>map</code>、<code>filter</code>、<code>reduce</code>和<code>apply</code>。其中，<code>apply</code>这个函数已经在Py3中被移除了。</p>
+<p>函数式语言通常会提供<code>map</code>、<code>filter</code>、<code>reduce</code>这三个高阶函数，有时使用的是不同的名称。在Python3中，<code>map</code>和<code>filter</code>还是内置函数。但是由于引入了列表推导和生成器表达式，它们就变得没那么重要了。Python3中，这两个高阶函数返回生成器，因而和生成器表达式非常相似。Python2中，这两个高阶函数则返回列表。<code>reduce</code>这个函数在Python3中被移到了<code>functools</code>中，这个函数以前常用于求和，但是现在引入了<code>sum</code>函数，更加高效和方便。</p>
+<h5 id="匿名函数">匿名函数</h5>
+<p><code>lambda</code>关键字可以用于创建匿名函数。一般而言，除了作为参数传给高阶函数之外，很少在Python中实用匿名函数，因为很难在Python中写出优秀的匿名函数。</p>
+<p>这个句法只是语法糖，和<code>def</code>一样，这个表达式会创建函数对象。</p>
+<h5 id="可调用对象">可调用对象</h5>
+<p>调用运算符，即函数名后面的<code>()</code>，还可以应用到其他对象上。</p>
+<ul>
+<li>用户定义的函数</li>
+<li>内置函数</li>
+<li>内置方法</li>
+<li>方法</li>
+<li>类</li>
+<li>类的实例</li>
+<li>生成器函数</li>
+</ul>
+<p>其中生成器函数十分特殊，调用之后返回一个生成器，并且还可以作为协程。</p>
+<p>任何Python对象都可以表现得像函数，只需要实现<code>__call__</code>方法即可。</p>
+<h4 id="函数内省">函数内省</h4>
+<p>除了<code>__doc__</code>，函数对象还有很多属性，使用<code>dir</code>函数可以获取。</p>
+<p>常规对象没有而函数有的属性有下面一些：</p>
+<ul>
+<li><code>__annotations__</code>，参数和返回值的注解</li>
+<li><code>__call__</code>，实现调用运算符</li>
+<li><code>__closure__</code>，闭包</li>
+<li><code>__code__</code>，编译成字节码的函数元数据和函数运算体</li>
+<li><code>__defaults__</code>，形式参数的默认值</li>
+<li><code>__get__</code>，实现只读描述符协议</li>
+<li><code>__globals__</code>，函数所在模块中的全局变量</li>
+<li><code>__kwdefaults__</code>，仅限关键字形式参数的默认值</li>
+<li><code>__name__</code>，函数名称</li>
+<li><code>__qualname__</code>，函数的限定名称</li>
+</ul>
+<h4 id="从定位参数到仅限关键字参数">从定位参数到仅限关键字参数</h4>
+<p>Python最好的特性之一是提供了灵活的参数处理机制，Python3进一步提供了仅限关键字参数。调用函数时使用<code>*</code>和<code>**</code>展开可迭代对象，映射到单个参数。下面是一个样例：</p>
+<pre><code class="language-python">&gt;&gt;&gt; def f(a, *b, **c):
+...     print('a:', a)
+...     if b:
+...         print('b:', b)
+...     if c:
+...         print('c:', c)
+... 
+&gt;&gt;&gt; f(1, 2, 3, i=4)
+a: 1
+b: (2,3)
+c: {'i':4}
+</code></pre>
+<p>注意，数量不定的定位参数必须要放在第二或者之后的参数位置。</p>
+<p>如果不想支持数量不定的定位参数，就在签名中放一个<code>*</code>，如<code>def f(a, *, b)</code>。</p>
+<h4 id="获取关于参数的信息">获取关于参数的信息</h4>
+<p>函数对象有个<code>__defaults__</code>参数，这个参数的值是一个元组，里面保存着定位参数和关键字参数的默认值。仅限关键字形式参数的默认值在<code>__kwdefaults__</code>属性中。然而，参数的名称在<code>__code__</code>属性中，它的值是一个<code>code</code>对象的引用。</p>
+<h4 id="关于函数式编程">关于函数式编程</h4>
+<p>得益于<code>operator</code>和<code>functools</code>等包的支持，函数式编程风格也可以信手拈来。</p>
+<h5 id="operator模块"><code>operator</code>模块</h5>
+<p>在函数式编程中，经常需要把算术运算符当作函数来使用。例如，不使用递归计算阶乘。求和可以使用<code>sum</code>函数，但是求积则没有这样的函数。我们可以使用<code>reduce</code>，但是需要一个函数计算序列中两个元素之积。</p>
+<p><code>operator</code>模块为多个算术运算符提供了相对应的函数，从而避免编写<code>lambda a,b:a*b</code>这样平凡的匿名函数。</p>
+<p><code>operator</code>模块中还有一类函数，能替代从序列中取出元素或者读取对象属性的<code>lambda</code>表达式：<code>itemgetter</code>和<code>attrgetter</code>其实会自行构建函数。比如，<code>itemgetter(1,0)</code>就相当于<code>lambda field: (field[1], field[0])</code>。</p>
+<p><code>attrgetter</code>与<code>itemgetter</code>作用类似，它创建的函数根据名称提取对象的属性。如果把多个属性名传给它，它也会返回提取的值构成的远足。此外，如果参数名中包含<code>.</code>，<code>attrgetter</code>会深入嵌套对象，获取指定的属性。</p>
+<p>还要一个方法是<code>methodcaller</code>，作用和上面两个类似，会自行创建函数。这个函数创建的函数会在对象上调用参数指定的方法：</p>
+<pre><code class="language-python">from operator import methodcaller
+s = 'The time has come'
+upcase = methodcaller('upper')
+upcase(s)
+</code></pre>
+<p>这样就相当于：</p>
+<pre><code class="language-python">s = 'The time has come'
+str.upper(s)
+</code></pre>
+<p>这个方法可以冻结某些参数，与<code>functools.partial</code>函数类似。</p>
+<h5 id="使用functoolspartial冻结参数">使用<code>functools.partial</code>冻结参数</h5>
+<p><code>functools</code>中，除了最广为人知的<code>reduce</code>，余下最有用的是<code>partial</code>和其变体<code>partialmethod</code>。</p>
+<p>这个高阶函数用于部分应用一个函数。部分应用是指，给予一个函数创建一个新的可调用对象，把原函数的某些参数固定。使用这个参数可以把接受一个或者多个参数的函数改编成需要回调的API，这样参数更少。</p>
+<h3 id="装饰器">装饰器</h3>
+<h4 id="装饰器的本质">装饰器的本质</h4>
+<p>事实上，装饰器是个语法糖。</p>
+<pre><code class="language-python">import time
+def clock(func):
+    def clocked(*args):
+        t0 = time.perf_counter()
+        resule=func(*args)
+        elapsed = time.perf_counter() - t0
+        name = func.__name__
+        arg_str = ', '.join(repr(arg) for arg in args)
+        print('[%0.8fs] %s(%s) -&gt; %r' % (elapsed, name, arg_Str, result))
+        return result
+   return clocked 
+</code></pre>
+<p>上面我们声明了一个装饰器，然后我们来使用一下：</p>
+<pre><code class="language-python">@clock
+def factorial(n):
+    return 1 if n &lt; 2 else n * factorial(n-1)
+</code></pre>
+<p>上面这一段代码就相当于：</p>
+<pre><code class="language-python">def factorial(n):
+    return 1 if n &lt; 2 else n * factorial(n-1)
+factorial = clock(factorial)
+</code></pre>
+<p>通过<code>*args</code>和<code>**kwargs</code>，可以传递未知参数。</p>
+<p>但是上面我们写的这个装饰器有一些缺点：不支持关键字参数、遮盖了被装饰函数的<code>__name__</code>和<code>__doc__</code>这两个属性。所以我们来改进一下：</p>
+<pre><code class="language-python">import time
+import functools
+
+def clock(func):
+    @functools.wraps(func)
+    def clocked(*args, **kwargs):
+        t0 = time.time()
+        result = func(*args, **kwargs)
+        elapsed = time.time() - t0
+        name = func.__name__
+        arg_lst = []
+        if args:
+            arg_lst.append(', '.join(repr(arg) for arg in args))
+        if kwargs:
+            pars = ['%s=%r' % (k,w) for k, w in sorted(kwargs.items())]
+            arg_lst.append(', '.join(pairs))
+        arg_str = ', '.join(arg_lst)
+        print('[%0.8fs] %s(%s) -&gt; %r ' % (elapsed, name, arg_str, result))
+        return result
+    return clocked
+
+@clock
+def factorial(n):
+    '''
+    calculate n!
+    '''
+    return 1 if n &lt; 2 else n * factorial(n-1)
+
+if __name__ == '__main__':
+    factorial(6)
+</code></pre>
+<p>这里用到了一个标准库中的装饰器：<code>functools.warps</code>，这个装饰器把相关的属性从<code>func</code>复制到<code>clocked</code>中去。此外，这个新版还能正确处理关键字参数。</p>
+<p>下面介绍两个标准库中的装饰器。</p>
+<h4 id="标准库中的装饰器">标准库中的装饰器</h4>
+<p>Python内置了三个用于装饰方法的函数：<code>property</code>、<code>classmethod</code>和<code>staticmethod</code>。另外一个常见的装饰器是<code>functools.warps</code>，作用是协助构建行为良好的装饰器。其他装饰器中，最值得关注的两个是<code>lru_cache</code>和全新的<code>singledispatch</code>。</p>
+<h5 id="lru_cache"><code>lru_cache</code></h5>
+<p>这个装饰器十分使用，实现了备忘功能。和记忆化递归比较相似，都是将耗时的函数结果保存起来，避免传入相同的参数时重复计算。当然，这更适合于函数式编程时的函数，即对于同样的参数，返回值不会有变化的函数。<code>LRU</code>是<code>Least Recently Used</code>，表明缓存是不会无限增长的，有时效性。</p>
+<p>举个例子，斐波那契数列的递归求法：</p>
+<pre><code class="language-python">@functools.lru_cache()
+@clock
+def fibnacci(n):
+    return n if n &lt; 2 else fibnacci(n-1) + fibnacci(n-2)
+</code></pre>
+<p>调用这个函数我们就会发现，添加了<code>functools.lru_cache</code>之后，求每个值的时候只会调用一次函数，需要求的值越大时，速度就越快。</p>
+<p>除了优化递归之外，在对付Web这种I/O密集型工作时，<code>lru_cache</code>也很有用处。</p>
+<p>特别注意：<code>lru_cache</code>可以使用两个可选的参数来配置。它的签名是：<code>functools.lru_cache(maxsize=128, typed=False)</code>。</p>
+<p>第一个参数<code>maxsize</code>指定最大的缓存结果保存量。缓存满了之后，旧结果会被扔掉。为了得到最佳的性能，<code>maxsize</code>应该设置为2的幂次。<code>typed</code>参数如果设置为<code>True</code>，把不同参数累赘得到结果分开保存，即把通常认为相等的浮点数和整数参数区分开来。顺便说一下，因为<code>lru_cache</code>使用字典存储结果，而且键根据调用时传入的定位参数和关键字参数创建，所以被<code>lru_cache</code>装饰的参数需要保证所有参数都是可散列的。</p>
+<h5 id="singledispatch"><code>singledispatch</code></h5>
+<p>有时候我们会想要根据对象的不同，定制函数的不同行为。但是<strong>Python不支持重载方法或者函数</strong>，所以我们不能使用不同的签名定义函数变体。一种常见的做法是把函数编程一个分派函数，用一串<code>if/elif/else</code>来根据参数不同调用不同的函数。这样虽然可以解决文档，但是一来不够优美，二来或许这个函数会变得很臃肿。</p>
+<p><code>singledispatch</code>可以把整体方法拆分成多个模块，甚至可以为你无法修改的累提供专门的函数。使用<code>@singledispatch</code>装饰的普通函数会变成<strong>泛函数</strong>：根据第一个参数的类型，以不同方式执行相同操作的一组函数，可以看如下示例：</p>
+<pre><code class="language-python">from functools import singledispatch
+from collections import abc
+import numbers
+import html
+
+@singledispatch
+def htmlize(obj):
+    content = html.escape(repr(obj))
+    return '&lt;pre&gt;{}&lt;/pre&gt;'.format(content)
+
+@htmlize.register(str)
+def _(text):
+    content = html.excape(text).replace('\n', '&lt;br&gt;\n')
+    return '&lt;p&gt;{}&lt;p&gt;'.format(content)
+
+@htmlize.register(numbers.Integral)
+def _(n):
+    return '&lt;per{0} (0x{0:x})&lt;/pre&gt;'.format(n)
+
+@htmlize.register(tuple)
+@htmlize.register(abc.MutableSequence)
+def _(seq):
+    inner = '&lt;li&gt;\n&lt;/li&gt;'.join(htmlize(item) for item in seq)
+    return '&lt;ul&gt;\n&lt;li&gt;' + inner + '&lt;/li&gt;\n&lt;ul&gt;'
+</code></pre>
+<p>只要可能，注册的专门函数应该处理抽象基类（如<code>numbers.Integral</code>和<code>abc.MutableSequence</code>），不要处理具体实现（如<code>int</code>和<code>list</code>）。这样，代码支持的兼容类型更加广泛。例如，Python扩展可以子类化<code>numbers.Integral</code>，使用固定位数实现<code>int</code>类型。</p>
+<p><code>singledispatch</code>机制的一个显著特种是，你可以在系统的任何地方和任何模块中注册专门函数，如果后来在新的模块中定义了新的类型，可以轻松的添加一个新的专门函数来处理。此外，还可以为布恩那个修改的类添加自定义函数。</p>
+<p>关于<code>singledispatch</code>可以查看文档“PEP 443——Single-dispatch generic functions”（https://www.python.org/dev/peps/pep-0443/）。</p>
+<blockquote>
+<p><code>@singledispatch</code>不是为了把Java的那种方法重载带入Python。在一个类中为一个方法定义多种重载变体，比在一个函数中使用一长串<code>if/elif/else</code>更好，但是也有缺陷。以为你它们让代码单元承担的职责太多。<code>@singlediapatch</code>的优势在于支持模块化扩展：各个模块可以为它支持的各种类型注册一个专门函数。</p>
+</blockquote>
+<h4 id="叠放装饰器">叠放装饰器</h4>
+<p>装饰器是函数，因此可以组合起来使用。可以在已经被装饰的函数上应用装饰器。理解了上面所说的<strong>装饰器的本质是语法糖</strong>，那么就能理解这里了。</p>
+<h4 id="参数化装饰器">参数化装饰器</h4>
+<p>Python把被装饰的函数作为第一个参数传给装饰器函数。那么怎么让装饰器函数接受其他参数呢？答案是：创建一个装饰器工厂函数，把参数传给它，返回一个装饰器，然后再把它应用到要装饰的函数上。</p>
+<p>举个例子：</p>
+<pre><code class="language-python">registry = []
+
+def register(func):
+    print('running register(%s)' % func)
+    registry.append(func)
+    return func
+
+@register
+def f1():
+    print('running f1()')
+
+print('running main()')
+print('registry -&gt;', registry)
+f1()
+</code></pre>
+<p>这是一个简单的装饰器。</p>
+<h5 id="一个参数化的注册装饰器">一个参数化的注册装饰器</h5>
+<p>为了便于启用或者禁用<code>register</code>的函数注册功能，我们提供一个可选的<code>active</code>参数。</p>
+<pre><code class="language-python">registry = set()
+
+def register(active=True):
+    def decorate(func):
+        print('running register(active=%s)-&gt;decorate(%s)' % (active, func))
+        if active:
+            registry.add(func)
+        else:
+            registry.discard(func)
+        return func
+    return decorate
+</code></pre>
+<p>这样我们就能给它添加参数了。</p>
+<pre><code class="language-python">@register(active=True)
+def f1():
+    print('running f1()')
+</code></pre>
+<p>这里的关键在于，<code>register()</code>要返回<code>decorate</code>，然后把它应用到被装饰的函数上。</p>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%80%E7%AD%89%E5%87%BD%E6%95%B0">一等函数</a>
+<ul>
+<li><a href="#%E6%8A%8A%E5%87%BD%E6%95%B0%E8%A7%86%E4%BD%9C%E5%AF%B9%E8%B1%A1">把函数视作对象</a>
+<ul>
+<li><a href="#%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0">高阶函数</a></li>
+<li><a href="#%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0">匿名函数</a></li>
+<li><a href="#%E5%8F%AF%E8%B0%83%E7%94%A8%E5%AF%B9%E8%B1%A1">可调用对象</a></li>
+</ul>
+</li>
+<li><a href="#%E5%87%BD%E6%95%B0%E5%86%85%E7%9C%81">函数内省</a></li>
+<li><a href="#%E4%BB%8E%E5%AE%9A%E4%BD%8D%E5%8F%82%E6%95%B0%E5%88%B0%E4%BB%85%E9%99%90%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0">从定位参数到仅限关键字参数</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E5%85%B3%E4%BA%8E%E5%8F%82%E6%95%B0%E7%9A%84%E4%BF%A1%E6%81%AF">获取关于参数的信息</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B">关于函数式编程</a>
+<ul>
+<li><a href="#operator%E6%A8%A1%E5%9D%97"><code>operator</code>模块</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8functoolspartial%E5%86%BB%E7%BB%93%E5%8F%82%E6%95%B0">使用<code>functools.partial</code>冻结参数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E8%A3%85%E9%A5%B0%E5%99%A8">装饰器</a>
+<ul>
+<li><a href="#%E8%A3%85%E9%A5%B0%E5%99%A8%E7%9A%84%E6%9C%AC%E8%B4%A8">装饰器的本质</a></li>
+<li><a href="#%E6%A0%87%E5%87%86%E5%BA%93%E4%B8%AD%E7%9A%84%E8%A3%85%E9%A5%B0%E5%99%A8">标准库中的装饰器</a>
+<ul>
+<li><a href="#lru_cache"><code>lru_cache</code></a></li>
+<li><a href="#singledispatch"><code>singledispatch</code></a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%A0%E6%94%BE%E8%A3%85%E9%A5%B0%E5%99%A8">叠放装饰器</a></li>
+<li><a href="#%E5%8F%82%E6%95%B0%E5%8C%96%E8%A3%85%E9%A5%B0%E5%99%A8">参数化装饰器</a>
+<ul>
+<li><a href="#%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0%E5%8C%96%E7%9A%84%E6%B3%A8%E5%86%8C%E8%A3%85%E9%A5%B0%E5%99%A8">一个参数化的注册装饰器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2017-11-25-Python学习笔记">https://wzhzzmzzy.github.io/post/2017-11-25-Python学习笔记</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2017-11-25-Python学习笔记">https://wzhzzmzzy.github.io/post/2017-11-25-Python学习笔记</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX"># Python</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX"># Python</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2018-2-6-Cpp学习记录">
+                                    C++ 学习记录（一）—— 从引用开始
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2017-11-18-前端开发笔记">
+                                            React 与 Material-UI-Next
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

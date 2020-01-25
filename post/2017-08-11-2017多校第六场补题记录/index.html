@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                2017多校第六场补题记录
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2017-08-11</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">12.9 mins</a></span>
+                                <span class="post-words">words:<a href="#">2452</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/MJMnE-34Ceg">暑期训练</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/G3FWMuzW0">ACM-ICPC</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2017-08-11</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">12.9 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">2452</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/MJMnE-34Ceg">暑期训练</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/G3FWMuzW0">ACM-ICPC</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <blockquote>
+<p><a href="http://acm.hdu.edu.cn/search.php?field=problem&amp;key=2017+Multi-University+Training+Contest+-+Team+6&amp;source=1&amp;searchmode=source">HDU多校训练赛第六场传送门</a></p>
+</blockquote>
+<h3 id="hdu-6096-1001">HDU - 6096 - 1001</h3>
+<blockquote>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6096">String</a></p>
+</blockquote>
+<h4 id="题意">题意</h4>
+<p>Bob有一本字典，其中有<code>N</code>个单词，此时给你<code>M</code>个前后缀对，对于每个前后缀对，求出其能匹配多少个字典中的单词。对于每组样例，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mo separator="true">,</mo><mi>Q</mi><mo>≤</mo><mn>100000</mn></mrow><annotation encoding="application/x-tex">N,Q \le 100000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">Q</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∑</mo><mrow><msub><mi>S</mi><mi>i</mi></msub><mo>+</mo><msub><mi>P</mi><mi>i</mi></msub></mrow><mo>≤</mo><mn>500000</mn></mrow><annotation encoding="application/x-tex">\sum{S_i+P_i} \le 500000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∑</mo><msub><mi>W</mi><mi>i</mi></msub><mo>≤</mo><mn>500000</mn></mrow><annotation encoding="application/x-tex">\sum{W_i} \le 500000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span>。</p>
+<h4 id="思路">思路</h4>
+<p>赛中交了一发<code>Hash_Set</code>，一发<code>AC</code>自动机，一发<code>AC+Trie</code>，都TLE了。看出题人的题解说Hash可以过，那应该是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> + <code>Set</code>时间复杂度过高了。</p>
+<p>赛后百度了一发题解，发现大神居然可以直接用<code>Trie</code>直接过，很神奇的解法。</p>
+<p>首先对于模式串 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>W</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">W_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，重构成前后缀交叉的字符串 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">st</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span></span></span></span>，是原串的两倍长度。 <code>st[0] = w[0], st[1] = w[-1], st[2] = w[1], st[3] = w[-2]</code>，以此类推。将字符串 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">st</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span></span></span></span> 插入字典树时，对于每个节点，更新经过当前节点的模式串数量（<code>ed[i]</code>），并储存这些串的长度（<code>G[i]</code>）。<code>nxt</code>数组用于跳转到该节点的最后一个字符串的下一个字符长度处。</p>
+<p>然后对于每一对前后缀 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>i</mi></msub><mo separator="true">,</mo><msub><mi>S</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">P_i, S_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，如上将其重构成新的字符串 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">st</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span></span></span></span>，不足之处用<code>'*'</code>补全。匹配时使用两个队列，<code>q[0]</code>遍历前缀，<code>q[1]</code>遍历后缀。从根节点开始遍历。双队列转移之后，用<code>lower_bound</code>获取该点所有字符串长度中不超过前后缀长度和（<code>rt</code>）的部分。</p>
+<h4 id="代码">代码</h4>
+<pre><code class="language-c++">/**
+ * Author: wzhzzmzzy
+ * Question: HDU - 6096
+ * Algorithm: Trie
+**/
+
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cmath&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+const int maxn = 5e5+7;
+
+char s[maxn], t[maxn], st[maxn&lt;&lt;1];
+int n, q;
+
+struct Trie { // 模板
+    int L, root, nxt[maxn&lt;&lt;1][26], ed[maxn&lt;&lt;1];
+    vector&lt;int&gt; G[maxn&lt;&lt;1];
+    int newNode() { // new a trie node
+        for (int i = 0; i &lt; 26; ++i) nxt[L][i] = -1;
+        ed[L] = 0;
+        return L++;
+    }
+    void init() { // refresh trie
+        L = 0;
+        for (int i = 0; i &lt; maxn*2; ++i) G[i].clear();
+        root = newNode();
+    }
+    void build(char s[], int len) { // insert a word
+        int now = root, slen = strlen(s);
+        for (int i = 0; i &lt; slen; ++i) {
+            int id = s[i] - 'a'; // s[i]'s value
+            if (nxt[now][id] == -1) 
+                nxt[now][id] = newNode();
+            now = nxt[now][id];
+            G[now].push_back(len);
+            ++ed[now];
+        }
+    }
+    void dfs(int x) { // init all vector
+        sort(G[x].begin(), G[x].end());
+        for (int i = 0; i &lt; 26; ++i) 
+            if (!~nxt[x][i]) dfs(nxt[x][i]);
+    }
+} trie;
+
+int main() {
+    // freopen(&quot;in.txt&quot;, &quot;r&quot;, stdin);
+    int T; scanf(&quot;%d&quot;, &amp;T);
+    while (T--) {
+        // init &amp; input
+        trie.init();
+        scanf(&quot;%d%d&quot;, &amp;n, &amp;q);
+        for (int i = 1; i &lt;= n; ++i) {
+            scanf(&quot;%s&quot;, s);
+            int len = strlen(s);
+            for (int i = 0; s[i]; ++i) 
+                st[i&lt;&lt;1] = s[i], // 前缀
+                st[i*2+1] = s[len-1-i]; // 后缀
+            st[len&lt;&lt;1] = '\0'; // 前后缀混合串
+            trie.build(st, len);
+        }
+        trie.dfs(0);
+        // solve
+        for (int i = 1; i &lt;= q; ++i) {
+            scanf(&quot;%s%s&quot;, s, t); // s -&gt; prefix , t -&gt; suffix
+            int len1 = strlen(s), len2 = strlen(t);
+            int rt = len1 + len2, len = max(len1, len2);
+            for (int j = 0; j &lt; len; ++j) {
+                st[j&lt;&lt;1] = j &lt; len1 ? s[j] : '*';
+                st[j*2+1] = j &lt; len2 ? t[len2-1-j] : '*';
+            }
+            len *= 2, st[len] = '\0'; // 前后缀混合串
+            queue&lt;int&gt; q[2]; q[0].push(0); // 前缀队列 0， 后缀队列 1
+            int tmp = 0, ans = 0;
+            for (int j = 0; j &lt; len; ++j) {
+                tmp ^= 1; // tmp -&gt; push 的队列
+                int id = st[j] - 'a'; // st[j]'s value
+                while (!q[tmp^1].empty()) {
+                    int now = q[tmp^1].front(); q[tmp^1].pop();
+                    if (st[j] == '*') {
+                        for (int k = 0; k &lt; 26; ++k)
+                        if (~trie.nxt[now][k])
+                            q[tmp].push(trie.nxt[now][k]);
+                    } else if (~trie.nxt[now][id])
+                        q[tmp].push(trie.nxt[now][id]);
+                }
+            }
+            while (!q[tmp].empty()) {
+                int now = q[tmp].front(); q[tmp].pop();
+                int cnt = lower_bound(trie.G[now].begin(), trie.G[now].end(), rt) - trie.G[now].begin();
+                ans -= cnt; // 去掉重叠部分
+                ans += trie.ed[now];
+            }
+            printf(&quot;%d\n&quot;, ans);
+        }
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="hdu-6098-1003">HDU - 6098 - 1003</h3>
+<blockquote>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6098">Inversion</a></p>
+</blockquote>
+<h4 id="题意-2">题意</h4>
+<p>给出一个数列 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span>，求一个数列 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span>，数列 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> 满足 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>B</mi><mi>i</mi></msub><mo>=</mo><msub><mi>max</mi><mo>⁡</mo><mrow><mi>i</mi><mo>∤</mo><mi>j</mi></mrow></msub><msub><mi>A</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">B_{i}= \max\limits_{i\nmid j}A_{j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.05017em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.644101em;vertical-align:-0.960771em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.43055999999999994em;"><span style="top:-2.0152229999999998em;margin-left:0em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel amsrm mtight">∤</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span><span class="mop">max</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.960771em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>。</p>
+<h4 id="思路-2">思路</h4>
+<p>其实暴力筛选是可以的，不过用<code>Set</code>可以优化一下。记录 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">A_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的值和下标，然后按值排序，按下标用<code>Set</code>查找即可。</p>
+<h4 id="代码-2">代码</h4>
+<pre><code class="language-c++">/**
+ * Author: BOSON
+ * Question: HDU - 6098
+ * Algorithm: Set 暴力瞎搞
+**/
+
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cmath&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+#include &lt;set&gt;
+
+using namespace std;
+
+const int maxn = 100000+7;
+
+struct node {
+    int x, y;
+    bool operator &lt; (const node &amp;rhs) const {
+        return y &gt; rhs.y;
+    }
+} a[maxn];
+
+int ans[maxn];
+set&lt;int&gt; s;
+
+int main() {
+    int t; scanf(&quot;%d&quot;, &amp;t);
+    while (t--) {
+        int n; scanf(&quot;%d&quot;, &amp;n);
+        s.clear();
+        for (int i = 1; i &lt;= n; ++i) {
+            scanf(&quot;%d&quot;, &amp;a[i].y), ans[i] = 0, a[i].x = i;
+            if (i != 1) s.insert(i);
+        }
+        sort(a + 1, a + 1 + n);
+        for (int i = 1; i &lt;= n; ++i) {
+            int x = a[i].x, y = a[i].y;
+            for (set&lt;int&gt;::iterator it = s.begin(); it != s.end();) {
+                if (x % (*it) != 0 ) {
+                    ans[*it] = y;
+                    s.erase(it++);
+                    if (s.empty()) break;
+                } else ++it;
+            }
+            if (s.empty()) break;
+        }
+        for (int i = 2; i &lt;= n; ++i)
+            printf(&quot;%d%c&quot;, ans[i], i == n ? '\n':' ');
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="hdu-6103-1008">HDU - 6103 - 1008</h3>
+<h4 id="题意-3">题意</h4>
+<p>Bob有一个字符串 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span></span></span></span>，要求求出 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span></span></span></span> 中最长的两个子串，且这两个子串 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A,B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> 满足 $$dis_{A,B} = \sum\limits_{i=0}^{n-1}|A_{i}-B_{n-1-i}| \le m$$。对于每组样例，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>≤</mo><mi mathvariant="normal">∥</mi><mi>S</mi><mi mathvariant="normal">∥</mi><mo>≤</mo><mn>5000</mn></mrow><annotation encoding="application/x-tex">2 \leq \|S\| \leq 5000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∥</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord">∥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span>。</p>
+<h4 id="思路-3">思路</h4>
+<p>一开始有一个二分的思路，但是算了一下发现是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>3</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，后来灵机一动，想到一个尺取法，也就是双指针。因为有两个限制条件，一个是子串，一个是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>，子串限制了连续，而 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 限制了子串长度，所以可以用双指针优化遍历，复杂度 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。</p>
+<h4 id="代码-3">代码</h4>
+<pre><code class="language-c++">/**
+ * Author: wzhzzmzzy
+ * Question: HDU - 6103
+ * Algorithm: 双指针优化遍历
+ **/
+
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cmath&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+const int maxn = 5000+7;
+
+int a[maxn], ans, m;
+char s[maxn];
+
+void calc(int p, int q){
+    int l = 0, r = 0, sum = 0;
+    while(q-r &gt; p+r){
+        sum += abs(s[p+r] - s[q-r]), ++r;
+        if(q-l*2-p+1 &lt;= 2*ans) break;
+        while(sum &gt; m)
+            sum -= abs(s[p+l]-s[q-l]), ++l;
+        if(ans &lt; r-l) ans = r - l;
+    }
+}
+
+int main() {
+    int n, t; scanf(&quot;%d&quot;, &amp;t);
+    while (t--) {
+        scanf(&quot;%d%s&quot;,&amp;m, s);
+        n = strlen(s), ans = 0;
+        for(int i = n-1; i; --i) calc(0, i);
+        for(int i = 1; i &lt; n-1; ++i) calc(i, n-1);
+        printf(&quot;%d\n&quot;, ans);
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="hdu-6105-1010">HDU - 6105 - 1010</h3>
+<blockquote>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6105">Gameia</a></p>
+</blockquote>
+<h4 id="题意-4">题意</h4>
+<p>Bob和Alice在一起玩游戏，棋盘是一棵树，Alice先手。Alice的回合，她可以任选一个点放上白子，下一回合，Bob可以任选一个点放上黑子，黑子相邻的所有点都会被染黑。Bob还有一个特权，他可以在任意时间，将一条边剪断。特权可以使用<code>K</code>次。</p>
+<h4 id="思路-4">思路</h4>
+<p>一开始觉得是博弈，后来发现完全就是个思维题。首先，树的大小如果是奇数，那么Alice必胜。如果Bob的次数无法把树切成<code>K+1</code>个两两匹配，那Alice也必胜。如果树本身就无法分为两两匹配，那么Alice也必胜。否则Bob胜。</p>
+<h4 id="代码-4">代码</h4>
+<pre><code class="language-c++">/**
+ * Author: wzhzzmzzy
+ * Question: HDU - 6105
+ * Algorithm: 思维
+ **/
+
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cmath&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+const int N = 5000+7;
+const int M = 1000+7;
+
+char st[N];
+typedef pair&lt;int,int&gt; P;
+
+int main() {
+    int T; scanf(&quot;%d&quot;, &amp;T);
+    while (T--) {
+        // init
+        int n, k, t = 1;
+        scanf(&quot;%d%d&quot;, &amp;n, &amp;k);
+        if (n%2 || k &lt; n/2-1) t = 0;
+        // 奇数 Alice 必胜，偶数并且 Bob 无法分为匹配 Alice 也必胜
+        vector&lt;int&gt; a[M];
+        int vis[M] = {}, cnt[M] = {}, fa[M] = {};
+        P p[M];
+        for (int i = 1; i &lt;= n; ++i)
+            a[i].clear(), p[i].first = 0, p[i].second = i;
+        // first -&gt; 相连的点的数量，second -&gt; 点编号
+        // solve
+        // add edge
+        for (int i = 2; i &lt;= n; ++i) {
+            scanf(&quot;%d&quot;, fa+i);
+            a[i].push_back(fa[i]);
+            a[fa[i]].push_back(i);
+            ++p[i].first, ++p[fa[i]].first;
+            ++cnt[i], ++cnt[fa[i]];
+        }
+        // calc match
+        // 对于每个叶子节点，在树中删去它父节点为根的子树
+        // 如果删去过程中，
+        for (int i = 1; i &lt; n; i += 2) {
+            sort(p+i, p+n+1); // 找到叶子节点或者根节点
+            // for (int j = i; j &lt;= n; ++j)
+            //     cout &lt;&lt; p[j].first &lt;&lt; &quot; &quot; &lt;&lt; p[j].second &lt;&lt; endl;
+            //     cout &lt;&lt; endl;
+            if (p[i].first != 1) {
+                t = 0; break;
+            }
+            int v = p[i].second, u;
+            for (int j = 0; j &lt; a[v].size(); ++j)
+                if (!vis[a[v][j]]) { // 找到唯一指定节点
+                    u = a[v][j]; break;
+                }
+            // cout &lt;&lt; &quot;v: &quot; &lt;&lt; v &lt;&lt; &quot;  u: &quot; &lt;&lt; u &lt;&lt; endl;
+            for (int k = i+2; k &lt;= n; ++k)
+                if (u == p[k].second) { // 避免遍历到这个节点
+                    swap(p[k], p[i+1]); break;
+                }
+            for (int j = 0; j &lt; a[u].size(); ++j)
+                for (int k = i+2; k &lt;= n; ++k)
+                    if (a[u][j] == p[k].second) {
+                        // cout &lt;&lt; &quot;delete edge: &quot; &lt;&lt; u &lt;&lt; &quot;-&gt;&quot; &lt;&lt; p[k].second &lt;&lt; endl;
+                        --p[k].first; break; // 消去 v 节点的影响
+                    }
+            vis[v] = vis[u] = 1;
+        }
+        puts(t? &quot;Bob&quot; : &quot;Alice&quot;);
+    }   
+}
+</code></pre>
+<h3 id="hdu-6106-1011">HDU - 6106 - 1011</h3>
+<blockquote>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6106">Classes</a></p>
+</blockquote>
+<h4 id="思路-5">思路</h4>
+<p>签到题就不写题意了，小坑在于判断是否是无效数据。</p>
+<h4 id="代码-5">代码</h4>
+<pre><code class="language-c++">/**
+ * Author: wzhzzmzzy
+ * Question: HDU - 6106
+ * Algorithm: 签到
+**/
+
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cmath&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+#define BRK(a) if (a&lt;0) continue;
+
+using namespace std;
+
+void solve() {
+    int n; scanf(&quot;%d&quot;, &amp;n);
+    int ans = 0;
+    while (n--) {
+        int a, b, c, ab, bc, ac, abc;
+        scanf(&quot;%d%d%d%d%d%d%d&quot;, &amp;a, &amp;b, &amp;c, &amp;ab, &amp;bc, &amp;ac, &amp;abc);
+        int A = a - ab - ac + abc; BRK(A);
+        int B = b - ab - bc + abc; BRK(B);
+        int C = c - ac - bc + abc; BRK(C);
+        int AB = ab - abc; BRK(AB);
+        int AC = ac - abc; BRK(AC);
+        int BC = bc - abc; BRK(BC);
+        int sum = A+B+C+AB+AC+BC+abc;
+        ans = max(ans, sum);
+    }
+    printf(&quot;%d\n&quot;, ans);
+}
+
+int main() {
+    int t; scanf(&quot;%d&quot;, &amp;t);
+    while (t--) solve();
+}
+</code></pre>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#hdu-6096-1001">HDU - 6096 - 1001</a>
+<ul>
+<li><a href="#%E9%A2%98%E6%84%8F">题意</a></li>
+<li><a href="#%E6%80%9D%E8%B7%AF">思路</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81">代码</a></li>
+</ul>
+</li>
+<li><a href="#hdu-6098-1003">HDU - 6098 - 1003</a>
+<ul>
+<li><a href="#%E9%A2%98%E6%84%8F-2">题意</a></li>
+<li><a href="#%E6%80%9D%E8%B7%AF-2">思路</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81-2">代码</a></li>
+</ul>
+</li>
+<li><a href="#hdu-6103-1008">HDU - 6103 - 1008</a>
+<ul>
+<li><a href="#%E9%A2%98%E6%84%8F-3">题意</a></li>
+<li><a href="#%E6%80%9D%E8%B7%AF-3">思路</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81-3">代码</a></li>
+</ul>
+</li>
+<li><a href="#hdu-6105-1010">HDU - 6105 - 1010</a>
+<ul>
+<li><a href="#%E9%A2%98%E6%84%8F-4">题意</a></li>
+<li><a href="#%E6%80%9D%E8%B7%AF-4">思路</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81-4">代码</a></li>
+</ul>
+</li>
+<li><a href="#hdu-6106-1011">HDU - 6106 - 1011</a>
+<ul>
+<li><a href="#%E6%80%9D%E8%B7%AF-5">思路</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81-5">代码</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2017-08-11-2017多校第六场补题记录">https://wzhzzmzzy.github.io/post/2017-08-11-2017多校第六场补题记录</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2017-08-11-2017多校第六场补题记录">https://wzhzzmzzy.github.io/post/2017-08-11-2017多校第六场补题记录</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/MJMnE-34Ceg"># 暑期训练</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/G3FWMuzW0"># ACM-ICPC</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/MJMnE-34Ceg"># 暑期训练</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/G3FWMuzW0"># ACM-ICPC</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2017-08-18-2017多校第八场补题记录">
+                                    2017多校第八场补题记录
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2017-08-07-树形DP入门">
+                                            树形DP入门专题题解
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

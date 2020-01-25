@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                魔盒挑战第二期判题系统制作日志
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2019-05-16</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">3.1 mins</a></span>
+                                <span class="post-words">words:<a href="#">689</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX">Python</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-05-16</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">3.1 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">689</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX">Python</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <blockquote>
+<p>Github Repo：</p>
+<ul>
+<li><a href="https://github.com/SUMSC/Pandora-2nd-Competition">题面 - Flask</a></li>
+<li><a href="https://github.com/SUMSC/Pandora-2nd-FE">前端页面 - VueElementAdmin</a></li>
+<li><a href="https://github.com/LionTao/Pandora-2nd-BE">后端 - Tornado</a></li>
+</ul>
+</blockquote>
+<h2 id="遇到的坑">遇到的坑</h2>
+<h3 id="python-http-service-异步">Python HTTP Service 异步</h3>
+<p>由于 eForm-Auth 在处理一个请求时会同步阻塞，并等待远端服务器的响应，直观的表现就是占用了过多的 Worker，无法处理之后过来的请求。因此，使用经典的同步 HTTP 框架，例如 Flask，就会让之后的请求超时。</p>
+<p>之后我们选用了 tornado 的 AsyncHTTPClient 处理这个问题，也就导致了下面这个问题的发生。</p>
+<h3 id="tornado-async-fetch-的缺陷">Tornado Async Fetch 的缺陷</h3>
+<p>由于 eForm-Auth 是通过向学校的统一认证服务器发送 HTTP 模拟请求进行用户登录的，所以我们需要使用 tornado AsyncHTTPClient Fetch 对这个环节进行异步处理。由于对服务器发送请求会发生两次连续的需要通过 Cookie 鉴权的重定向，而 tornado Fetch 没有对重定向保持 Credential，而之前，当我们使用 Python 发送 HTTP 请求最主流的<code>requests</code>包对学校的统一认证服务进行访问时，则和浏览器会有相同的表现。</p>
+<p>解决方法：手动处理 tornado Redirect</p>
+<pre><code class="language-python">async def post(self):
+    ...
+    http_client = AsyncHTTPClient()
+    try:
+        response = await http_client.fetch(url,
+            method=&quot;POST&quot;, headers=headers,
+            body=urlencode({&quot;IDToken1&quot;: id_tag, &quot;IDToken2&quot;: token}),
+            follow_redirects=False
+        )
+    except HTTPClientError as e:
+        cookie = next(filter(lambda s: s.startswith(
+            'iPlanetDirectoryPro'),
+            e.response.headers.get_list('Set-Cookie'))
+        )
+        request = HTTPRequest(
+            url=&quot;...&quot;,
+            method='GET',
+            headers={
+                &quot;Cookie&quot;: cookie,
+            },
+        )
+        response = await http_client.fetch(request)
+        res = json.loads(response.body).get('data')
+        ...
+        self.finish()
+    else:
+        self.set_status(status_code=400)
+        ...
+        self.finish()
+</code></pre>
+<h3 id="github-personal-authorization-key-与-gitee-私人令牌使用差异">Github Personal Authorization Key 与 Gitee 私人令牌使用差异</h3>
+<p>当在 Azure Pipeline 中使用 Git 进行操作时，不可避免会需要使用 Github 或 Gitee 的 OpenAPI。这两者的私人令牌使用有差异，以<code>git push</code>为例：</p>
+<pre><code class="language-shell"># Github PAT
+git push -f &quot;https://$(github-pat)@github.com/&lt;USER&gt;/&lt;REPO&gt;.git&quot;
+
+# Gitee 私人令牌
+git push -f &quot;https://$(gitee-username):$(gitee-pat)@github.com/&lt;USER&gt;/&lt;REPO&gt;.git&quot;
+</code></pre>
+<h3 id="sqlite3-的奇妙错误待解决">SQLite3 的奇妙错误（待解决）</h3>
+<p>我们需要一个查询所有用户的成绩单的接口：<code>GET /inspect</code>。</p>
+<pre><code class="language-python">@app.route('/inspect', methods=['POST', 'GET'])
+def inspect():
+    if request.method == 'GET':
+        db = get_db()
+        try:
+            test_grade = db.execute(
+                '''
+                SELECT *
+                FROM (
+                    SELECT user.id_tag, user.username, test.test_status, test.test_grade
+                    FROM
+                        main.test,
+                        main.user
+                    WHERE test.user_id = user.id
+                    ORDER BY test_grade ASC
+                )
+                GROUP BY id_tag
+                ''').fetchall()
+            return jsonify(list(map(
+                lambda item: dict(zip(item.keys(), tuple(item))),
+                test_grade)))
+
+        except Exception as e:
+            tb = sys.exc_info()[2]
+            logging.error(e, exc_info=True)
+            return jsonify({&quot;error&quot;: str(e.with_traceback(tb))})
+    if request.method == 'POST':
+        ...
+</code></pre>
+<p>这里的问题发生在 SQL 语句里，我们在 PyCharm 中使用其 DATABASE 功能进行测试时，使用<code>ORDER BY ... DESC</code>可以查询到用户的历史最好成绩，但是使用 Python3 sqlite3 包时，表现截然相反：<code>ORDER BY ... DESC</code>获取的结果是用户的最坏成绩，使用<code>ORDER BY ... ASC</code>则能获得最好成绩。我们猜测是 Python3 的 sqlite3 实现问题。</p>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91">遇到的坑</a>
+<ul>
+<li><a href="#python-http-service-%E5%BC%82%E6%AD%A5">Python HTTP Service 异步</a></li>
+<li><a href="#tornado-async-fetch-%E7%9A%84%E7%BC%BA%E9%99%B7">Tornado Async Fetch 的缺陷</a></li>
+<li><a href="#github-personal-authorization-key-%E4%B8%8E-gitee-%E7%A7%81%E4%BA%BA%E4%BB%A4%E7%89%8C%E4%BD%BF%E7%94%A8%E5%B7%AE%E5%BC%82">Github Personal Authorization Key 与 Gitee 私人令牌使用差异</a></li>
+<li><a href="#sqlite3-%E7%9A%84%E5%A5%87%E5%A6%99%E9%94%99%E8%AF%AF%E5%BE%85%E8%A7%A3%E5%86%B3">SQLite3 的奇妙错误（待解决）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-5-20-Pandora-2nd-记录">https://wzhzzmzzy.github.io/post/2019-5-20-Pandora-2nd-记录</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-5-20-Pandora-2nd-记录">https://wzhzzmzzy.github.io/post/2019-5-20-Pandora-2nd-记录</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX"># Python</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX"># Python</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2019-5-16-TypeScript基础">
+                                    TypeScript 基础语法
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript类型系统">
+                                            TypeScript 类型系统
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

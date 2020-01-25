@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                操作系统笔记（三）：虚拟存储器
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2018-07-13</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">11.3 mins</a></span>
+                                <span class="post-words">words:<a href="#">3217</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/9GxOyscbPh">Linux</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/FlYaqKQKfn">操作系统</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2018-07-13</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">11.3 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">3217</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/9GxOyscbPh">Linux</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/FlYaqKQKfn">操作系统</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="虚拟存储器">虚拟存储器</h2>
+<p>为了更加有效地管理存储器并且少出错，现代系统提供了一种对主存的抽象概念，叫做虚拟存储器。虚拟存储器是硬件异常、硬件地址翻译、主存、磁盘文件和内核软件的完美交互，它为每个进程提供了一个大的、一致的和私有的地址空间。通过一个很清晰的机制，虚拟存储器提供了三个重要的能力：</p>
+<ol>
+<li>它将主存看成是一个存储在磁盘上的地址空间的高速缓存，在主存中只保存活动区域，并根据需要在磁盘和主存之间来回传送数据，通过这种方式，它高效地使用了主存。</li>
+<li>它为每个进程提供了一致的地址空间，从而简化了存储器管理。</li>
+<li>它保护了每 个进程的地址空间不被其他进程破坏。</li>
+</ol>
+<h3 id="虚拟存储器作为缓存的工具">虚拟存储器作为缓存的工具</h3>
+<p>虚拟存储器被组织为一个由存放在磁盘上的 N 个连续的字节大小的单元组成的数组。每字节都有一个唯一的虚拟地址，这个唯一的虚拟地址是作为到数组的索引的。磁盘上数组的内容被缓存在主存中。 虚拟存储器被分为一定大小的块，这些块称为虚拟页，类似的，物理存储器被分割为物理页。</p>
+<p>可以将主存看作磁盘的缓存，那么虚拟存储就能在主存上获得缓存。</p>
+<h4 id="dram-缓存的组织结构">DRAM 缓存的组织结构</h4>
+<p>SRAM 缓存指的是 CPU 和主存之间的高速缓存，DRAM 缓存表示虚拟存储器系统的缓存，它在主存中缓存虚拟页。</p>
+<p>由于 DRAM 缓存未命中时有着巨大的不命中开销，所以DRAM 缓存时全相连的，也就是说，任何虚拟页都可以放置在任何的物理页中。</p>
+<h4 id="页表">页表</h4>
+<p>虚拟存储器系统必须有某种方法来判定一个虚拟页是否存放在 DRAM 中 的某个地方。如果是，系统还必须确定这个虚拟页存放在哪个物理页中。如果不命中，系统必须判断这个虚拟页存放在磁盘的哪个位置，在物理存储器中选择一个牺牲页，并将虚拟页从磁盘拷贝到 DRAM 中，替换这个牺牲页。</p>
+<p>页表提供了虚拟页到物理页到映射。</p>
+<h4 id="缺页">缺页</h4>
+<p>DRAM 缓存不命中称为缺页。缺页异常调用内核中的缺页异常处理程序，选择一个牺牲页。磁盘和存储器之间传送页到活动叫做<strong>交换</strong>或者<strong>页面调度</strong>。在正常使用时，主存会一直等待，直到有不命中发生时，才会换入页面，这种策略称为按需页面调度。</p>
+<h4 id="局部性">局部性</h4>
+<p>局部性是程序十分重要的一个特性，尽管在整个运行过程中，程序引用的不同页面的总数可能超出物理存储器总的大小，但是局部性原则保证了在任意时刻，程序将往往在一个较小的活动页面集合上工作，这个集合叫做工作集。</p>
+<p>只要我们的程序有好的时间局部性，虚拟存储器系统就能工作得相当好。</p>
+<h3 id="虚拟存储器作为存储器管理的工具">虚拟存储器作为存储器管理的工具</h3>
+<p>虚拟存储器简化了存储器管理，并提供了一种自然的保护存储器的方法。</p>
+<p>操作系统为每个进程提供一个独立的页表，因而也就是一个独立的虚拟地址空间。</p>
+<ul>
+<li>独立的地址空间允许每个进程的存储器映像使用相同的基本格式，而不管代码和数据实际存放在物理存储器的何处。</li>
+<li>虚拟存储器还使得容易向存储器中加载可执行文件和共享对象文件。</li>
+<li>虚拟存储器简化了向用户进程提供一个简单的分配额外存储器的工作。</li>
+<li>独立地址空间为操作系统提供了一个管理用户进程和操作系统自身之间共享的一致机制。</li>
+</ul>
+<h3 id="地址翻译">地址翻译</h3>
+<p>形式上来说，地址翻译是一个 N 元素的虚拟地址空间中的元素和一个 M 元素的物理地址空间中元素之间的映射。</p>
+<p>页面命中时，CPU 执行如下步骤：</p>
+<ol>
+<li>处理器生成虚拟地址，传给 MMU；</li>
+<li>MMU 生成 PTE 地址，从缓存请求得到它；</li>
+<li>缓存向 MMU 返回 PTE；</li>
+<li>MMU 构造物理地址，传送给缓存；</li>
+<li>缓存返回请求的数据字给处理器。</li>
+</ol>
+<p>页面命中完全由硬件处理，缺页则要求硬件和系统内核协作完成。</p>
+<ol>
+<li>处理器生成虚拟地址，传给 MMU；</li>
+<li>MMU 生成 PTE 地址，从缓存请求得到它；</li>
+<li>缓存向 MMU 返回 PTE；</li>
+<li>PTE 中的有效位数零，所以 MMU 触发了一次异常，传递 CPU 中的控制到系统内核中的缺页异常处理程序。</li>
+<li>缺页处理程序确定出物理存储器中的牺牲页，如果这个页面已经被修改了，就把它换出磁盘。</li>
+</ol>
+<h4 id="利用-tlb-加速地址翻译">利用 TLB 加速地址翻译</h4>
+<p>正如我们看到的，每次 CPU 产生一个虚拟地址， MMU 就必须查阅一个 PTE, 以便将虚拟地址翻译为物理地址。在最糟糕的情况下，这又会要求从存储器取一次数据，代价是几十到几百个周期。如果 PTE 碰巧缓存在 L1 缓存中，那么开销就下降到 1 个或 2 个周期。</p>
+<p>系统在 MMU 中包括了一个关于 PTE 的小的缓存，称为翻译后备缓冲器。</p>
+<p>TLB 是一个小的、虚拟寻址的缓存，其中每一行都保存着一个由单个 PTE 组成的块。当 TLB 命中时，MMU 的翻译步骤会变得非常快。</p>
+<h3 id="存储器映射">存储器映射</h3>
+<p>Linux (以及其他一些形式的 Unix) 通过将一个虚拟存储器区域与一个磁盘上的对象关联起来，以初始化这个虚拟存储器区域的内容，这个过程称为存储器映射。虚拟存储器区域可以映射到两种类型的对象中的一种：</p>
+<ol>
+<li>Unix 文件系统中的普通文件；</li>
+<li>匿名文件:一个区域也可以映射到一个匿名文件，匿名文件是由内核创建的，包含的全是二进制零。</li>
+</ol>
+<p>一个对象可以被映射到虚拟存储器的一个区城，要么作为共享对象，要么作为私有对象。如果一个进程将一个共享对象映射到它的虚拟地址空间的一个区域内，那么这个进程对这个区域的任何写操作，对于那些也把这个共享对象映射到它们虚拟存储器的其他进程而言也是可见的。而且，这些变化也会反映在磁盘上的原始对象中。</p>
+<p>另一方面，对一个映射到私有对象的区域做的改变，对于其他进程来说是不可见的，并且进程对这个区域所做的任何写操作都不会反映在磁盘上的对象中。一个映射到共享对象的虚拟存储器区域叫做共享区域。类似地，也有私有区域。</p>
+<p>私有对象有一种特别的机制叫做写时拷贝。两个进程将一个私有对象映射到它们虚拟存储器的不同区域，但是共享这个对象的同一个物理拷贝。对于每个映象私有对象的进程，相应私有区域的页表条目都被标记为只读。并且区域结构被标记为私有的写时拷贝。</p>
+<h4 id="再看fork函数">再看<code>fork</code>函数</h4>
+<p>既然我们理解了虚拟存储器和存储器映射，那么我们可以清晰地知道<code>fork</code>函数是如何创建一个带有自己独立虚拟地址空间的新进程的。</p>
+<p>当<code>fork</code>函数被当前进程调用时，内核为新进程创建各种数据结构，并分配给它一个唯一的 PID。为了给这个新进程创建虚拟存储器，它创建了当前进程的<code>mm_struct</code>、区域结构和页表的原样拷贝。它将两个进程中的每个页面都标记为只读，并将两个进程中的每个区域结构都标记为私有的写时拷贝。</p>
+<p>当<code>fork</code>在新进程中返回时，新进程现在的虚拟存储器刚好和调用<code>fork</code>时存在的虚拟存储器相同。当这两个进程中的任一个后来进行写操作时，写时拷贝机制就会创建新页面，因此，也就为每个进程保持了私有地址空间的抽象概念。</p>
+<h3 id="系统级-io">系统级 I/O</h3>
+<p>所有语言的运行时系统都提供执行 I/O 的较高级别的工具，包含像<code>printf</code>和<code>scanf</code>这样带缓冲区的 I/O 函数。这些高级 I/O 函数都是由系统级 Unix I/O 函数来实现的。</p>
+<h4 id="unix-io">Unix I/O</h4>
+<p>一个 Unix 文件就是一个 m 个字节的序列。所有的 I/O 设备，比如网络、磁盘、终端，都被模型化为文件。Unix I/O 就是一个统一的应用接口。</p>
+<p>一个应用程序通过要求内核打开相应的文件来宣告它想要访问一个 I/O 设备。内核返回一个小的非负整数，叫做描述符。在后续的文件操作中，描述符用于标识这个文件。</p>
+<h4 id="打开和关闭文件">打开和关闭文件</h4>
+<p>进程通过调用<code>open</code>函数来打开一个已存在的文件或者创建一个新文件。</p>
+<pre><code class="language-c">#include &lt;sys/types.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;fcnt1.h&gt;
+
+int open(char *filename, int flags, mode_t mode);
+</code></pre>
+<p><code>open</code>函数将<code>filename</code>转换为一个文件描述符，并且返回描述符数字，<code>flags</code>参数指明如何访问这个文件，<code>mode</code>参数指定了新文件的访问权限位。</p>
+<h3 id="读写文件">读写文件</h3>
+<p>应用程序是通过分别调用<code>read</code>和<code>write</code>函数来执行输入和输出的。</p>
+<pre><code class="language-c">#include &lt;unistd.h&gt;
+ssize_t read(int fd, void *buf, size_t n);
+ssize_t write(int fd, const void *buf, size_t n);
+</code></pre>
+<p><code>read</code>函数从描述符为<code>fd</code>的当前文件位置拷贝最多<code>n</code>个字节到存储器位置<code>buf</code>。返回值<code>-1</code>表示一个错误，而返回值<code>0</code>表示 EOF。否则，返回值表示的是实际传送的字节数量。</p>
+<p><code>write</code>函数从存储器位置<code>buf</code>拷贝至多<code>n</code>个字节到描述符<code>fd</code>的当前文件位置。</p>
+<h3 id="标准-io">标准 I/O</h3>
+<p>ANSI C 定义了一组高级输入输出函数，称为标准 I/O 库，为程序员提供了 Unix I/O 的较高级别的替代。这个库提供了打开和关闭文件的函数 (<code>fopen</code>和<code>fclose</code>、读和写字节的函数 (<code>fread</code>和<code>fwrite</code>)、读和写字符串的函数 (<code>fgets</code>和<code>fputs</code>), 以及复杂的格式化的 I/O 函数 (<code>scanf</code>和<code>printf</code>)。</p>
+<p>标准 I/O 库将一个打开的文件模型化为一个流。对于程序员而言，一个流就是一个指向 FILE 类型的结构的指针。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+extern FILE *stdin;
+extern FILE *stdout;
+extern FILE *stderr;
+</code></pre>
+<h3 id="流和套接字的限制">流和套接字的限制</h3>
+<p>流的输入输出是有限制的。</p>
+<ol>
+<li>跟在输出函数之后的输入函数。如果中间没有插入对<code>fflush</code>、<code>fseek</code>、<code>fsetpos</code>或者<code>rewind</code>的调用，一个输入函数不能跟随在一个输出函数之后。<code>fflush</code>函数清空与流相关的缓冲区。后三个函数使用 Unix I/O<code>lseek</code>函数来重置当前的文件位置。</li>
+<li>跟在输入函数之后的输出函数。如果中间没有插入对<code>fseek</code>、<code>fsetpos</code>或者<code>rewind</code>的调用，一个输出函数不能跟随在一个输入函数之后，除非该输入函数遇到了一个 EOF。</li>
+</ol>
+<p>这些限制同样适用于套接字，但是对套接字使用<code>lseek</code>是非法的。对流的第一个限制能够采用刷新缓冲区来满足，第二个限制只能通过对同一个套接字打开两个流来满足。</p>
+<pre><code class="language-c">FILE *fpin, *fpout;
+
+fpin = fdopen(sockfd, &quot;r&quot;);
+fpout = fdopen(sockfd, &quot;w&quot;);
+</code></pre>
+<p>这里就有些麻烦，两个流都需要被关闭，而且关闭时都会试图关闭同一个套接字描述符，所以第二个操作就会失败。因此，在网络套接字上，不应该使用标准 I/O 来输入输出。</p>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8">虚拟存储器</a>
+<ul>
+<li><a href="#%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8%E4%BD%9C%E4%B8%BA%E7%BC%93%E5%AD%98%E7%9A%84%E5%B7%A5%E5%85%B7">虚拟存储器作为缓存的工具</a>
+<ul>
+<li><a href="#dram-%E7%BC%93%E5%AD%98%E7%9A%84%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84">DRAM 缓存的组织结构</a></li>
+<li><a href="#%E9%A1%B5%E8%A1%A8">页表</a></li>
+<li><a href="#%E7%BC%BA%E9%A1%B5">缺页</a></li>
+<li><a href="#%E5%B1%80%E9%83%A8%E6%80%A7">局部性</a></li>
+</ul>
+</li>
+<li><a href="#%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8%E4%BD%9C%E4%B8%BA%E5%AD%98%E5%82%A8%E5%99%A8%E7%AE%A1%E7%90%86%E7%9A%84%E5%B7%A5%E5%85%B7">虚拟存储器作为存储器管理的工具</a></li>
+<li><a href="#%E5%9C%B0%E5%9D%80%E7%BF%BB%E8%AF%91">地址翻译</a>
+<ul>
+<li><a href="#%E5%88%A9%E7%94%A8-tlb-%E5%8A%A0%E9%80%9F%E5%9C%B0%E5%9D%80%E7%BF%BB%E8%AF%91">利用 TLB 加速地址翻译</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AD%98%E5%82%A8%E5%99%A8%E6%98%A0%E5%B0%84">存储器映射</a>
+<ul>
+<li><a href="#%E5%86%8D%E7%9C%8Bfork%E5%87%BD%E6%95%B0">再看<code>fork</code>函数</a></li>
+</ul>
+</li>
+<li><a href="#%E7%B3%BB%E7%BB%9F%E7%BA%A7-io">系统级 I/O</a>
+<ul>
+<li><a href="#unix-io">Unix I/O</a></li>
+<li><a href="#%E6%89%93%E5%BC%80%E5%92%8C%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6">打开和关闭文件</a></li>
+</ul>
+</li>
+<li><a href="#%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6">读写文件</a></li>
+<li><a href="#%E6%A0%87%E5%87%86-io">标准 I/O</a></li>
+<li><a href="#%E6%B5%81%E5%92%8C%E5%A5%97%E6%8E%A5%E5%AD%97%E7%9A%84%E9%99%90%E5%88%B6">流和套接字的限制</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2018-7-13-虚拟存储器">https://wzhzzmzzy.github.io/post/2018-7-13-虚拟存储器</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2018-7-13-虚拟存储器">https://wzhzzmzzy.github.io/post/2018-7-13-虚拟存储器</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/9GxOyscbPh"># Linux</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/FlYaqKQKfn"># 操作系统</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/9GxOyscbPh"># Linux</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/FlYaqKQKfn"># 操作系统</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2018-7-14-网络编程">
+                                    操作系统笔记（四）：网络编程
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2018-7-12-异常控制流">
+                                            操作系统笔记（二）：异常控制流
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

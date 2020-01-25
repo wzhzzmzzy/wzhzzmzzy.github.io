@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                TypeScript 基础语法
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2019-05-16</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">16.3 mins</a></span>
+                                <span class="post-words">words:<a href="#">3806</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Ww2JGjz2CK">TypeScript</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-05-16</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">16.3 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">3806</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Ww2JGjz2CK">TypeScript</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="基础类型">基础类型</h2>
+<p>TS 支持与 JS 几乎完全相同的基本数据类型，还添加了枚举类型。</p>
+<ul>
+<li>
+<p>布尔值（<code>boolean</code>）</p>
+</li>
+<li>
+<p>数字（<code>number</code>）</p>
+</li>
+<li>
+<p>字符串（<code>string</code>）</p>
+</li>
+<li>
+<p>数组（<code>number[]</code>、<code>Array&lt;number&gt;</code>）</p>
+</li>
+<li>
+<p>元组（<code>[string, number]</code>）</p>
+</li>
+<li>
+<p>枚举：默认情况下，从<code>0</code>开始为元素编号。 你也可以手动的指定成员的数值。</p>
+<pre><code class="language-typescript">enum Color {Red, Green, Blue}
+enum Color {Red = 1, Green = 2, Blue = 4}
+</code></pre>
+</li>
+<li>
+<p>Any（<code>any</code>）</p>
+</li>
+<li>
+<p>Void（<code>void</code>)</p>
+</li>
+<li>
+<p>Null 和 Undefined（<code>null / undefined</code>）</p>
+</li>
+<li>
+<p>Never（<code>never</code>）：表示永不存在值的类型</p>
+</li>
+<li>
+<p>Object（<code>object</code>）：非原始类型</p>
+</li>
+</ul>
+<h3 id="类型断言">类型断言</h3>
+<p>可以在编码时给代码动态添加类型，可以看做是类型转换。类型断言语法有两种，但是在 JSX 中只有 <code>as</code> 是被允许的。</p>
+<pre><code class="language-typescript">let s: any = &quot;test string&quot;;
+let s_len: number = (&lt;string&gt;s).length;
+let s_len2: number = (s as string).length;
+</code></pre>
+<h2 id="变量声明">变量声明</h2>
+<h3 id="var"><code>var</code></h3>
+<p>过去 JavaScript 中最常见的变量声明符号。他的特点在于作用域：<code>var</code>声明可以在包含它的函数，模块，命名空间或全局作用域内部任何位置被访问。</p>
+<p>还有一点会导致一些难以被发现的错误：变量被重复声明不会报错。</p>
+<h3 id="let"><code>let</code></h3>
+<p>为了解决<code>var</code>所存在的问题，ES6 提出了<code>let</code>关键字。<code>let</code>的不同之处在于，它的作用域是块作用域，也称为此法作用域。并且，<code>let</code>变量重定义是不允许的，</p>
+<p><code>let</code>还有一个特性是屏蔽，即在内部块作用域内可以声明同名变量，不会影响到外部变量。</p>
+<h3 id="const"><code>const</code></h3>
+<p><code>const</code>关键字用于声明常量，不能被修改。</p>
+<h3 id="解构">解构</h3>
+<p>ES6中添加的解构赋值在 TypeScript 中也可以使用：</p>
+<pre><code class="language-typescript">// 数组解构
+let input = [1, 2];
+let [first, second] = input;
+[second, first] = [first, second];
+
+function foo([first, second]: [number, number]) { }
+foo(input);
+
+let [a] = [1, 2] // a === 1
+let [, b, , c] = [1, 2, 3, 4] // b === 2 &amp;&amp; c == 4
+
+// 对象解构
+let o = {a: &quot;foo&quot;, b: &quot;bar&quot;};
+let { c, d } = o;
+({ d, e } = {a: &quot;foo&quot;, b: &quot;bar&quot;});
+let {f, ...g} = o;
+</code></pre>
+<h4 id="属性重命名">属性重命名</h4>
+<p>这是一个混乱的语法，不太建议去使用。</p>
+<pre><code class="language-typescript">let { a: newName1, b: newName2 }= o;
+let {a, b}: {a: string, b: number} = o;
+</code></pre>
+<h4 id="默认值">默认值</h4>
+<p>当属性为<code>undefine</code>时给予默认值。函数参数默认值使用也是如此。</p>
+<pre><code class="language-typescript">function foo(o: { a: string, b?: number }) {
+    let { a, b = 1001 } = o;
+}
+</code></pre>
+<h4 id="函数声明">函数声明</h4>
+<p>解构当然也可以用于函数声明。当存在深层嵌套解构的时候，就算这时没有堆叠在一起的重命名，默认值和类型注解，也是令人难以理解的。</p>
+<pre><code class="language-typescript">type C = { a: string, b?: number }
+function f1({ a, b }: C): void { }
+function f2({ a=&quot;&quot;, b=0 } = {}): void { }
+f();
+</code></pre>
+<h3 id="展开">展开</h3>
+<p>展开操作符正与解构相反。 它允许你将一个数组展开为另一个数组，或将一个对象展开为另一个对象。</p>
+<pre><code class="language-typescript">let first = [1, 2];
+let second = [3, 4];
+let bothPlus = [0, ...first, ...second, 5];
+
+let defaults = { food: &quot;spicy&quot;, price: &quot;$$&quot;, ambiance: &quot;noisy&quot; };
+let search = { ...defaults, food: &quot;rich&quot; };
+</code></pre>
+<p>注意，展开时后面的属性会覆盖前面的属性。另外，展开时对象本身的方法会丢失。</p>
+<h2 id="接口">接口</h2>
+<p>TypeScript 的核心原则之一是<code>Duck Typing</code>。也就是，编译器检查类型时，并不会严格地给变量打上一个“实现了这个接口”的标记，而是判断他的是否具备了接口的所有要求，如果具备了，那就可以算是该接口的类型。</p>
+<pre><code class="language-typescript">interface LabelledValue {
+  label: string;
+}
+
+function printLabel(labelledObj: LabelledValue) {
+  console.log(labelledObj.label);
+}
+
+let myObj = {size: 10, label: &quot;Size 10 Object&quot;};
+printLabel(myObj);
+</code></pre>
+<h3 id="可选属性">可选属性</h3>
+<p>声明接口时可以声明可选属性，只需要带一个<code>?</code>即可。</p>
+<pre><code class="language-typescript">interface SquareConfig {
+  color?: string;
+  width?: number;
+}
+</code></pre>
+<h3 id="只读属性">只读属性</h3>
+<p>可以给对象创建只读属性。</p>
+<pre><code class="language-typescript">interface Point {
+    readonly x: number;
+    readonly y: number;
+}
+</code></pre>
+<p>TypeScript 添加了 <code>ReadonlyArray&lt;T&gt;</code>，与<code>Array&lt;T&gt;</code>相似，只是把所有的可变方法都去掉了，因此可以确保数组创建后再也不能被修改。<code>ReadonlyArray</code>不可以被整个赋值为一个普通数组，但是可以用类型断言重写。</p>
+<h3 id="额外的属性检查">额外的属性检查</h3>
+<p>在使用接口时，有时会出现一些问题，比如将可选属性与接收接口指定类型的函数结合，你可能认为传入一个包含其他属性的对象也没问题，但是事实上，这是无法成功的。</p>
+<pre><code class="language-typescript">interface SquareConfig {
+    color?: string;
+    width?: number;
+}
+
+function createSquare(config: SquareConfig): { color: string; area: number } {
+    // ...
+}
+
+// error: 'colour' not expected in type 'SquareConfig'
+let mySquare = createSquare({ colour: &quot;red&quot;, width: 100 });
+
+// 这样可以绕开检查
+let mySquare = createSquare({ width: 100, opacity: 0.5 } as SquareConfig);
+
+// 最好的方法是给接口添加一个字符串索引签名
+interface SquareConfig {
+    color?: string;
+    width?: number;
+    [propName: string]: any;
+}
+</code></pre>
+<h3 id="函数类型">函数类型</h3>
+<p>函数当然也具有类型，也可以在接口声明，以下是一个函数接口的声明：</p>
+<pre><code class="language-typescript">interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+// 对于函数，不会检查其中形参的名称是否符合声明，只要求对应位置上的参数类型是兼容的
+let mySearch: SearchFunc = function(src: string, subStr: string) {
+  let result = source.search(subString);
+  return result &gt; -1;
+}
+</code></pre>
+<h3 id="可索引的类型">可索引的类型</h3>
+<p>与使用接口描述函数类型差不多，我们也可以描述那些能够“通过索引得到”的类型，比如<code>a[10]</code>或<code>ageMap[&quot;daniel&quot;]</code>。 可索引类型具有一个索引签名，它描述了对象索引的类型，还有相应的索引返回值类型。</p>
+<pre><code class="language-typescript">interface StringArray {
+  [index: number]: string;
+}
+
+let myArray: StringArray;
+myArray = [&quot;Bob&quot;, &quot;Fred&quot;];
+
+let myStr: string = myArray[0];
+</code></pre>
+<p>这里有个需要注意的地方：TypeScript 支持字符串和数字索引。可以同时使用两种类型，但是数字索引必须是字符串索引返回值的子类型。这是因为当使用 <code>number</code>来索引时，JavaScript会将它转换成<code>string</code>然后再去索引对象。 也就是说用 <code>100</code>（一个<code>number</code>）去索引等同于使用<code>&quot;100&quot;</code>（一个<code>string</code>）去索引，因此两者需要保持一致。</p>
+<h3 id="类类型">类类型</h3>
+<h4 id="实现接口">实现接口</h4>
+<p>与C#或Java里接口的基本作用一样。</p>
+<pre><code class="language-typescript">interface ClockInterface {
+    currentTime: Date;
+    setTime(d: Date);
+}
+
+class Clock implements ClockInterface {
+    currentTime: Date;
+    setTime(d: Date) {
+        this.currentTime = d;
+    }
+    constructor(h: number, m: number) { }
+}
+</code></pre>
+<p>接口描述了类的公共部分，而不是公共和私有两部分。 它不会帮你检查类是否具有某些私有成员。</p>
+<p>当我们想要用接口去描述一个类的构造函数的时候，我们可以将类描述为一个只包含构造函数的接口：</p>
+<pre><code class="language-typescript">interface ClockConstructor {
+    new (hour: number, minute: number): ClockInterface;
+}
+interface ClockInterface {
+    tick();
+}
+
+function createClock(ctor: ClockConstructor, hour: number, minute: number): ClockInterface {
+    return new ctor(hour, minute);
+}
+class DigitalClock implements ClockInterface {
+    constructor(h: number, m: number) { }
+    tick() {
+        console.log(&quot;beep beep&quot;);
+    }
+}
+</code></pre>
+<h3 id="继承接口">继承接口</h3>
+<p>和类一样，接口也可以相互继承。一个接口可以继承多个接口，创建出多个接口的合成接口。</p>
+<h3 id="混合类型">混合类型</h3>
+<p>当需要描述混合类型的时候，接口也是可以胜任的。</p>
+<pre><code class="language-typescript">interface Counter {
+    (start: number): string;
+    interval: number;
+    reset(): void;
+}
+</code></pre>
+<h3 id="接口继承类">接口继承类</h3>
+<p>当接口继承了一个类类型时，它会继承类的成员但不包括其实现。</p>
+<h2 id="类">类</h2>
+<h3 id="类-2">类</h3>
+<p>下面看一个使用类的例子。</p>
+<pre><code class="language-typescript">class Greeter {
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return &quot;Hello, &quot; + this.greeting;
+    }
+}
+
+let greeter = new Greeter(&quot;world&quot;);
+</code></pre>
+<h3 id="继承">继承</h3>
+<p>在构造函数里访问 <code>this</code>的属性之前，我们 <em>一定</em>要调用 <code>super()</code>。 这个是TypeScript强制执行的一条重要规则。</p>
+<pre><code class="language-typescript">class Animal {
+    name: string;
+    constructor(theName: string) { this.name = theName; }
+    move(distanceInMeters: number = 0) {
+        console.log(`${this.name} moved ${distanceInMeters}m.`);
+    }
+}
+
+class Snake extends Animal {
+    constructor(name: string) { super(name); }
+    move(distanceInMeters = 5) {
+        console.log(&quot;Slithering...&quot;);
+        super.move(distanceInMeters);
+    }
+}
+
+class Horse extends Animal {
+    constructor(name: string) { super(name); }
+    move(distanceInMeters = 45) {
+        console.log(&quot;Galloping...&quot;);
+        super.move(distanceInMeters);
+    }
+}
+</code></pre>
+<h3 id="公共-私有-受保护-只读">公共、私有、受保护、只读</h3>
+<p>默认为<code>public</code>，当然也可以明确标记；标记为<code>private</code>时，不可以在类外部访问；<code>protected</code>可以在派生类内访问。</p>
+<p>属性还可以多一个<code>readonly</code>修饰符，必须有默认值或者在构造函数里赋值。</p>
+<h3 id="存取器">存取器</h3>
+<p>TypeScript 中当然有<code>getter/setters</code>。</p>
+<pre><code class="language-typescript">let passcode = &quot;secret passcode&quot;;
+
+class Employee {
+    private _fullName: string;
+
+    get fullName(): string {
+        return this._fullName;
+    }
+
+    set fullName(newName: string) {
+        if (passcode &amp;&amp; passcode == &quot;secret passcode&quot;) {
+            this._fullName = newName;
+        }
+        else {
+            console.log(&quot;Error: Unauthorized update of employee!&quot;);
+        }
+    }
+}
+</code></pre>
+<h3 id="静态属性">静态属性</h3>
+<p>访问静态属性前面要加类名。</p>
+<pre><code class="language-typescript">class Grid {
+    static origin = {x: 0, y: 0};
+    calculateDistanceFromOrigin(point: {x: number; y: number;}) {
+        let xDist = (point.x - Grid.origin.x);
+        let yDist = (point.y - Grid.origin.y);
+        return Math.sqrt(xDist * xDist + yDist * yDist) / this.scale;
+    }
+    constructor (public scale: number) { }
+}
+</code></pre>
+<h3 id="抽象类">抽象类</h3>
+<p>抽象类不可以被实例化。</p>
+<pre><code class="language-typescript">abstract class Animal {
+    abstract makeSound(): void;
+    move(): void {
+        console.log('roaming the earch...');
+    }
+}
+</code></pre>
+<h3 id="构造函数的本质">构造函数的本质</h3>
+<p>在声明一个类的时候，事实上是声明了一个构造函数：</p>
+<pre><code class="language-typescript">class Greeter {
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return &quot;Hello, &quot; + this.greeting;
+    }
+}
+
+let greeter: Greeter;
+greeter = new Greeter(&quot;world&quot;);
+console.log(greeter.greet());
+
+// 编译后的 JavaScript
+let Greeter = (function () {
+    function Greeter(message) {
+        this.greeting = message;
+    }
+    Greeter.prototype.greet = function () {
+        return &quot;Hello, &quot; + this.greeting;
+    };
+    return Greeter;
+})();
+
+let greeter;
+greeter = new Greeter(&quot;world&quot;);
+console.log(greeter.greet());
+</code></pre>
+<h3 id="把类当做接口使用">把类当做接口使用</h3>
+<p>你可以在任何使用接口的地方使用类。</p>
+<h2 id="函数">函数</h2>
+<p>在 TypeScript 中可以使用命名函数和匿名函数。函数可以使用函数外定义的变量。</p>
+<h3 id="函数类型-2">函数类型</h3>
+<p>函数类型包含两部分：参数类型和返回值类型。 当写出完整函数类型的时候，这两部分都是需要的。只要参数类型是匹配的，那么就认为它是有效的函数类型，而不在乎参数名是否正确。</p>
+<pre><code class="language-typescript">let myAdd: (x: number, y: number) =&gt; number =
+    function(x: number, y: number): number { return x + y; };
+</code></pre>
+<h3 id="可选参数和默认参数">可选参数和默认参数</h3>
+<p>TypeScript里的每个函数参数都是必须的。，但是你可以传入<code>null</code>或者<code>undefined</code>。可选参数是指可以在参数名旁边添加<code>?</code>。默认值可以在无默认值的参数之前，如果要这样的话，就需要使用传入<code>undefined</code>来获取参数的默认值。</p>
+<h3 id="剩余参数">剩余参数</h3>
+<p>在TypeScript里，你可以把所有参数收集到一个变量里：</p>
+<pre><code class="language-typescript">function buildName(firstName: string, ...restOfName: string[]) {
+  return firstName + &quot; &quot; + restOfName.join(&quot; &quot;);
+}
+
+let employeeName = buildName(&quot;Joseph&quot;, &quot;Samuel&quot;, &quot;Lucas&quot;, &quot;MacKinzie&quot;);
+</code></pre>
+<h3 id="this"><code>this</code></h3>
+<p>如果你想了解JavaScript里的 <code>this</code>是如何工作的，那么首先阅读Yehuda Katz写的<a href="http://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/">Understanding JavaScript Function Invocation and &quot;this&quot;</a>。TypeScript能通知你错误地使用了<code>this</code>的地方。</p>
+<p>JavaScript里，<code>this</code>的值在函数被调用的时候才会指定。为了解决这个问题，我们可以在函数被返回时就绑好正确的<code>this</code>。箭头函数能保存函数创建时的 <code>this</code>值，而不是调用时的值。</p>
+<pre><code class="language-javascript">let deck = {
+    suits: [&quot;hearts&quot;, &quot;spades&quot;, &quot;clubs&quot;, &quot;diamonds&quot;],
+    cards: Array(52),
+    createCardPicker: function() {
+        // NOTE: the line below is now an arrow function, allowing us to capture 'this' right here
+        return () =&gt; {
+            let pickedCard = Math.floor(Math.random() * 52);
+            let pickedSuit = Math.floor(pickedCard / 13);
+
+            return {suit: this.suits[pickedSuit], card: pickedCard % 13};
+        }
+    }
+}
+
+let cardPicker = deck.createCardPicker();
+let pickedCard = cardPicker();
+
+alert(&quot;card: &quot; + pickedCard.card + &quot; of &quot; + pickedCard.suit);
+</code></pre>
+<p>更好事情是，TypeScript会警告你犯了一个错误，如果你给编译器设置了<code>--noImplicitThis</code>标记。 它会指出<code>this.suits[pickedSuit]</code>里的<code>this</code>的类型为<code>any</code>。这是因为 <code>this</code>来自对象字面量里的函数表达式。 修改的方法是，提供一个显式的 <code>this</code>参数。 <code>this</code>参数是个假的参数，它出现在参数列表的最前面：</p>
+<blockquote>
+<p><code>this: void</code> means that <code>addClickListener</code> expects <code>f</code> to be a function that does not require a <code>this</code> type.</p>
+</blockquote>
+<pre><code class="language-typescript">function f(this: void) {
+    // make sure `this` is unusable in this standalone function
+}
+</code></pre>
+<p>我们往例子里加一些接口，代码就会变得更加清晰：</p>
+<pre><code class="language-typescript">interface Card {
+    suit: string;
+    card: number;
+}
+interface Deck {
+    suits: string[];
+    cards: number[];
+    createCardPicker(this: Deck): () =&gt; Card;
+}
+let deck: Deck = {
+    suits: [&quot;hearts&quot;, &quot;spades&quot;, &quot;clubs&quot;, &quot;diamonds&quot;],
+    cards: Array(52),
+    // NOTE: The function now explicitly specifies that its callee must be of type Deck
+    createCardPicker: function(this: Deck) {
+        return () =&gt; {
+            let pickedCard = Math.floor(Math.random() * 52);
+            let pickedSuit = Math.floor(pickedCard / 13);
+
+            return {suit: this.suits[pickedSuit], card: pickedCard % 13};
+        }
+    }
+}
+
+let cardPicker = deck.createCardPicker();
+let pickedCard = cardPicker();
+
+alert(&quot;card: &quot; + pickedCard.card + &quot; of &quot; + pickedCard.suit);
+</code></pre>
+<p>现在TypeScript知道<code>createCardPicker</code>期望在某个<code>Deck</code>对象上调用。 也就是说 <code>this</code>是<code>Deck</code>类型的，而非<code>any</code>，因此<code>--noImplicitThis</code>不会报错了。</p>
+<p>如果你想要把一个函数作为参数传入一个库函数，而库函数所定义的函数类型中有<code>this: void</code>，那么意味着你需要修复你函数中<code>this</code>的类型，否则会报错。或者你可以直接传入一个箭头函数。</p>
+<h3 id="函数重载">函数重载</h3>
+<p>TypeScript使用严格函数定义的另一个好处是可以使用函数重载。为了让编译器能够选择正确的检查类型，它与JavaScript里的处理流程相似。 它查找重载列表，尝试使用第一个重载定义。 如果匹配的话就使用这个。 因此，在定义重载的时候，一定要把最精确的定义放在最前面。</p>
+<h2 id="泛型">泛型</h2>
+<p>TypeScript的泛型和其他语言的泛型非常相似。使用泛型的好处是不会像使用<code>any</code>一样丢失类型信息。</p>
+<pre><code class="language-typescript">function identity&lt;T&gt;(arg: T): T {
+    return arg;
+}
+</code></pre>
+<h3 id="泛型函数的类型">泛型函数的类型</h3>
+<pre><code class="language-typescript">interface GenericIdentityFn {
+    &lt;T&gt;(arg: T): T;
+}
+</code></pre>
+<h3 id="泛型类">泛型类</h3>
+<p>我们在<a href="https://www.tslang.cn/docs/handbook/classes.html">类</a>那节说过，类有两部分：静态部分和实例部分。 泛型类指的是实例部分的类型，所以类的静态属性不能使用这个泛型类型。</p>
+<pre><code class="language-typescript">class GenericNumber&lt;T&gt; {
+    zeroValue: T;
+    add: (x: T, y: T) =&gt; T;
+}
+
+</code></pre>
+<h3 id="泛型约束">泛型约束</h3>
+<p>由于泛型本身没有任何类型，所以这就弱化了编译器的功能。编译器会十分严格地要求泛型，所以我们无法调用泛型上的方法。我们可以给泛型添加约束来让泛型可以被更好地使用。</p>
+<pre><code class="language-typescript">function loggingIdentity&lt;T extends Lengthwise&gt;(arg: T): T {
+    console.log(arg.length);  // Now we know it has a .length property, so no more error
+    return arg;
+}
+</code></pre>
+<h3 id="在泛型约束中使用类型参数">在泛型约束中使用类型参数</h3>
+<p>你可以声明一个类型参数，且它被另一个类型参数所约束。 比如，现在我们想要用属性名从对象里获取这个属性。 并且我们想要确保这个属性存在于对象 <code>obj</code>上，因此我们需要在这两个类型之间使用约束。</p>
+<pre><code class="language-typescript">function getProperty(obj: T, key: K) {
+    return obj[key];
+}
+
+let x = { a: 1, b: 2, c: 3, d: 4 };
+
+getProperty(x, &quot;a&quot;); // okay
+getProperty(x, &quot;m&quot;); // error: Argument of type 'm' isn't assignable to 'a' | 'b' | 'c' | 'd'.
+</code></pre>
+<h3 id="在泛型里使用类类型">在泛型里使用类类型</h3>
+<p>在TypeScript使用泛型创建工厂函数时，需要引用构造函数的类类型。比如，</p>
+<pre><code class="language-ts">function create&lt;T&gt;(c: {new(): T; }): T {
+    return new c();
+}
+</code></pre>
+<p>一个更高级的例子，使用原型属性推断并约束构造函数与类实例的关系。</p>
+<pre><code class="language-ts">class BeeKeeper {
+    hasMask: boolean;
+}
+
+class ZooKeeper {
+    nametag: string;
+}
+
+class Animal {
+    numLegs: number;
+}
+
+class Bee extends Animal {
+    keeper: BeeKeeper;
+}
+
+class Lion extends Animal {
+    keeper: ZooKeeper;
+}
+
+function createInstance&lt;A extends Animal&gt;(c: new () =&gt; A): A {
+    return new c();
+}
+
+createInstance(Lion).keeper.nametag;  // typechecks!
+createInstance(Bee).keeper.hasMask;   // typechecks!
+</code></pre>
+<h2 id="symbol">Symbol</h2>
+<p>自ECMAScript 2015起，<code>symbol</code>成为了一种新的原生类型，就像<code>number</code>和<code>string</code>一样。</p>
+<p><code>symbol</code>类型的值是通过<code>Symbol</code>构造函数创建的。</p>
+<pre><code class="language-ts">let sym1 = Symbol();
+
+let sym2 = Symbol(&quot;key&quot;); // 可选的字符串key
+</code></pre>
+<p>Symbols是不可改变且唯一的。</p>
+<pre><code class="language-ts">let sym2 = Symbol(&quot;key&quot;);
+let sym3 = Symbol(&quot;key&quot;);
+
+sym2 === sym3; // false, symbols是唯一的
+</code></pre>
+<p>像字符串一样，symbols也可以被用做对象属性的键。</p>
+<pre><code class="language-ts">let sym = Symbol();
+
+let obj = {
+    [sym]: &quot;value&quot;
+};
+
+console.log(obj[sym]); // &quot;value&quot;
+</code></pre>
+<p>Symbols也可以与计算出的属性名声明相结合来声明对象的属性和类成员。</p>
+<pre><code class="language-ts">const getClassNameSymbol = Symbol();
+
+class C {
+    [getClassNameSymbol](){
+       return &quot;C&quot;;
+    }
+}
+
+let c = new C();
+let className = c[getClassNameSymbol](); // &quot;C&quot;
+</code></pre>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B">基础类型</a>
+<ul>
+<li><a href="#%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80">类型断言</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E">变量声明</a>
+<ul>
+<li><a href="#var"><code>var</code></a></li>
+<li><a href="#let"><code>let</code></a></li>
+<li><a href="#const"><code>const</code></a></li>
+<li><a href="#%E8%A7%A3%E6%9E%84">解构</a>
+<ul>
+<li><a href="#%E5%B1%9E%E6%80%A7%E9%87%8D%E5%91%BD%E5%90%8D">属性重命名</a></li>
+<li><a href="#%E9%BB%98%E8%AE%A4%E5%80%BC">默认值</a></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E">函数声明</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B1%95%E5%BC%80">展开</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8E%A5%E5%8F%A3">接口</a>
+<ul>
+<li><a href="#%E5%8F%AF%E9%80%89%E5%B1%9E%E6%80%A7">可选属性</a></li>
+<li><a href="#%E5%8F%AA%E8%AF%BB%E5%B1%9E%E6%80%A7">只读属性</a></li>
+<li><a href="#%E9%A2%9D%E5%A4%96%E7%9A%84%E5%B1%9E%E6%80%A7%E6%A3%80%E6%9F%A5">额外的属性检查</a></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B">函数类型</a></li>
+<li><a href="#%E5%8F%AF%E7%B4%A2%E5%BC%95%E7%9A%84%E7%B1%BB%E5%9E%8B">可索引的类型</a></li>
+<li><a href="#%E7%B1%BB%E7%B1%BB%E5%9E%8B">类类型</a>
+<ul>
+<li><a href="#%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3">实现接口</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BB%A7%E6%89%BF%E6%8E%A5%E5%8F%A3">继承接口</a></li>
+<li><a href="#%E6%B7%B7%E5%90%88%E7%B1%BB%E5%9E%8B">混合类型</a></li>
+<li><a href="#%E6%8E%A5%E5%8F%A3%E7%BB%A7%E6%89%BF%E7%B1%BB">接口继承类</a></li>
+</ul>
+</li>
+<li><a href="#%E7%B1%BB">类</a>
+<ul>
+<li><a href="#%E7%B1%BB-2">类</a></li>
+<li><a href="#%E7%BB%A7%E6%89%BF">继承</a></li>
+<li><a href="#%E5%85%AC%E5%85%B1-%E7%A7%81%E6%9C%89-%E5%8F%97%E4%BF%9D%E6%8A%A4-%E5%8F%AA%E8%AF%BB">公共、私有、受保护、只读</a></li>
+<li><a href="#%E5%AD%98%E5%8F%96%E5%99%A8">存取器</a></li>
+<li><a href="#%E9%9D%99%E6%80%81%E5%B1%9E%E6%80%A7">静态属性</a></li>
+<li><a href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB">抽象类</a></li>
+<li><a href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E6%9C%AC%E8%B4%A8">构造函数的本质</a></li>
+<li><a href="#%E6%8A%8A%E7%B1%BB%E5%BD%93%E5%81%9A%E6%8E%A5%E5%8F%A3%E4%BD%BF%E7%94%A8">把类当做接口使用</a></li>
+</ul>
+</li>
+<li><a href="#%E5%87%BD%E6%95%B0">函数</a>
+<ul>
+<li><a href="#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B-2">函数类型</a></li>
+<li><a href="#%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0%E5%92%8C%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0">可选参数和默认参数</a></li>
+<li><a href="#%E5%89%A9%E4%BD%99%E5%8F%82%E6%95%B0">剩余参数</a></li>
+<li><a href="#this"><code>this</code></a></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD">函数重载</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B3%9B%E5%9E%8B">泛型</a>
+<ul>
+<li><a href="#%E6%B3%9B%E5%9E%8B%E5%87%BD%E6%95%B0%E7%9A%84%E7%B1%BB%E5%9E%8B">泛型函数的类型</a></li>
+<li><a href="#%E6%B3%9B%E5%9E%8B%E7%B1%BB">泛型类</a></li>
+<li><a href="#%E6%B3%9B%E5%9E%8B%E7%BA%A6%E6%9D%9F">泛型约束</a></li>
+<li><a href="#%E5%9C%A8%E6%B3%9B%E5%9E%8B%E7%BA%A6%E6%9D%9F%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0">在泛型约束中使用类型参数</a></li>
+<li><a href="#%E5%9C%A8%E6%B3%9B%E5%9E%8B%E9%87%8C%E4%BD%BF%E7%94%A8%E7%B1%BB%E7%B1%BB%E5%9E%8B">在泛型里使用类类型</a></li>
+</ul>
+</li>
+<li><a href="#symbol">Symbol</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-5-16-TypeScript基础">https://wzhzzmzzy.github.io/post/2019-5-16-TypeScript基础</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-5-16-TypeScript基础">https://wzhzzmzzy.github.io/post/2019-5-16-TypeScript基础</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Ww2JGjz2CK"># TypeScript</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Ww2JGjz2CK"># TypeScript</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2019-5-24-How-Browsers-Work">
+                                    浏览器工作原理
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2019-5-20-Pandora-2nd-记录">
+                                            魔盒挑战第二期判题系统制作日志
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

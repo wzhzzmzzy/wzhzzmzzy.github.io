@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                网站架构及其演变过程
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2018-07-14</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">15.5 mins</a></span>
+                                <span class="post-words">words:<a href="#">4566</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/s_zlHQ8hoN">计算机网络</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2018-07-14</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">15.5 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">4566</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/s_zlHQ8hoN">计算机网络</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="网站架构及其演变过程">网站架构及其演变过程</h2>
+<h3 id="软件的三大类型">软件的三大类型</h3>
+<ul>
+<li>
+<p>单机软件</p>
+</li>
+<li>
+<p>C/S 结构</p>
+<p>Client/Server 结构，客户端与服务器交互。一开始，是由于服务端需要管理一些数据，后来，服务端就不只是管理数据了，也需要处理一些业务逻辑。哪些工作需要放在服务端，哪些工作下放到客户端，就变成了见仁见智的问题。服务端的业务可以提供更好的安全性和稳定性，而且升级起来也比较容易，但是服务端的压力就会变大很多；下放到客户端就会增加安全性和稳定性问题，升级也是一个很大的问题。另外，由于网络 I/O 的巨大开销，通过网络传输的数据应该尽量少。</p>
+</li>
+<li>
+<p>B/S 结构</p>
+<p>服务器变得越来越强大，就有了浏览器，而且一个浏览器可以访问所有同种类型的网站，主要用作展示数据。B/S 结构除了提供统一的客户端还根据相应的协议和标准提供通用的服务器程序。</p>
+</li>
+</ul>
+<p>这就是软件的三大类型，各有特点。B/S 类型开发简单，使用方便，功能强大，所以现在使用最广泛。</p>
+<h3 id="基础结构并不简单">基础结构并不简单</h3>
+<p>B/S 结构是最基础的结构，但是依然十分复杂。B/S 结构网络传输的分解方式有两种，一种是标准的 OSI 参考模型，一种是 TCP/IP 模型。</p>
+<p>OSI 分为七层：应用层、表示层、会话层、传输层、网络层、数据链路层、物理层。这于 TCP/IP 是对应的，应用、表示、会话对应应用层，传输层对应传输层，网络层对应网络互联层，数据链路、物理层对应网络接入层。</p>
+<p>OSI 参考模型较为复杂，一般来说，TCP/IP 四层模型更好理解：</p>
+<ul>
+<li>网络接入层：将需要连接的节点接入网络，为数据传输提供条件；</li>
+<li>网络互联层：找到要传输数据的目标节点；</li>
+<li>传输层：实际传输数据；</li>
+<li>应用层：使用接收到的数据。</li>
+</ul>
+<p>稍微解释一下，网络接入层就是交通网络，数据包在这里传递，网络互联层是我们的地址，传输层是我们拿到数据包的地方，然后应用层拆包使用数据。</p>
+<p>每一层都有自己的协议族，TCP/IP 协议族就泛指他们。简单理解的话，网际互联层是 IP 协议，传输层是 TCP 协议，应用层是 HTTP 协议。另外，在 B/S 结构中还使用到了 DNS 协议，而且在 HTTP 协议之上还有其他的规范，比如 Python 的 WSGI、Java Web 的Servlet 等等。</p>
+<p>数据传输本质大家都知道，是按照晶体振动周期或者其整数倍来传输代表 0/1 的高低电平，传输过程中最为关键的就是各种传输协议，对硬件来说是总线协议，对网络来说就是网络传输协议。要开发一个如前面所述的 B/S 结构系统并非难事，但是这样的系统并不好用，除了用户交互之外，最重要的问题就是速度问题。比如 12306 的购票系统。虽然这个系统已经花了很大力气去优化，但是依然只能说是堪堪可用的地步。<strong>解决速度问题的核心就是解决海量数据操作和高并发问题，网站复杂的架构就是从这两个问题演变出来的。</strong></p>
+<h3 id="海量数据的解决方案">海量数据的解决方案</h3>
+<p>无论是企业的业务系统还是互联网的网站程序，都面临着数据量大的问题，如果解决不好就严重影响着系统的运行速度。不过，也有着很多的解决方案</p>
+<h4 id="缓存和页面静态化">缓存和页面静态化</h4>
+<p>数据量大这个问题最直接的使用方案就是使用缓存。缓存就是将数据库中获取的结果暂时保存起来，下次使用的时候不用再到数据库里去获取，这样可以大大减少数据库服务器的压力，也避免了瓶颈的出现。</p>
+<p>缓存的使用方式可以分为直接保存到内存和使用缓存框架两种。直接操作主要是使用<code>Map</code>，尤其是<code>ConcurrentHashMap</code>。常用的缓存框架有<code>Ehcache</code>，<code>Memcache</code>和<code>Redis</code>。缓存使用过程中，最重要的问题是什么时候创建缓存，和缓存的失效机制。缓存可以在第一次获取的时候创建，也可以在程序启动和缓存失效之后立即创建，缓存的失效还可以定期失效，也可以是数据发生变化时立即失效，数据发生变化时失效还有着粒度大小的区分。</p>
+<blockquote>
+<p>对于空数据，缓存应该有一个特别的标识符或者类型来保存，避免每次都因为缓存为空而访问数据库。</p>
+</blockquote>
+<p>缓存同样也有缺点，它只适用于数据变化不是很频繁的情况。</p>
+<p>与缓存相似的另一种技术叫做页面静态化，原理上和缓存很相似，页面静态化就是将最后一次访问的页面保存起来，不用每次都调用生成新的页面了。不但不需要查库，连应用程序处理都不用了。</p>
+<p>页面静态化可以使用模板生成，也可以使用缓存服务器在应用服务器的上一层缓存生成的页面，比如使用<code>Squid</code>，另外 Nginx 也提供了相应的功能。</p>
+<h4 id="数据库优化">数据库优化</h4>
+<p>要解决数据量问题，数据库优化是必不可少的一环。数据库优化方法很多，表结构、SQL 语句、分区和分表、索引优化、使用存储过程代替直接操作等，有时候合理使用冗余也能获得很好的效果。</p>
+<h5 id="表结构优化">表结构优化</h5>
+<p>表结构优化是数据库中最基础也是最重要的，但也是最复杂的，不细说。</p>
+<h5 id="sql-语句优化">SQL 语句优化</h5>
+<p>基础的 SQL 优化是在语法层面，更重要的是逻辑层面，也需要根据实际情况具体处理，而且要和索引缓存配合使用。不过有一个通用的做法：将涉及大数据业务的 SQL 语句执行时间详细记录下来，其次通过仔细分析日志找出需要优化的语句和其中的问题，然后再有的放矢地优化，而不是不分重点对每条语句都花同样的时间和精力优化。</p>
+<h5 id="分区">分区</h5>
+<p>数据量变大，如果可以分区或者分表，可以起到很好的效果。一张表中的数据量很大，操作速度就会变慢，就可以用多张表中保存。但是多张表会造成操作的麻烦，所以可以通过分区来达到目的。分区就是将一张表中的数据按照一定的规则分到不同的区来保存。</p>
+<h5 id="分表">分表</h5>
+<p>如果一张表中的数据可以分为几种固定不变的类型，而且同时对多种类型共同操作的次数不多，那么都可以通过分表来处理。</p>
+<h5 id="索引优化">索引优化</h5>
+<p>索引就是为数据表的某一个字段建立一张列表，记录字段值与物理位置的映射，加快查询的速度。索引增加查询的时候降低了数据操作（增删改）的速度，因为数据变化的时候需要更新相关的索引。所以需要多添加一些测试。</p>
+<h5 id="使用存储过程代替常用操作">使用存储过程代替常用操作</h5>
+<p>存储过程只需要单次编译，而且可以在存储过程中做一些复杂的操作，比直接操作高效很多。</p>
+<h4 id="分离活跃数据">分离活跃数据</h4>
+<p>有时候，数据总量很大，但是活跃数据并不多，这种情况就可以将活跃数据单独保存起来从而提高处理效率。比如，对网站来说，活跃用户只占总用户的一小部分，这时候就可以给活跃用户一张特殊的表，找不到再到不活跃用户表中去查找。</p>
+<h4 id="批量读取和延迟修改">批量读取和延迟修改</h4>
+<p>批量读取和延迟修改的原理是通过减少操作次数来提高效率，如果使用恰当，效率将会有非常大的提高。</p>
+<p>批量读取是将多次查询合并到一次中进行，如果每保存一条记录都查询一次数据库，那么对每个需要检查的字段，都需要查询与要保存的记录条数相同次数的数据库，这时候可以先将所有要保存的数据的相应字段读取到一个变量中，然后使用<code>in</code>语句统一查询数据库。</p>
+<p>延迟修改主要针对高并发而且频繁修改的数据，比如一些统计数据。这种情况可以先将需要修改的数据暂时保存到缓存中，然后定时将缓存中的数据保存到数据库中，程序在读取数据时可以同时读取数据库中和缓存中的数据。</p>
+<h4 id="读写分离">读写分离</h4>
+<p>读写分离的本质是对数据库进行集群，这样就可以在高并发的情况下将数据库的操作分配到多个数据库服务器去处理，从而降低单台服务器的压力了，不过由于数据库的特殊性——每台服务器所保存的数据都需要一致，所以数据同步就成了数据库集群中最核心的问题。这个问题当多台服务器可以进行写数据时数据同步变得更加复杂，所以一般将写操作交给一台主服务器来处理，然后同步到多台从服务器中。如果从服务器数量多，那么可以让主服务器先向其中一部分从服务器同步数据，第一部分从服务器接收到数据后向另一部分同步。</p>
+<p>读写分离还需要考虑负载均衡问题，需要专门的软硬件配合。</p>
+<h4 id="分布式数据库">分布式数据库</h4>
+<p>分布式数据库是将不同的表存放到不同的数据库中，然后再存放到不同的服务器。这样再处理请求时，如果需要调用多个表，可以让多台服务器同时处理，提高处理的速度。</p>
+<p>数据库集群（读写分离）的作用是将多个请求分配到不同的服务器处理，从而减轻单台服务器的压力，而分布式数据库是解决单个请求本身就很复杂的问题，它可以将单个请求分配到多个服务器处理，使用分布时候，每个节点还可以同时使用读写分离，从而组成多个节点群。</p>
+<p>实际情况中，分布式数据库有很多复杂的问题需要解决，比如事务处理、多表查询等等。分布式的另一种思路是，将不同业务的数据表保存到不同的节点，让不同的业务调用不同的数据库，这种用法其实是和集群一样起到了分流的作用，不过这种情况就不需要同步数据了。</p>
+<h4 id="nosql-和-hadoop">NoSQL 和 Hadoop</h4>
+<p>NoSQL 是近年非常火热的一门技术，发展十分迅速，其核心思想就是非结构化。它与关系型数据库不同，不需要事先定义表结构，突破了数据库范式的制约，非常灵活。另外，由于通过多个快存储数据的特点，操作大数据的速度也非常快。关系型数据库的特点就是强一致性，而 NoSQL 舍弃了强一致性，换取了关系型数据库无法获得的高并发下的高速查询能力。这正是现代互联网所需要的。</p>
+<p>Hadoop 是专门针对大数据处理的一套框架。Hadoop 对数据存储和处理都提供了相应的解决方案，思路和前面讲的分布式数据库和集群的方案类似，不过 Hadoop 是将同一个表的数据分为多块保存到多个节点，而且一块数据都有多个节点保存，这里的集群不但可以并行处理，还保证了数据的有效冗余，避免数据的损失。</p>
+<p>Hadoop 对数据的处理是先对每一块数据找到相应的节点并进行处理，然后对每一个处理的结果进行处理，生成最终的结果。</p>
+<h3 id="高并发的解决方案">高并发的解决方案</h3>
+<p>除了数据量大，还有一个常见的问题就是并发量高，很多架构就是为这个问题而设计的。</p>
+<h4 id="应用和静态资源分离">应用和静态资源分离</h4>
+<p>在 B/S 架构中，很多应用程序和静态资源一开始是放在一起的，为了应对高并发，简单的静态资源（图片、视频、JavaScript 脚本、CSS 样式表和一些资源文件）可以被放到其他的专门的服务器上，因为这些文件没有状态，所以分离比较简单。通过不同的域名可以让浏览器直接访问资源服务器而不是应用服务器。</p>
+<h4 id="页面缓存">页面缓存</h4>
+<p>上面已经详细叙述过了，这里再多说一个点，对于某一小块数据经常变化的页面，可以先生成静态页面，然后用 AJAX 或者 Fetch API 等方法动态获取数据。</p>
+<h4 id="集群与分布式">集群与分布式</h4>
+<p>集群是每台服务器都有相同的功能，主要起到分流的作用，分布式是将不同的业务放到不同的服务器上，用来提高单个请求的处理速度。</p>
+<p>集群有两个方式：静态资源集群、应用程序集群。静态资源集群比较简单，应用程序集群就比较复杂了。因为应用程序在处理过程中可能会使用到一些缓存的数据，如果集群就需要同步这些数据。其中最重要的就是<code>session</code>，<code>session</code>同步也是就应用程序集群中一个非常核心的问题。<code>session</code>同步有两种处理方式，一种是在<code>session</code>发生变化后自动同步到其他服务器，另一种方式是用一个程序统一管理<code>session</code>。所有集群的服务器都是用同一个<code>session</code>。</p>
+<p>还有一种思路来简单解决<code>session</code>同步问题：<code>session</code>需要同步是因为需要让不同的服务器为一个用户提供服务，如果负载均衡在分配请求时可以将同一个用户分配到同一台服务器进行处理，也就不需要<code>session</code>同步了，这种方法一般也不会对负载均衡带来太大的问题。</p>
+<h4 id="反向代理">反向代理</h4>
+<p>反向代理指的是客户端直接访问服务器并不真正提供服务，从别的服务器获取资源然后将结果返回给用户。</p>
+<p>反向代理服务器可以和实际处理请求的服务器在一台主机上，而且一台反向代理服务器也可以访问多台实际处理请求的服务器。反向代理服务服务器主要有三个作用：</p>
+<ol>
+<li>可以作为前端服务器跟实际处理请求的服务器（如 Tomcat、uwsgi）集成；</li>
+<li>可以用做负载均衡；</li>
+<li>转发请求，将不同类型的资源请求转发到不同的服务器处理。</li>
+</ol>
+<h4 id="cdn">CDN</h4>
+<p>CDN 其实是一种特殊的集群页面缓存服务器，和普通集群的多台页面缓存服务器比，主要是它存放的位置和分配请求的方式有点特殊。CDN 服务器是分布在全国各地的，根据用户请求的位置选择最合适的 CDN 服务器节点获取数据。CDN 的每个节点其实就是一个页面缓存服务器，如果没有请求资源的缓存，就会从主服务器获取，否则直接返回缓存的页面。CDN 分配请求的方式比较特殊，并不是普通的负载均衡服务器，而是专门的 CDN 域名解析服务器在解析域名的时候就分配好的，一般的做法是从 ISP （互联网服务提供商）那里使用 CNAME 将域名解析到一个特别的域名，然后再解析到专门的 CDN 服务器，到相应的 CDN 节点。</p>
+<h3 id="底层优化">底层优化</h3>
+<p>前面讲了这么多架构，都是建立在最开始讲到的 TCP/IP 模型之上的。如果可以加快网络传输速度，那么就可以从根本上加快整个系统的运转。网络传输是根据各种协议来完成的，但是协议也不是不可以更改，Google 就是用了 Quic、Spdy 等新的协议来传输数据，Quic 比 TCP 效率高 而比 UDP 更安全。现在，Spdy 有些特性包含到了 HTTP/2 中，Google 已经转向了 HTTP/2 。</p>
+<h3 id="小结">小结</h3>
+<p>网站架构的整个演变过程主要是围绕大数据和高并发两个问题展开的，解决的方案主要分为使用缓存和使用多资源两种类型。多资源指的是多存储、多处理器、多网络，对于多资源来说又分为单资源处理一个请求，和多资源合作处理一个请求。</p>
+<p>网站具体需要使用什么样的架构，需要根据实际需要做出选择。要注意，使用复杂架构之前要把自己的业务优化好，这是基础中的基础。</p>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%85%B6%E6%BC%94%E5%8F%98%E8%BF%87%E7%A8%8B">网站架构及其演变过程</a>
+<ul>
+<li><a href="#%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%B8%89%E5%A4%A7%E7%B1%BB%E5%9E%8B">软件的三大类型</a></li>
+<li><a href="#%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84%E5%B9%B6%E4%B8%8D%E7%AE%80%E5%8D%95">基础结构并不简单</a></li>
+<li><a href="#%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">海量数据的解决方案</a>
+<ul>
+<li><a href="#%E7%BC%93%E5%AD%98%E5%92%8C%E9%A1%B5%E9%9D%A2%E9%9D%99%E6%80%81%E5%8C%96">缓存和页面静态化</a></li>
+<li><a href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96">数据库优化</a>
+<ul>
+<li><a href="#%E8%A1%A8%E7%BB%93%E6%9E%84%E4%BC%98%E5%8C%96">表结构优化</a></li>
+<li><a href="#sql-%E8%AF%AD%E5%8F%A5%E4%BC%98%E5%8C%96">SQL 语句优化</a></li>
+<li><a href="#%E5%88%86%E5%8C%BA">分区</a></li>
+<li><a href="#%E5%88%86%E8%A1%A8">分表</a></li>
+<li><a href="#%E7%B4%A2%E5%BC%95%E4%BC%98%E5%8C%96">索引优化</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E4%BB%A3%E6%9B%BF%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C">使用存储过程代替常用操作</a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%86%E7%A6%BB%E6%B4%BB%E8%B7%83%E6%95%B0%E6%8D%AE">分离活跃数据</a></li>
+<li><a href="#%E6%89%B9%E9%87%8F%E8%AF%BB%E5%8F%96%E5%92%8C%E5%BB%B6%E8%BF%9F%E4%BF%AE%E6%94%B9">批量读取和延迟修改</a></li>
+<li><a href="#%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB">读写分离</a></li>
+<li><a href="#%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93">分布式数据库</a></li>
+<li><a href="#nosql-%E5%92%8C-hadoop">NoSQL 和 Hadoop</a></li>
+</ul>
+</li>
+<li><a href="#%E9%AB%98%E5%B9%B6%E5%8F%91%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">高并发的解决方案</a>
+<ul>
+<li><a href="#%E5%BA%94%E7%94%A8%E5%92%8C%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%88%86%E7%A6%BB">应用和静态资源分离</a></li>
+<li><a href="#%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98">页面缓存</a></li>
+<li><a href="#%E9%9B%86%E7%BE%A4%E4%B8%8E%E5%88%86%E5%B8%83%E5%BC%8F">集群与分布式</a></li>
+<li><a href="#%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86">反向代理</a></li>
+<li><a href="#cdn">CDN</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BA%95%E5%B1%82%E4%BC%98%E5%8C%96">底层优化</a></li>
+<li><a href="#%E5%B0%8F%E7%BB%93">小结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2018-7-14-网站架构及其演变">https://wzhzzmzzy.github.io/post/2018-7-14-网站架构及其演变</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2018-7-14-网站架构及其演变">https://wzhzzmzzy.github.io/post/2018-7-14-网站架构及其演变</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/s_zlHQ8hoN"># 计算机网络</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/s_zlHQ8hoN"># 计算机网络</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2018-7-30-模拟 HTTP 请求">
+                                    模拟 HTTP 请求
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2018-7-14-网络编程">
+                                            操作系统笔记（四）：网络编程
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

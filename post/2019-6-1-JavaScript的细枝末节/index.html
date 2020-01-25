@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                JavaScript 笔记（三）：一些细枝末节
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2019-06-01</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">8.9 mins</a></span>
+                                <span class="post-words">words:<a href="#">2358</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/HHs8rBvHi6">JavaScript</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-06-01</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">8.9 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">2358</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/HHs8rBvHi6">JavaScript</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="语法细节">语法细节</h2>
+<h3 id="变量作用域">变量作用域</h3>
+<p>全局变量自然拥有全局作用域，不过在 JavaScript 任何一个运行环境：NodeJS、浏览器，似乎其实都不存在一个全局环境。浏览器下最大的作用域是<code>&lt;script&gt;</code>，NodeJS的作用域也顶多是在一个文件模块内部。</p>
+<p>函数体内部，局部<code>var</code>变量的优先级高于同名的全局<code>var</code>变量。</p>
+<pre><code class="language-js">var scope = &quot;global&quot;;
+function checkscope() {
+    var scope = &quot;local&quot;;
+    return scope;
+}
+checkscope();
+</code></pre>
+<h3 id="函数作用域与声明提前">函数作用域与声明提前</h3>
+<p>下面这个函数中，在不同的位置定义了变量<code>i</code>，<code>j</code>，<code>k</code>，但是这三个变量都可以在整个函数范围内访问到。</p>
+<pre><code class="language-js">function test(o) {
+    var i = 0;
+    if (typeof o == &quot;object&quot;) {
+        var j = 0;
+        for (var k = 0; k &lt; 10; ++k) {
+            console.log(k);
+        }
+        console.log(k);
+    }
+    console.log(j);
+}
+</code></pre>
+<p>这个函数其实与下面的写法是等价的：</p>
+<pre><code class="language-js">function test(o) {
+    var i = 0, j, k;
+    if (typeof o == &quot;object&quot;) {
+        j = 0;
+        for (k = 0; k &lt; 10; ++k) {
+            console.log(k);
+        }
+        console.log(k);
+    }
+    console.log(j);
+}
+</code></pre>
+<p>下面这段代码也可能有一些歧义，我们可以联合上面提到的声明提前与变量作用域这两点来理解他：</p>
+<pre><code class="language-js">var scope = &quot;global&quot;;
+function f() {
+	console.log(scope);
+    var scope = &quot;local&quot;;
+    console.log(scope);
+}
+</code></pre>
+<p>可能你会觉得函数第一行的输出是<code>global</code>，但是其实是<code>undefined</code>。所以，多用<code>let</code>。</p>
+<h3 id="作用域链">作用域链</h3>
+<p>JS 是基于作用域链的，每一段 JS 代码都有一个与之相关的作用域链。</p>
+<p>什么是作用域链呢？我们可以这样理解，作用域链就是一个链表，链表的每一个节点上记录了一个作用域，这个作用域有自己的变量。比如对于全局环境而言，链表只有一个节点，就是全局环境；对于非嵌套的函数而言，全局环境之上还有一个函数作用域，其中记录了形参和局部变量；嵌套函数自然还有自己的函数作用域。</p>
+<p>当使用变量时，会自上而下查找作用域链，一旦找到了，就会直接返回，这就解释了为什么全局变量会被局部变量覆盖，也导致了后面要讲到的闭包现象。</p>
+<h3 id="继承">继承</h3>
+<p>大家都知道 JS 有个神秘的 <code>prototype</code>，有时候觉得无法理解。下面是一个示例<code>inherit</code>函数：</p>
+<pre><code class="language-js">function inherit(p) {
+    if (p === null) throw TypeError();
+    if (Object.create)
+        return Object.create(p);
+    var t = typeof p;
+    if (t !== &quot;object&quot; &amp;&amp; t !== &quot;function&quot;) throw TypeError();
+    function f() {};
+    f.prototype = p;
+    return new f();
+}
+</code></pre>
+<p>取值和赋值都会对原型链进行查找，以此来判断如何对对象的属性进行修改。对于对象来说，原型是只读的，也就是大家无法对对象的原型进行修改，除非通过<code>defineProperty</code>。</p>
+<h3 id="命名空间">命名空间</h3>
+<p>在过去的 ES5 时代，大家可以通过函数来实现命名空间。也就是，通过立即执行函数来执行一些命名空间的初始化操作，生成一些封装好的工具。</p>
+<pre><code class="language-js">var myModule = (function {
+    var test = &quot;test&quot;;
+    return function() {console.log(test)};
+}());
+</code></pre>
+<h3 id="闭包">闭包</h3>
+<p>所谓闭包，就是当我们使用嵌套函数时，可以用它来保存函数内的局部变量。这是因为作用域链的原因。对于函数中声明的嵌套函数，其作用域链肯定是外部函数高于全局变量的，所以外部函数的变量环境在嵌套函数中会获得保留。</p>
+<p>只用文字描述一定有些抽象，有一个简单的例子：</p>
+<pre><code class="language-js">var scope = &quot;global scope&quot;;
+function checkscope() {
+    var scope = &quot;local scope&quot;;
+    function f() { return scope; }
+    return f;
+}
+checkscope()(); // local scope
+</code></pre>
+<p>有什么用呢？可以使用闭包来灵活地生成一些有着完全封闭的私有变量的函数，避免恶意改动。</p>
+<h3 id="异步-同步加载">异步、同步加载</h3>
+<p><code>&lt;script&gt;</code>标签可以有<code>defer</code>和<code>async</code>属性，一般来说，这些属性只在和<code>src</code>属性联合使用时才有效，但是有些浏览器还支持延迟的内联脚本。</p>
+<p><code>async</code>和<code>defer</code>都是告诉浏览器，可以在下载脚本的同时继续解析和渲染文档，<code>defer</code>属性让浏览器延迟脚本的执行直到文档载入和解析完成，<code>async</code>让浏览器可以尽快执行脚本，而不用在下载脚本的同事阻塞文档解析。</p>
+<p>顺便，如果同时具有这两个属性，那么浏览器会使用<code>async</code>，而不是<code>defer</code>。</p>
+<p>当然，在不支持<code>async</code>的浏览器里，可以动态创建<code>&lt;script&gt;</code>元素并插入到文档当中：</p>
+<pre><code class="language-js">function loadsync(url) {
+    var head = document.getElementsByTagName(&quot;head&quot;)[0];
+    var s = document.createElement(&quot;script&quot;);
+    s.src = url;
+    head.appendChild(s);
+}
+</code></pre>
+<h2 id="浏览器相关">浏览器相关</h2>
+<h3 id="事件驱动">事件驱动</h3>
+<p>JavaScript 是事件驱动的。一般而言，我们更多时候是在监听事件、绑定处理函数，而不是做一些时刻处在运行状态的脚本，那样低效且难以维护。</p>
+<p>通常，我们推荐使用<code>addEventListener</code>而不是直接对DOM元素的<code>onxxx</code>属性赋值来进行事件的监听，因为这样可以添加多个监听函数，而不是只能绑定一个。</p>
+<p>这里有一个小小的使用<code>setTimeout</code>的点子，也就是使用<code>setTimeout</code>来人为添加异步队列。因为<code>setTimeout</code>不会立即执行函数，而是在定时结束之后将函数放入任务队列，所以我们可以：</p>
+<pre><code class="language-js">function onLoad(f) {
+    if (onLoad.loaded)
+        window.setTimeout(f, 0); // 通过 setTimeout 将 f 放入之后的队列
+    else if (window.addEventListener)
+        window.addEventListener(&quot;load&quot;, f, false);
+    else if (window.attachEvent)
+        window.attachEvent(&quot;onload&quot;, f);
+}
+onLoad.loaded = false;
+onLoad(function() { onLoad.loaded = true; });
+</code></pre>
+<h3 id="浏览器时间线">浏览器时间线</h3>
+<ol>
+<li>创建 Document 对象，并且开始解析 Web 页面，解析 HTML 元素和文本内容后添加 Element 对象和 Text 节点到文档中。这个阶段<code>document.readyState === &quot;loadging&quot;</code>。</li>
+<li>当遇到没有<code>async</code>和<code>defer</code>的<code>&lt;script&gt;</code>元素时，会将这些元素添加到文档中，然后执行脚本。并且在脚本执行的同时，脚本会同步执行，并且在脚本下载和执行的同时，解析器会暂停。</li>
+<li>当解析器遇到了设置了<code>async</code>属性的<code>&lt;script&gt;</code>元素，会开始下载脚本，然后尽快运行，并继续解析文档。脚本会在它下载完成之后尽快执行，但是解析器没有停下来等他下载。异步脚本禁止使用<code>document.write()</code>方法。</li>
+<li>当文档完成解析之后，<code>document.readyState === &quot;interactive&quot;</code>。</li>
+<li>所有有<code>defer</code>属性的脚本，会按照他们在文档里出现的顺序执行，异步脚本可能也会在这个时间执行。延迟脚本能访问完整的文档树，但是禁止使用<code>document.write()</code>。</li>
+<li>Document 对象触发<code>DOMContentLoaded</code>事件，标志着程序执行从同步转换到了异步事件驱动阶段。</li>
+<li>这时，文档已经完全解析，但是浏览器可能还在等待其他内容载入。所有内容完成载入，所有异步脚本也执行完成，<code>document.readyState</code>属性改变为<code>&quot;complete&quot;</code>，浏览器触发<code>window</code>对象上的<code>load</code>事件。</li>
+<li>到这时，才会进入下一个异步任务队列。</li>
+</ol>
+<p>这是理想的时间线，但是在不同浏览器中有差异。所有浏览器都支持<code>load</code>事件，它才是决定文档载入并且可以操作的最通用的技术。</p>
+<h3 id="跨站脚本cross-site-scripting">跨站脚本（Cross-site scripting）</h3>
+<p>所谓 XSS 攻击也就是直接将用户输入添加到 HTML 文档中。可以使用脚本注入直接在站点内执行其他脚本，来获取用户。这是非常危险的攻击。例如：</p>
+<pre><code class="language-html">&lt;script&gt;
+var name = decodeURIComponent(window.location.search.substring(1)) || &quot;&quot;;
+document.write(&quot;Hello &quot; + name);
+&lt;/script&gt;
+</code></pre>
+<p>这样就可以在站点上执行远端脚本，从而进行一些入侵。</p>
+<h3 id="window-对象">window 对象</h3>
+<p><code>window</code>对象有着很多浏览器的 API。</p>
+<h4 id="浏览器和屏幕信息">浏览器和屏幕信息</h4>
+<p>通过<code>window</code>的<code>navigator</code>和<code>screen</code>两个对象可以获取到相关的信息。</p>
+<h4 id="打开和关闭窗口">打开和关闭窗口</h4>
+<p><code>window.open</code>载入指定的 URL 到新的或已经存在的窗口中，并且返回代表那个窗口的<code>window</code>对象。</p>
+<p><code>open</code>的第一个参数是 URL，第二个参数时新打开的窗口的名字。如果是一个已经存在的窗口的名字，那么就会直接使用已经存在的窗口。否则，会打开新的窗口。需要注意的是，脚本无法通过猜测窗口的名字来操控窗口中的 Web 应用。一般来说，只有文档是来自同源的，或者确实是由同一个脚本打开的才会生效。</p>
+<p><code>windows.open</code>是广告商用来弹窗的手段，所以一般来说如果不是用户点击导致的弹窗，会被浏览器所屏蔽。</p>
+<p><code>window.close</code>可以关闭一个窗口。</p>
+<h3 id="indexeddb">IndexedDB</h3>
+<p>可以认为 <code>IndexedDB</code>是一个浏览器环境下内置的 NoSQL。<code>IndexedDB</code>限制只有同源的网站可以相互访问内容，不同源的就不可以。每个源可以有任意数目的数据库，但是名字在当前源内需要是唯一的。</p>
+<p><code>IndexedDB</code>提供原子性保证，也就是对数据库的 CURD 操作是包含在一个事务内部的。这个数据库内，所有操作都是异步的，当成功或者失败的时候，会触发<code>success</code>和<code>error</code>事件。</p>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%AF%AD%E6%B3%95%E7%BB%86%E8%8A%82">语法细节</a>
+<ul>
+<li><a href="#%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F">变量作用域</a></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%A3%B0%E6%98%8E%E6%8F%90%E5%89%8D">函数作用域与声明提前</a></li>
+<li><a href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE">作用域链</a></li>
+<li><a href="#%E7%BB%A7%E6%89%BF">继承</a></li>
+<li><a href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4">命名空间</a></li>
+<li><a href="#%E9%97%AD%E5%8C%85">闭包</a></li>
+<li><a href="#%E5%BC%82%E6%AD%A5-%E5%90%8C%E6%AD%A5%E5%8A%A0%E8%BD%BD">异步、同步加载</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B8%E5%85%B3">浏览器相关</a>
+<ul>
+<li><a href="#%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8">事件驱动</a></li>
+<li><a href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%B6%E9%97%B4%E7%BA%BF">浏览器时间线</a></li>
+<li><a href="#%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%ACcross-site-scripting">跨站脚本（Cross-site scripting）</a></li>
+<li><a href="#window-%E5%AF%B9%E8%B1%A1">window 对象</a>
+<ul>
+<li><a href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%92%8C%E5%B1%8F%E5%B9%95%E4%BF%A1%E6%81%AF">浏览器和屏幕信息</a></li>
+<li><a href="#%E6%89%93%E5%BC%80%E5%92%8C%E5%85%B3%E9%97%AD%E7%AA%97%E5%8F%A3">打开和关闭窗口</a></li>
+</ul>
+</li>
+<li><a href="#indexeddb">IndexedDB</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-6-1-JavaScript的细枝末节">https://wzhzzmzzy.github.io/post/2019-6-1-JavaScript的细枝末节</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-6-1-JavaScript的细枝末节">https://wzhzzmzzy.github.io/post/2019-6-1-JavaScript的细枝末节</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/HHs8rBvHi6"># JavaScript</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/HHs8rBvHi6"># JavaScript</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2019-7-2-JS-Generator">
+                                    JavaScript Generator
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2019-5-31-JavaScript内存模型">
+                                            JavaScript 笔记（一）：内存模型
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

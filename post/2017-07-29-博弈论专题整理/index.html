@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                博弈论学习
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2017-07-29</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">5.0 mins</a></span>
+                                <span class="post-words">words:<a href="#">1241</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/G3FWMuzW0">ACM-ICPC</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2017-07-29</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">5.0 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">1241</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/G3FWMuzW0">ACM-ICPC</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h4 id="学习资料">学习资料</h4>
+<ul>
+<li><a href="http://www.cppblog.com/MiYu/archive/2010/08/25/124649.html">总结</a></li>
+<li><a href="http://blog.csdn.net/xuzengqiang/article/details/7763635">巴什博奕</a></li>
+<li><a href="http://blog.csdn.net/y990041769/article/details/21694007">威佐夫博弈</a></li>
+<li><a href="http://www.cnblogs.com/jiangjun/archive/2012/11/01/2749937.html">尼姆博弈</a></li>
+<li><a href="http://blog.csdn.net/flqbestboy/article/details/8222603">博弈问题与SG值</a></li>
+</ul>
+<h3 id="巴什博奕bash-game">巴什博奕（Bash Game）</h3>
+<h4 id="博弈原题">博弈原题</h4>
+<p>最简单的巴什博奕题大概就是抢三十了，两个人分别报数，每人一次可以报<code>1~4</code>个数，先报数到<code>30</code>的人赢。</p>
+<p>这个游戏是典型的后手必胜游戏。首先，当一个人报数到了<code>25</code>，那么他必然会赢，因为不论下一个人报数多少，他都能凑足<code>30</code>。既然<code>25 -&gt; 30</code>是这样，那么<code>20 -&gt; 25</code>也是这样，凡是报数到<code>20</code>的人下一回合都能报数到<code>25</code>。以此类推，我们发现，后手必然能够报数到<code>5</code>，然后是<code>10</code>，<code>15</code>，<code>20</code>，<code>25</code>。</p>
+<p>这样就得到了是后手必胜。</p>
+<h4 id="博弈原理">博弈原理</h4>
+<p>我们分析一下其中的原理，为什么是<code>5</code>？因为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mo>=</mo><mn>4</mn><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">5=4+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 。那么我们就得到了巴什博奕完善的表达形式：</p>
+<p>有一堆<code>n</code>个石子，两人在自己的回合可以任意取<code>1~m</code>个石子，先取完者胜。那么如果 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>=</mo><mi>k</mi><mo>×</mo><mo>(</mo><mi>m</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">n=k\times(m+1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span> ，后手必胜，否则先手必胜。</p>
+<h3 id="威佐夫博弈wythoff-game">威佐夫博弈（Wythoff Game）</h3>
+<h4 id="博弈原理-2">博弈原理</h4>
+<p>有两堆石子，两人可以在自己的回合取某一堆中任意数量的石子，也可以同时从两堆中任意取相同数量的石子，先取完者胜。</p>
+<p>推导过程看不懂。但大体过程是这样的：</p>
+<p>用<code>(a, b)</code>表示两堆石子数目，第一必败态毋庸置疑是<code>(0, 0)</code>；第二必败态是<code>(1, 2)</code>，因为先手无论如何取，后手下一步都能取完所有石子。</p>
+<p>然后是第三必败态<code>(3, 5)</code>，因为无论先手如何取，后手都能走到下一个必胜态。以此类推可以得到：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>必败态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><code>(a, b)</code></td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>(0, 0)</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>(1, 2)</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>(3, 5)</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>(4, 7)</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>(6, 10)</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>(8, 13)</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>(9, 15)</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>(11, 18)</code></td>
+</tr>
+</tbody>
+</table>
+<p>观察样例，很难得出结论，但是样例数很多之后我们发现了其中的规律：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><msqrt><mn>5</mn></msqrt><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo>×</mo><mo>(</mo><mi>b</mi><mo>−</mo><mi>a</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">a = \frac{\sqrt{5}+1}{2}\times (b-a)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.27022em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5842200000000002em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.90722em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">5</span></span></span><span style="top:-2.86722em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.13278em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mclose">)</span></span></span></span></span></p>
+<h4 id="博弈应用">博弈应用</h4>
+<h5 id="判断先后手输赢">判断先\后手输赢</h5>
+<p>很好解决，直接判断<code>a</code>，<code>b</code>就可以了。</p>
+<h5 id="求先手输赢输出第一次取法">求先手输赢，输出第一次取法</h5>
+<p>先考虑两堆同时取，这样差值是不变的。如果只能取一堆，那么枚举差值即可。</p>
+<h3 id="尼姆博奕nimm-game">尼姆博奕（Nimm Game）</h3>
+<h4 id="博弈原题-2">博弈原题</h4>
+<p>有三堆石子，两人可以在自己的回合取某一堆中任意数量的石子，先取完者胜。</p>
+<p>我们依然用<code>(a, b, c)</code>表示当前状态。首先我们知道<code>(0, 0, 0)</code>是必败态。第二种必败态是<code>(0, n, n)</code>，这种状态，无论先手那多少，后手都可以从另一堆中拿同样数量。</p>
+<p>然后直接给出规律吧……完全看不出来的。</p>
+<p>必败态的充要条件是<code>a ^ b ^ c = 0</code>。</p>
+<h4 id="博弈推广">博弈推广</h4>
+<p>现在有<code>n</code>堆石子，其他规则不变。这样的博弈依然服从尼姆博弈的规律。</p>
+<p>我们把满足所有值的异或值是<code>0</code>的状态称为平衡状态，平衡状态为必败态。并且平衡状态只能转化为非平衡状态，非平衡状态可以转化为平衡状态。</p>
+<p>那么我们把博弈规则改一改，改为先取完者负。</p>
+<p>这样初看很复杂，但是实际依然存在规律。首先依然按照尼姆博弈的规律取，直到有某一堆物品数量大于<code>1</code>，其他堆全部为<code>1</code>的状态，将这堆取空或者取为<code>1</code>，使数量为<code>1</code>的堆的数目变为奇数即可。因为操作需要满足平衡状态，所以不会面对这种情况，这样就可以判断胜负了。</p>
+<h4 id="例题hdu-1850">例题（HDU 1850）</h4>
+<h5 id="思路">思路</h5>
+<p>求尼姆博弈先手是否能胜，如果能，第一步有几种走法。</p>
+<p>思路很简单，只要看当前是否是非平衡状态，下一步哪个堆可以转化为平衡状态即可。</p>
+<h5 id="代码">代码</h5>
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main(){
+    int n, num[100+7];
+    while (scanf(&quot;%d&quot;, &amp;n), n) {
+        int sum = 0, cnt = 0;
+        for (int i = 0; i &lt; n; ++i) {
+            scanf(&quot;%d&quot;, num+i);
+            sum ^= num[i];
+        }
+        for (int i = 0; i &lt; n; ++i)
+            if (num[i] &gt; (sum^num[i])) ++cnt;
+        printf(&quot;%d\n&quot;, cnt);
+    }
+    return 0;
+}
+</code></pre>
+<h4 id="反尼姆博奕例题hdu-1905">反尼姆博奕例题（HDU  1905）</h4>
+<h5 id="思路-2">思路</h5>
+<p>与正常的尼姆博弈几乎相同，只是要特判奇数个<code>1</code>和偶数个<code>1</code>的情况。</p>
+<h5 id="代码-2">代码</h5>
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int n, num[50];
+
+void solve() {
+    int sum = 0, odd = 0, even = 0;
+    scanf(&quot;%d&quot;, &amp;n);
+    for (int i = 0; i &lt; n; ++i) {
+        scanf(&quot;%d&quot;, num+i);
+        sum ^= num[i];
+        num[i] &lt; 2 ? ++odd : ++even;
+    }
+    if ((sum &amp;&amp; even) || (!sum &amp;&amp; !even)) puts(&quot;John&quot;);
+    else puts(&quot;Brother&quot;);
+}
+
+int main(){
+    int t; scanf(&quot;%d&quot;, &amp;t);
+    while (t--) solve();
+    return 0;
+}
+</code></pre>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99">学习资料</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B7%B4%E4%BB%80%E5%8D%9A%E5%A5%95bash-game">巴什博奕（Bash Game）</a>
+<ul>
+<li><a href="#%E5%8D%9A%E5%BC%88%E5%8E%9F%E9%A2%98">博弈原题</a></li>
+<li><a href="#%E5%8D%9A%E5%BC%88%E5%8E%9F%E7%90%86">博弈原理</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A8%81%E4%BD%90%E5%A4%AB%E5%8D%9A%E5%BC%88wythoff-game">威佐夫博弈（Wythoff Game）</a>
+<ul>
+<li><a href="#%E5%8D%9A%E5%BC%88%E5%8E%9F%E7%90%86-2">博弈原理</a></li>
+<li><a href="#%E5%8D%9A%E5%BC%88%E5%BA%94%E7%94%A8">博弈应用</a>
+<ul>
+<li><a href="#%E5%88%A4%E6%96%AD%E5%85%88%E5%90%8E%E6%89%8B%E8%BE%93%E8%B5%A2">判断先\后手输赢</a></li>
+<li><a href="#%E6%B1%82%E5%85%88%E6%89%8B%E8%BE%93%E8%B5%A2%E8%BE%93%E5%87%BA%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8F%96%E6%B3%95">求先手输赢，输出第一次取法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%B0%BC%E5%A7%86%E5%8D%9A%E5%A5%95nimm-game">尼姆博奕（Nimm Game）</a>
+<ul>
+<li><a href="#%E5%8D%9A%E5%BC%88%E5%8E%9F%E9%A2%98-2">博弈原题</a></li>
+<li><a href="#%E5%8D%9A%E5%BC%88%E6%8E%A8%E5%B9%BF">博弈推广</a></li>
+<li><a href="#%E4%BE%8B%E9%A2%98hdu-1850">例题（HDU 1850）</a>
+<ul>
+<li><a href="#%E6%80%9D%E8%B7%AF">思路</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81">代码</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%8D%E5%B0%BC%E5%A7%86%E5%8D%9A%E5%A5%95%E4%BE%8B%E9%A2%98hdu-1905">反尼姆博奕例题（HDU  1905）</a>
+<ul>
+<li><a href="#%E6%80%9D%E8%B7%AF-2">思路</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81-2">代码</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2017-07-29-博弈论专题整理">https://wzhzzmzzy.github.io/post/2017-07-29-博弈论专题整理</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2017-07-29-博弈论专题整理">https://wzhzzmzzy.github.io/post/2017-07-29-博弈论专题整理</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/G3FWMuzW0"># ACM-ICPC</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/G3FWMuzW0"># ACM-ICPC</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2017-08-04-Let-s-Do-It">
+                                    Let&#39;s Do It
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2017-07-03-AC-Automachion">
+                                            AC自动机模板整理及入门例题
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

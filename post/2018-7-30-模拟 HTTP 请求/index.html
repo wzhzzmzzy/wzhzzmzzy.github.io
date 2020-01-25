@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                模拟 HTTP 请求
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2018-07-30</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">8.7 mins</a></span>
+                                <span class="post-words">words:<a href="#">1878</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX">Python</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2018-07-30</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">8.7 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">1878</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX">Python</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="urllib">urllib</h2>
+<p><code>urllib</code>有四个模块：</p>
+<ul>
+<li><code>request</code>，处理请求</li>
+<li><code>error</code>，处理错误</li>
+<li><code>parse</code>，对请求内容解码和编码</li>
+<li><code>robotparser</code>，查看<code>robot.txt</code></li>
+</ul>
+<h3 id="发送请求">发送请求</h3>
+<p><code>request</code>用于发送请求。</p>
+<h4 id="urlopen"><code>urlopen()</code></h4>
+<p>示例：</p>
+<pre><code class="language-python">import urllib.request
+
+res = urllib.request.urlopen(&quot;https://www.python.org/&quot;)
+print(res.read().decode('utf8')) # get html
+print(type(res)) # &lt;class 'http.client.HTTPResponse'&gt;
+print(res.getheader(&quot;Server&quot;)) # 'nginx'
+print(res.getheaders()) # Response Headers
+print(res.status) # 200
+</code></pre>
+<p>这个方法也支持表单提交。</p>
+<pre><code class="language-python">import urllib.request
+import urllib.parse
+
+data = bytes(urllib.parse.urlencode({&quot;word&quot;: &quot;hi&quot;}), encoding='utf8')
+res = urllib.request.urlopen(&quot;https://httpbin.org/post&quot;, data=data)
+print(res.read().decode('utf8'))
+</code></pre>
+<h4 id="request"><code>Request</code></h4>
+<p><code>Request</code>类可以生成完整的请求实例，添加 Headers，指定 Method。</p>
+<pre><code class="language-python">url = &quot;http://httpbin.org/post&quot;
+headers = {
+    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6)&quot;,
+    &quot;Host&quot;: 'httpbin.org'
+}
+dict = {'name': 'Amber'}
+data = bytes(urllib.parse.urlencode(dict), encoding='utf8')
+req = urllib.request.Request(url=url, data=data, headers=headers, method='POST')
+res = urllib.request.urlopen(req)
+print(res.read().decode('utf-8'))
+</code></pre>
+<h4 id="高级用法">高级用法</h4>
+<p>生成一个请求，不仅仅会需要 URI、参数、方法和请求头，还需要处理 Cookie、代理等等。生成这样的高级请求就要用到<code>Handler</code>。<code>urllib.request.BaseHandler</code>提供了最基本的方法，可以集成它来自己创建<code>Handler</code>，有一些内置的：</p>
+<ul>
+<li><code>HTTPDefaultErrorHandler</code></li>
+<li><code>HTTPRedirectHandler</code></li>
+<li><code>HTTPCookieProcessor</code></li>
+<li><code>ProxyHandle</code></li>
+<li><code>HTTPPasswordMgr</code></li>
+<li><code>HTTPBasicAuthHandler</code></li>
+</ul>
+<p>还有一些其他的，可以查看文档。</p>
+<p>另外一个重要的类是<code>OpenerDirector</code>，简称<code>Opener</code>。<code>Opener</code>可以使用<code>open()</code>方法，返回<code>response</code>。我们需要利用<code>Handler</code>来构建<code>Opener</code>。</p>
+<h5 id="cookie">Cookie</h5>
+<p>下面是一个利用<code>HTTPCookieProcessor</code>读写 Cookie 的例子：</p>
+<pre><code class="language-python">def build_cookie(cookie_file, login_req=None, override=False):
+    &quot;&quot;&quot;
+    将 Cookies 写入 cookie_file，或从其中读出 Cookies
+    :param cookie_file: Cookie 文件路径
+    :param login_req: 建立 Cookie 的请求
+    :param override: 是否覆盖原先的 Cookie 文件
+    :return: cookie_opener
+    &quot;&quot;&quot;
+    import os
+    from http.cookiejar import LWPCookieJar
+    from urllib.request import HTTPCookieProcessor, build_opener
+    if (not os.path.exists(cookie_file)) or override:
+        if login_req is None:
+            raise Exception(&quot;请给出登陆请求！&quot;)
+        cookie = LWPCookieJar(cookie_file)
+        cookie_opener = build_opener(HTTPCookieProcessor(cookie))
+        cookie_opener.open(login_req)
+        cookie.save(ignore_expires=True, ignore_discard=True)
+    else:  # 直接读取
+        cookie = LWPCookieJar()
+        cookie.load(cookie_file, ignore_discard=True, ignore_expires=True)
+        cookie_opener = build_opener(HTTPCookieProcessor(cookie))
+    return cookie_opener
+</code></pre>
+<h5 id="代理">代理</h5>
+<p>下面是一个利用<code>ProxyHandler</code>实现代理访问的方法：</p>
+<pre><code class="language-python">def build_proxy(proxy):
+    &quot;&quot;&quot;
+    根据 proxy 参数获取代理访问
+    :param proxy: dict，key 为协议，value 为代理地址
+    :return: proxy_opener
+    &quot;&quot;&quot;
+    from urllib.request import ProxyHandler, build_opener
+    return build_opener(ProxyHandler(proxy))
+</code></pre>
+<h3 id="处理异常">处理异常</h3>
+<p><code>urllib</code>提供了<code>URLError</code>和<code>HTTPError</code>，所有<code>request</code>返回的异常都在<code>URLError</code>中。</p>
+<pre><code class="language-python">from urllib import request, error
+
+try:
+    response = request.urlopen('https://xxx.com/')
+except error.HTTPError as e:
+    print(e.reason, e.code, e.headers)
+except error.URLError as e:
+    print(e.reason)
+else:
+    print('Request Successfully')
+</code></pre>
+<h3 id="解析链接">解析链接</h3>
+<p>URL 中有一些很重要的信息，包括协议、域名、资源地址、参数、查询以及分段。使用<code>parse</code>模块可以对 URL 进行解析。</p>
+<ul>
+<li><code>urlparse</code>可以将 URL 分为协议、域名、资源地址、参数、查询以及分段六块，<code>urlunparse</code>可以将一个六元素列表组织成一个 URL。</li>
+<li><code>urlsplit</code>无视参数项，分解为协议、域名、资源地址、查询以及分段五块，<code>urlunsplit</code>将一个五元素列表组织成一个 URL。</li>
+<li><code>urlencode</code>将一个字典编码为一个 GET 查询字符串。<code>parse_qs</code>将一个 GET 查询字符串解码为字典。</li>
+<li><code>quote</code>将字符串进行 URL 序列化，<code>unquote</code>反之。</li>
+</ul>
+<h3 id="分析robots协议">分析<code>Robots</code>协议</h3>
+<p><code>robotparse</code>模块解析<code>robots.txt</code>，判断爬虫是否有权限对某个页面进行爬取。</p>
+<pre><code class="language-python">def can_fetch(ua, url, robots_url):
+    &quot;&quot;&quot;
+    查看 UA 是否可以爬取该 URL
+    :param ua: 爬虫 User-Agent
+    :param url: 需要爬取的页面地址
+    :param robots_url: 主站的 robots.txt
+    :return: Bool
+    &quot;&quot;&quot;
+    from urllib import parse, robotparser
+    robots = robotparser.RobotFileParser(robots_url)
+    robots.read()
+    return robots.can_fetch(ua, url)
+</code></pre>
+<h2 id="requests">requests</h2>
+<h3 id="基本用法">基本用法</h3>
+<p><code>requests</code>可以直接发起对应的 HTTP Method 请求：</p>
+<pre><code class="language-python">import requests
+url = &quot;https://www.baidu.com/&quot;
+requests.get(url)
+requests.post(url)
+requests.put(url)
+requests.delete(url)
+requests.options(url)
+</code></pre>
+<h4 id="get">GET</h4>
+<p>对于 GET 参数，可以直接将字典附加到<code>requests.get()</code>的<code>params</code>参数。对于 API 返回的 JSON，可以直接调用<code>response.json()</code>。可以直接附加 Headers。<code>response</code>的<code>text</code>属性是 Unicode 解码，<code>content</code>属性是二进制。封装的<code>response</code>中还可以获取 Cookies，History，URL，Status_Code</p>
+<pre><code class="language-python">import requests
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+}
+res = requests.get('https://www.zhihu.com/', headers=headers)
+</code></pre>
+<h4 id="post">POST</h4>
+<pre><code class="language-python">import requests
+
+data = {'name': 'germey', 'age': '22'}
+r = requests.post(&quot;http://httpbin.org/post&quot;, data=data)
+print(r.json())
+</code></pre>
+<h3 id="高级用法-2">高级用法</h3>
+<h4 id="文件上传">文件上传</h4>
+<pre><code class="language-python">import requests
+
+files = {'file': open('favicon.ico', 'rb')}
+r = requests.post(&quot;http://httpbin.org/post&quot;, files=files)
+print(r.text)
+</code></pre>
+<h4 id="cookie-2">Cookie</h4>
+<pre><code class="language-python">import requests
+
+res = requests.get(&quot;https://www.baidu.com/&quot;)
+print(res.cookies)
+for k, v in r.cookies.items():
+    print(k, '=', v)
+</code></pre>
+<p>在<code>requests</code>中使用 Cookie，可以像往常一样直接放在 Headers 中，不过稍微有些难看，下面是完整的使用 Cookie 的方式：</p>
+<pre><code class="language-python">import requests
+from http.cookiejar import LWPCookieJar
+
+jar = requests.cookies.RequestsCookieJar()
+cookie = LWPCookieJar()
+cookie.load(&quot;cookie.txt&quot;)
+for i in cookie:
+    jar.set(i.name, i.value)
+</code></pre>
+<h4 id="session">Session</h4>
+<p>上面的维持 Cookie 发起访问的方式相当麻烦，所以<code>requests</code>提供了更好的方法：Session。对于浏览器来说，会话（Session）是无比平常的东西。如果留心的话，在解析网络时经常能发现 Request Headers 总会有<code>keep-alive</code>。事实上，会话是依赖于 Cookie 的，由于 HTTP 是无状态协议，所以使用 Cookie 来标记长连接，也就是会话。</p>
+<pre><code class="language-python">import requests
+
+s = requests.Session()
+s.get(&quot;https://www.baidu.com&quot;)
+</code></pre>
+<p>会话可以看作是<code>urllib</code>的一个 Opener，在一次会话中，会保留 Cookie、代理，因而非常方便。</p>
+<h4 id="ssl-证书">SSL 证书</h4>
+<p><code>requests</code>提供了 SSL 证书验证的功能，如果遇到无法验证的 SSL 证书，可以添加<code>verify=False</code>跳过验证。</p>
+<h4 id="代理-2">代理</h4>
+<pre><code class="language-python">import requests
+
+proxies = {
+    'http': 'http://127.0.0.1:1087',
+    'https': 'https://127.0.0.1:1087'
+}
+
+proxies_socks = {
+    'http': 'socks5://127.0.0.1:1086',
+    'https': 'socks5://127.0.0.1:1086'
+}
+
+requests.get(&quot;https://www.google.com&quot;, proxies=proxies)
+</code></pre>
+<h4 id="prepared-request">Prepared Request</h4>
+<p>有可能我们需要一个结构化的请求来多次复用，这时候我们可以使用<code>Request</code>类来生成一个底层的请求对象。一个请求对象可以自己与处理，但是当使用<code>Session</code>时，就需要使用<code>Session</code>去预处理。</p>
+<pre><code class="language-python">from requests import Request, Session
+
+url = 'http://httpbin.reg/post'
+data = {
+    'name': 'germey'
+}
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+}
+s = Session()
+req = Request('POST', url, data=data, headers=headers)
+# pre_req = req.prepare()
+pre_req = s.prepare_request(req)
+res = s.send(pre_req)
+print(res.text)
+</code></pre>
+<h2 id="正则">正则</h2>
+<p>完整讲述正则表达式过于复杂，不如自己理解。常用的正则表达式工具列在下方：</p>
+<ul>
+<li><a href="http://tool.oschina.net/regex">正则表达式测试——开源中国</a></li>
+<li><a href="http://tool.oschina.net/uploads/apidocs/jquery/regexp.html">正则表达式手册——开源中国</a></li>
+<li><a href="https://deerchao.net/tutorials/regex/regex.htm">正则表达式入门教程</a></li>
+</ul>
+<p>这里我们来说一些 Python3 re 模块的一些使用。</p>
+<h3 id="常用函数">常用函数</h3>
+<h4 id="修饰符">修饰符</h4>
+<ul>
+<li><code>re.S</code>：使<code>.</code>匹配换行符在内的所有字符；</li>
+<li><code>re.I</code>：大小写不敏感；</li>
+<li><code>re.M</code>：多行匹配，影响<code>^</code>和<code>$</code>；</li>
+<li><code>re.L</code>：本地化识别匹配；</li>
+<li><code>re.U</code>：根据 Unicode 解析字符；</li>
+<li><code>re.X</code>：可以更灵活地写正则表达式。</li>
+</ul>
+<p>一般常用<code>re.S</code>和<code>re.I</code>。</p>
+<h4 id="match"><code>match()</code></h4>
+<p>从字符串起始处开始匹配，返回一个<code>match</code>对象，可以使用<code>.group()</code>获取匹配到的内容。</p>
+<pre><code class="language-python">import re
+
+url = re.match(&quot;.*?&lt;title&gt;(.*?)&lt;/title&gt;&quot;, res.text)
+print(url.group(1)) # Google 
+</code></pre>
+<h4 id="search"><code>search()</code></h4>
+<p>和<code>match()</code>很像，区别是不是固定从开头开始查找。</p>
+<pre><code class="language-python">import re
+
+res = re.search('&lt;title&gt;(.*?)&lt;/title&gt;', res.text)
+print(url.group(1))
+</code></pre>
+<h4 id="findall"><code>findall()</code></h4>
+<p>获取所有正则能匹配到的内容。</p>
+<pre><code class="language-python">import re
+
+res = re.findall('&lt;a.*?href=&quot;(.*?)&quot;', res.text)
+print(res)
+</code></pre>
+<h4 id="sub"><code>sub()</code></h4>
+<p>用正则表达式统一替换。</p>
+<pre><code class="language-python">import re
+
+content = '123abc456'
+content = re.sub('\d+', '', content)
+print(content) # abc
+</code></pre>
+<h4 id="compile"><code>compile()</code></h4>
+<p>获取一个组织完成的正则表达式对象，便于复用。</p>
+<pre><code class="language-python">import re
+
+pattern = re.compile('ppp.*?ppp', re.S)
+</code></pre>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#urllib">urllib</a>
+<ul>
+<li><a href="#%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82">发送请求</a>
+<ul>
+<li><a href="#urlopen"><code>urlopen()</code></a></li>
+<li><a href="#request"><code>Request</code></a></li>
+<li><a href="#%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95">高级用法</a>
+<ul>
+<li><a href="#cookie">Cookie</a></li>
+<li><a href="#%E4%BB%A3%E7%90%86">代理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%A4%84%E7%90%86%E5%BC%82%E5%B8%B8">处理异常</a></li>
+<li><a href="#%E8%A7%A3%E6%9E%90%E9%93%BE%E6%8E%A5">解析链接</a></li>
+<li><a href="#%E5%88%86%E6%9E%90robots%E5%8D%8F%E8%AE%AE">分析<code>Robots</code>协议</a></li>
+</ul>
+</li>
+<li><a href="#requests">requests</a>
+<ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95">基本用法</a>
+<ul>
+<li><a href="#get">GET</a></li>
+<li><a href="#post">POST</a></li>
+</ul>
+</li>
+<li><a href="#%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95-2">高级用法</a>
+<ul>
+<li><a href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0">文件上传</a></li>
+<li><a href="#cookie-2">Cookie</a></li>
+<li><a href="#session">Session</a></li>
+<li><a href="#ssl-%E8%AF%81%E4%B9%A6">SSL 证书</a></li>
+<li><a href="#%E4%BB%A3%E7%90%86-2">代理</a></li>
+<li><a href="#prepared-request">Prepared Request</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%AD%A3%E5%88%99">正则</a>
+<ul>
+<li><a href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0">常用函数</a>
+<ul>
+<li><a href="#%E4%BF%AE%E9%A5%B0%E7%AC%A6">修饰符</a></li>
+<li><a href="#match"><code>match()</code></a></li>
+<li><a href="#search"><code>search()</code></a></li>
+<li><a href="#findall"><code>findall()</code></a></li>
+<li><a href="#sub"><code>sub()</code></a></li>
+<li><a href="#compile"><code>compile()</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2018-7-30-模拟 HTTP 请求">https://wzhzzmzzy.github.io/post/2018-7-30-模拟 HTTP 请求</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2018-7-30-模拟 HTTP 请求">https://wzhzzmzzy.github.io/post/2018-7-30-模拟 HTTP 请求</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX"># Python</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX"># Python</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2018-8-5-Splash">
+                                    Scrapy-Splash 使用教程
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2018-7-14-网站架构及其演变">
+                                            网站架构及其演变过程
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

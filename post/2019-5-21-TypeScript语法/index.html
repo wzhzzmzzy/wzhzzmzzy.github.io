@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                TypeScript 语法深入
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2019-05-16</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">7.0 mins</a></span>
+                                <span class="post-words">words:<a href="#">1764</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Ww2JGjz2CK">TypeScript</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-05-16</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">7.0 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">1764</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Ww2JGjz2CK">TypeScript</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="迭代器和生成器">迭代器和生成器</h2>
+<p>当一个对象实现了<code>Symbol.iterator</code>，我们认为它是可迭代的。对象上的 <code>Symbol.iterator</code>函数负责返回供迭代的值。</p>
+<h4 id="forof语句-与-forin语句"><code>for...of</code>语句 与 <code>for...in</code>语句</h4>
+<p>下面的例子展示了两者之间的区别：</p>
+<pre><code class="language-ts">let list = [4, 5, 6];
+
+for (let i in list) {
+    console.log(i); // &quot;0&quot;, &quot;1&quot;, &quot;2&quot;,
+}
+
+for (let i of list) {
+    console.log(i); // &quot;4&quot;, &quot;5&quot;, &quot;6&quot;
+}
+</code></pre>
+<p>另一个区别是<code>for..in</code>可以操作任何对象；它提供了查看对象属性的一种方法。 但是 <code>for..of</code>关注于迭代对象的值。内置对象<code>Map</code>和<code>Set</code>已经实现了<code>Symbol.iterator</code>方法，让我们可以访问它们保存的值。</p>
+<pre><code class="language-ts">let pets = new Set([&quot;Cat&quot;, &quot;Dog&quot;, &quot;Hamster&quot;]);
+pets[&quot;species&quot;] = &quot;mammals&quot;;
+
+for (let pet in pets) {
+    console.log(pet); // &quot;species&quot;
+}
+
+for (let pet of pets) {
+    console.log(pet); // &quot;Cat&quot;, &quot;Dog&quot;, &quot;Hamster&quot;
+}
+</code></pre>
+<h2 id="模块">模块</h2>
+<p>TypeScript 中有着多种<code>export</code>形式和多种<code>import</code>形式，其他大多与 JavaScript 中的主流模块实现相仿：模块自声明、模块使用模块加载器去导入其他模块。</p>
+<h3 id="导出">导出</h3>
+<h4 id="导出声明">导出声明</h4>
+<p>任何声明都可以通过<code>export</code>来导出：</p>
+<pre><code class="language-ts">export interface StringValidator {
+    isAcceptable(s: string): boolean;
+}
+
+export const numberRegexp = /^[0-9]+$/;
+
+export class ZipCodeValidator implements StringValidator {
+    isAcceptable(s: string) {
+        return s.length === 5 &amp;&amp; numberRegexp.test(s);
+    }
+}
+</code></pre>
+<h4 id="导出语句">导出语句</h4>
+<pre><code class="language-ts">export { ZipCodeValidator as mainValidator };
+</code></pre>
+<h4 id="重新导出">重新导出</h4>
+<p>我们经常会去扩展其它模块，并且只导出那个模块的部分内容。 重新导出功能并不会在当前模块导入那个模块或定义一个新的局部变量。</p>
+<pre><code class="language-ts">export {ZipCodeValidator as RegExpBasedZipCodeValidator} from &quot;./ZipCodeValidator&quot;;
+</code></pre>
+<p>一个模块可以包裹多个模块，并且把他们导出的内容联合在一起：</p>
+<pre><code class="language-ts">export * from &quot;./ZipCodeValidator&quot;;
+</code></pre>
+<h3 id="导入">导入</h3>
+<pre><code class="language-ts">import { ZipCodeValidator } from &quot;./ZipCodeValidator&quot;;
+import { ZipCodeValidator as ZCV } from &quot;./ZipCodeValidator&quot;;
+import * as validator from &quot;./ZipCodeValidator&quot;;
+import &quot;./my-module.js&quot;; // 副作用导入：尽管不推荐这么做，一些模块会设置一些全局状态供其它模块使用。 这些模块可能没有任何的导出或用户根本就不关注它的导出。 使用下面的方法来导入这类模块：
+</code></pre>
+<h3 id="默认导出">默认导出</h3>
+<p>每个模块都可以有一个<code>default</code>导出。 默认导出使用 <code>default</code>关键字标记；并且一个模块只能够有一个<code>default</code>导出。 需要使用一种特殊的导入形式来导入 <code>default</code>导出。</p>
+<h5 id="jquerydts">JQuery.d.ts</h5>
+<pre><code class="language-ts">declare let $: JQuery;
+export default $;
+</code></pre>
+<p>类和函数声明可以直接被标记为默认导出。 标记为默认导出的类和函数的名字是可以省略的。</p>
+<h3 id="export-和import-require"><code>export =</code>和<code>import = require()</code></h3>
+<p><code>export =</code>语法定义一个模块的导出<code>对象</code>。 这里的<code>对象</code>一词指的是类，接口，命名空间，函数或枚举。</p>
+<p>若使用<code>export =</code>导出一个模块，则必须使用TypeScript的特定语法<code>import module = require(&quot;module&quot;)</code>来导入此模块。</p>
+<h5 id="zipcodevalidatorts">ZipCodeValidator.ts</h5>
+<pre><code class="language-ts">let numberRegexp = /^[0-9]+$/;
+class ZipCodeValidator {
+    isAcceptable(s: string) {
+        return s.length === 5 &amp;&amp; numberRegexp.test(s);
+    }
+}
+export = ZipCodeValidator;
+</code></pre>
+<h5 id="testts">Test.ts</h5>
+<pre><code class="language-ts">import zip = require(&quot;./ZipCodeValidator&quot;);
+
+// Some samples to try
+let strings = [&quot;Hello&quot;, &quot;98052&quot;, &quot;101&quot;];
+
+// Validators to use
+let validator = new zip();
+
+// Show whether each string passed each validator
+strings.forEach(s =&gt; {
+  console.log(`&quot;${ s }&quot; - ${ validator.isAcceptable(s) ? &quot;matches&quot; : &quot;does not match&quot; }`);
+});
+</code></pre>
+<h3 id="可选的模块加载和其他高级加载场景">可选的模块加载和其他高级加载场景</h3>
+<p>编译器会检测是否每个模块都会在生成的JavaScript中用到。 如果一个模块标识符只在类型注解部分使用，并且完全没有在表达式中使用时，就不会生成 <code>require</code>这个模块的代码。 省略掉没有用到的引用对性能提升是很有益的，并同时提供了选择性加载模块的能力。</p>
+<h2 id="命名空间">命名空间</h2>
+<p>使用<code>namespaces</code>可以让你更好地组织代码，避免重名、让代码结构更清晰。</p>
+<pre><code class="language-ts">namespace Student {
+    export interface Boy {
+        name: String;
+    }
+    export class Gay extends Boy {
+        name: String;
+    }
+}
+</code></pre>
+<p>你也可以把名空间拆到多个文件当中：</p>
+<h5 id="studentts"><code>Student.ts</code></h5>
+<pre><code class="language-ts">namespace Student {
+    export interface Boy {
+        name: String;
+    }
+}
+</code></pre>
+<h5 id="gayts"><code>Gay.ts</code></h5>
+<pre><code class="language-ts">/// &lt;reference path=&quot;Student.ts&quot;&gt;
+namespace Student {
+    export class Gay extends Boy {
+        name: String;
+    }
+}
+</code></pre>
+<p>尽管是不同的文件，它们仍是同一个命名空间，并且在使用的时候就如同它们在一个文件中定义的一样。 因为不同文件之间存在依赖关系，所以我们加入了引用标签来告诉编译器文件之间的关联。 我们的测试代码保持不变。</p>
+<h3 id="别名">别名</h3>
+<p>另一种简化命名空间操作的方法是使用<code>import q = x.y.z</code>给常用的对象起一个短的名字。 不要与用来加载模块的 <code>import x = require('name')</code>语法弄混了，这里的语法是为指定的符号创建一个别名。 你可以用这种方法为任意标识符创建别名，也包括导入的模块中的对象。<strong>对于值来讲， <code>import</code>会生成与原始符号不同的引用，所以改变别名的<code>var</code>值并不会影响原始变量的值。</strong></p>
+<pre><code class="language-ts">namespace Shapes {
+    export namespace Polygons {
+        export class Triangle { }
+        export class Square { }
+    }
+}
+
+import polygons = Shapes.Polygons;
+let sq = new polygons.Square(); // Same as &quot;new Shapes.Polygons.Square()&quot;
+</code></pre>
+<h3 id="使用其他的-javascript-库">使用其他的 JavaScript 库</h3>
+<p>为了描述不是用TypeScript编写的类库的类型，我们需要声明类库导出的API。 由于大部分程序库只提供少数的顶级对象，命名空间是用来表示它们的一个好办法。</p>
+<p>我们称其为声明是因为它不是外部程序的具体实现。 我们通常在 <code>.d.ts</code>里写这些声明。 如果你熟悉C/C++，你可以把它们当做 <code>.h</code>文件。</p>
+<h2 id="命名空间与模块">命名空间与模块</h2>
+<h3 id="使用命名空间">使用命名空间</h3>
+<p>命名空间是位于全局命名空间下的一个普通的带有名字的JavaScript对象。 这令命名空间十分容易使用。 它们可以在多文件中同时使用，并通过 <code>--outFile</code>结合在一起。 命名空间是帮你组织Web应用不错的方式，你可以把所有依赖都放在HTML页面的 <code>&lt;script&gt;</code>标签里。</p>
+<p>但就像其它的全局命名空间污染一样，它很难去识别组件之间的依赖关系，尤其是在大型的应用中。</p>
+<h3 id="使用模块">使用模块</h3>
+<p>像命名空间一样，模块可以包含代码和声明。 不同的是模块可以 <em>声明</em>它的依赖。</p>
+<p>模块会把依赖添加到模块加载器上（例如CommonJs / Require.js）。 对于小型的JS应用来说可能没必要，但是对于大型应用，这一点点的花费会带来长久的模块化和可维护性上的便利。 模块也提供了更好的代码重用，更强的封闭性以及更好的使用工具进行优化。</p>
+<p>对于Node.js应用来说，模块是默认并推荐的组织代码的方式。</p>
+<p>从ECMAScript 2015开始，模块成为了语言内置的部分，应该会被所有正常的解释引擎所支持。 因此，对于新项目来说推荐使用模块做为组织代码的方式。</p>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8C%E7%94%9F%E6%88%90%E5%99%A8">迭代器和生成器</a><br>
+*
+<ul>
+<li><a href="#forof%E8%AF%AD%E5%8F%A5-%E4%B8%8E-forin%E8%AF%AD%E5%8F%A5"><code>for...of</code>语句 与 <code>for...in</code>语句</a></li>
+</ul>
+</li>
+<li><a href="#%E6%A8%A1%E5%9D%97">模块</a>
+<ul>
+<li><a href="#%E5%AF%BC%E5%87%BA">导出</a>
+<ul>
+<li><a href="#%E5%AF%BC%E5%87%BA%E5%A3%B0%E6%98%8E">导出声明</a></li>
+<li><a href="#%E5%AF%BC%E5%87%BA%E8%AF%AD%E5%8F%A5">导出语句</a></li>
+<li><a href="#%E9%87%8D%E6%96%B0%E5%AF%BC%E5%87%BA">重新导出</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AF%BC%E5%85%A5">导入</a></li>
+<li><a href="#%E9%BB%98%E8%AE%A4%E5%AF%BC%E5%87%BA">默认导出</a><br>
+*
+<ul>
+<li><a href="#jquerydts">JQuery.d.ts</a></li>
+</ul>
+</li>
+<li><a href="#export-%E5%92%8Cimport-require"><code>export =</code>和<code>import = require()</code></a><br>
+*
+<ul>
+<li><a href="#zipcodevalidatorts">ZipCodeValidator.ts</a></li>
+<li><a href="#testts">Test.ts</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%AF%E9%80%89%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8A%A0%E8%BD%BD%E5%92%8C%E5%85%B6%E4%BB%96%E9%AB%98%E7%BA%A7%E5%8A%A0%E8%BD%BD%E5%9C%BA%E6%99%AF">可选的模块加载和其他高级加载场景</a></li>
+</ul>
+</li>
+<li><a href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4">命名空间</a><br>
+*<br>
+*<br>
+* <a href="#studentts"><code>Student.ts</code></a><br>
+* <a href="#gayts"><code>Gay.ts</code></a>
+<ul>
+<li><a href="#%E5%88%AB%E5%90%8D">别名</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%85%B6%E4%BB%96%E7%9A%84-javascript-%E5%BA%93">使用其他的 JavaScript 库</a></li>
+</ul>
+</li>
+<li><a href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E4%B8%8E%E6%A8%A1%E5%9D%97">命名空间与模块</a>
+<ul>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4">使用命名空间</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%9D%97">使用模块</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript语法">https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript语法</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript语法">https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript语法</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Ww2JGjz2CK"># TypeScript</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Ww2JGjz2CK"># TypeScript</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript类型系统">
+                                    TypeScript 类型系统
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2019-5-7-VueAdmin">
+                                            VueAdminTemplate源码分析
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

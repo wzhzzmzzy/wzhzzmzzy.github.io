@@ -1,0 +1,2333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://wzhzzmzzy.github.io</id>
+    <title>拭微</title>
+    <updated>2020-01-25T04:51:54.394Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://wzhzzmzzy.github.io"/>
+    <link rel="self" href="https://wzhzzmzzy.github.io/atom.xml"/>
+    <subtitle>愿你一生一世每天都能睡到自然醒。</subtitle>
+    <logo>https://wzhzzmzzy.github.io/images/avatar.png</logo>
+    <icon>https://wzhzzmzzy.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, 拭微</rights>
+    <entry>
+        <title type="html"><![CDATA[JavaScript Generator]]></title>
+        <id>https://wzhzzmzzy.github.io/post/2019-7-2-JS-Generator</id>
+        <link href="https://wzhzzmzzy.github.io/post/2019-7-2-JS-Generator">
+        </link>
+        <updated>2019-07-01T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="从-iterator-讲起">从 Iterator 讲起</h2>
+<p>与 Python 的 Iterable 类似，ES6 添加的 Iterator 支持也是通过获取 Iterable 对象的迭代器，然后通过<code>next</code>进行类似于惰性求值的工作。</p>
+<p>下面是 Python Iterable 的示例：</p>
+<pre><code class="language-python">rangeIter = iter(range(3))
+next(rangeIter)  # 0
+next(rangeIter)  # 1
+next(rangeIter)  # 2
+next(rangeIter)
+
+# throw StopIteration
+</code></pre>
+<p>然后是 JavaScript Iterable 示例：</p>
+<pre><code class="language-js">rangeIter = [1, 2, 3][Symbol.Iterator]
+rangeIter.next() // { value: 1, done: false }
+rangeIter.next() // { value: 2, done: false }
+rangeIter.next() // { value: 3, done: false }
+rangeIter.next() // { value: undefined, done: true }
+</code></pre>
+<h2 id="generator">Generator</h2>
+<h3 id="语法说明">语法说明</h3>
+<p>Generator 函数是 ES6 标准中提供的异步编程解决方案，语法与 Python 类似：</p>
+<pre><code class="language-js">function* gen() {
+    yield 1;
+    yield 2;
+    return 'end';
+}
+</code></pre>
+<p>Generator 函数的调用方法与普通函数一样，也是在函数名后面加上一对圆括号。不同的是，调用 Generator 函数后，该函数并不执行，返回的也不是函数运行结果，而是一个指向内部状态的指针对象，即 Iterator 对象。</p>
+<p>下一步，必须调用遍历器对象的<code>next</code>方法，使得指针移向下一个状态。</p>
+<p><code>yield</code>表达式本身没有返回值，或者说总是返回<code>undefined</code>。<code>next</code>方法可以带一个参数，该参数就会被当作上一个yield表达式的返回值。</p>
+<p>Generator 函数返回的遍历器对象，都有一个<code>throw</code>方法，可以在函数体外抛出错误，然后在 Generator 函数体内捕获。</p>
+<pre><code class="language-js">var g = function* () {
+  try {
+    yield;
+  } catch (e) {
+    console.log('内部捕获', e);
+  }
+};
+
+var i = g();
+i.next();
+
+try {
+  i.throw('a');
+  i.throw('b');
+} catch (e) {
+  console.log('外部捕获', e);
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JavaScript 笔记（三）：一些细枝末节]]></title>
+        <id>https://wzhzzmzzy.github.io/post/2019-6-1-JavaScript的细枝末节</id>
+        <link href="https://wzhzzmzzy.github.io/post/2019-6-1-JavaScript的细枝末节">
+        </link>
+        <updated>2019-05-31T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="语法细节">语法细节</h2>
+<h3 id="变量作用域">变量作用域</h3>
+<p>全局变量自然拥有全局作用域，不过在 JavaScript 任何一个运行环境：NodeJS、浏览器，似乎其实都不存在一个全局环境。浏览器下最大的作用域是<code>&lt;script&gt;</code>，NodeJS的作用域也顶多是在一个文件模块内部。</p>
+<p>函数体内部，局部<code>var</code>变量的优先级高于同名的全局<code>var</code>变量。</p>
+<pre><code class="language-js">var scope = &quot;global&quot;;
+function checkscope() {
+    var scope = &quot;local&quot;;
+    return scope;
+}
+checkscope();
+</code></pre>
+<h3 id="函数作用域与声明提前">函数作用域与声明提前</h3>
+<p>下面这个函数中，在不同的位置定义了变量<code>i</code>，<code>j</code>，<code>k</code>，但是这三个变量都可以在整个函数范围内访问到。</p>
+<pre><code class="language-js">function test(o) {
+    var i = 0;
+    if (typeof o == &quot;object&quot;) {
+        var j = 0;
+        for (var k = 0; k &lt; 10; ++k) {
+            console.log(k);
+        }
+        console.log(k);
+    }
+    console.log(j);
+}
+</code></pre>
+<p>这个函数其实与下面的写法是等价的：</p>
+<pre><code class="language-js">function test(o) {
+    var i = 0, j, k;
+    if (typeof o == &quot;object&quot;) {
+        j = 0;
+        for (k = 0; k &lt; 10; ++k) {
+            console.log(k);
+        }
+        console.log(k);
+    }
+    console.log(j);
+}
+</code></pre>
+<p>下面这段代码也可能有一些歧义，我们可以联合上面提到的声明提前与变量作用域这两点来理解他：</p>
+<pre><code class="language-js">var scope = &quot;global&quot;;
+function f() {
+	console.log(scope);
+    var scope = &quot;local&quot;;
+    console.log(scope);
+}
+</code></pre>
+<p>可能你会觉得函数第一行的输出是<code>global</code>，但是其实是<code>undefined</code>。所以，多用<code>let</code>。</p>
+<h3 id="作用域链">作用域链</h3>
+<p>JS 是基于作用域链的，每一段 JS 代码都有一个与之相关的作用域链。</p>
+<p>什么是作用域链呢？我们可以这样理解，作用域链就是一个链表，链表的每一个节点上记录了一个作用域，这个作用域有自己的变量。比如对于全局环境而言，链表只有一个节点，就是全局环境；对于非嵌套的函数而言，全局环境之上还有一个函数作用域，其中记录了形参和局部变量；嵌套函数自然还有自己的函数作用域。</p>
+<p>当使用变量时，会自上而下查找作用域链，一旦找到了，就会直接返回，这就解释了为什么全局变量会被局部变量覆盖，也导致了后面要讲到的闭包现象。</p>
+<h3 id="继承">继承</h3>
+<p>大家都知道 JS 有个神秘的 <code>prototype</code>，有时候觉得无法理解。下面是一个示例<code>inherit</code>函数：</p>
+<pre><code class="language-js">function inherit(p) {
+    if (p === null) throw TypeError();
+    if (Object.create)
+        return Object.create(p);
+    var t = typeof p;
+    if (t !== &quot;object&quot; &amp;&amp; t !== &quot;function&quot;) throw TypeError();
+    function f() {};
+    f.prototype = p;
+    return new f();
+}
+</code></pre>
+<p>取值和赋值都会对原型链进行查找，以此来判断如何对对象的属性进行修改。对于对象来说，原型是只读的，也就是大家无法对对象的原型进行修改，除非通过<code>defineProperty</code>。</p>
+<h3 id="命名空间">命名空间</h3>
+<p>在过去的 ES5 时代，大家可以通过函数来实现命名空间。也就是，通过立即执行函数来执行一些命名空间的初始化操作，生成一些封装好的工具。</p>
+<pre><code class="language-js">var myModule = (function {
+    var test = &quot;test&quot;;
+    return function() {console.log(test)};
+}());
+</code></pre>
+<h3 id="闭包">闭包</h3>
+<p>所谓闭包，就是当我们使用嵌套函数时，可以用它来保存函数内的局部变量。这是因为作用域链的原因。对于函数中声明的嵌套函数，其作用域链肯定是外部函数高于全局变量的，所以外部函数的变量环境在嵌套函数中会获得保留。</p>
+<p>只用文字描述一定有些抽象，有一个简单的例子：</p>
+<pre><code class="language-js">var scope = &quot;global scope&quot;;
+function checkscope() {
+    var scope = &quot;local scope&quot;;
+    function f() { return scope; }
+    return f;
+}
+checkscope()(); // local scope
+</code></pre>
+<p>有什么用呢？可以使用闭包来灵活地生成一些有着完全封闭的私有变量的函数，避免恶意改动。</p>
+<h3 id="异步-同步加载">异步、同步加载</h3>
+<p><code>&lt;script&gt;</code>标签可以有<code>defer</code>和<code>async</code>属性，一般来说，这些属性只在和<code>src</code>属性联合使用时才有效，但是有些浏览器还支持延迟的内联脚本。</p>
+<p><code>async</code>和<code>defer</code>都是告诉浏览器，可以在下载脚本的同时继续解析和渲染文档，<code>defer</code>属性让浏览器延迟脚本的执行直到文档载入和解析完成，<code>async</code>让浏览器可以尽快执行脚本，而不用在下载脚本的同事阻塞文档解析。</p>
+<p>顺便，如果同时具有这两个属性，那么浏览器会使用<code>async</code>，而不是<code>defer</code>。</p>
+<p>当然，在不支持<code>async</code>的浏览器里，可以动态创建<code>&lt;script&gt;</code>元素并插入到文档当中：</p>
+<pre><code class="language-js">function loadsync(url) {
+    var head = document.getElementsByTagName(&quot;head&quot;)[0];
+    var s = document.createElement(&quot;script&quot;);
+    s.src = url;
+    head.appendChild(s);
+}
+</code></pre>
+<h2 id="浏览器相关">浏览器相关</h2>
+<h3 id="事件驱动">事件驱动</h3>
+<p>JavaScript 是事件驱动的。一般而言，我们更多时候是在监听事件、绑定处理函数，而不是做一些时刻处在运行状态的脚本，那样低效且难以维护。</p>
+<p>通常，我们推荐使用<code>addEventListener</code>而不是直接对DOM元素的<code>onxxx</code>属性赋值来进行事件的监听，因为这样可以添加多个监听函数，而不是只能绑定一个。</p>
+<p>这里有一个小小的使用<code>setTimeout</code>的点子，也就是使用<code>setTimeout</code>来人为添加异步队列。因为<code>setTimeout</code>不会立即执行函数，而是在定时结束之后将函数放入任务队列，所以我们可以：</p>
+<pre><code class="language-js">function onLoad(f) {
+    if (onLoad.loaded)
+        window.setTimeout(f, 0); // 通过 setTimeout 将 f 放入之后的队列
+    else if (window.addEventListener)
+        window.addEventListener(&quot;load&quot;, f, false);
+    else if (window.attachEvent)
+        window.attachEvent(&quot;onload&quot;, f);
+}
+onLoad.loaded = false;
+onLoad(function() { onLoad.loaded = true; });
+</code></pre>
+<h3 id="浏览器时间线">浏览器时间线</h3>
+<ol>
+<li>创建 Document 对象，并且开始解析 Web 页面，解析 HTML 元素和文本内容后添加 Element 对象和 Text 节点到文档中。这个阶段<code>document.readyState === &quot;loadging&quot;</code>。</li>
+<li>当遇到没有<code>async</code>和<code>defer</code>的<code>&lt;script&gt;</code>元素时，会将这些元素添加到文档中，然后执行脚本。并且在脚本执行的同时，脚本会同步执行，并且在脚本下载和执行的同时，解析器会暂停。</li>
+<li>当解析器遇到了设置了<code>async</code>属性的<code>&lt;script&gt;</code>元素，会开始下载脚本，然后尽快运行，并继续解析文档。脚本会在它下载完成之后尽快执行，但是解析器没有停下来等他下载。异步脚本禁止使用<code>document.write()</code>方法。</li>
+<li>当文档完成解析之后，<code>document.readyState === &quot;interactive&quot;</code>。</li>
+<li>所有有<code>defer</code>属性的脚本，会按照他们在文档里出现的顺序执行，异步脚本可能也会在这个时间执行。延迟脚本能访问完整的文档树，但是禁止使用<code>document.write()</code>。</li>
+<li>Document 对象触发<code>DOMContentLoaded</code>事件，标志着程序执行从同步转换到了异步事件驱动阶段。</li>
+<li>这时，文档已经完全解析，但是浏览器可能还在等待其他内容载入。所有内容完成载入，所有异步脚本也执行完成，<code>document.readyState</code>属性改变为<code>&quot;complete&quot;</code>，浏览器触发<code>window</code>对象上的<code>load</code>事件。</li>
+<li>到这时，才会进入下一个异步任务队列。</li>
+</ol>
+<p>这是理想的时间线，但是在不同浏览器中有差异。所有浏览器都支持<code>load</code>事件，它才是决定文档载入并且可以操作的最通用的技术。</p>
+<h3 id="跨站脚本cross-site-scripting">跨站脚本（Cross-site scripting）</h3>
+<p>所谓 XSS 攻击也就是直接将用户输入添加到 HTML 文档中。可以使用脚本注入直接在站点内执行其他脚本，来获取用户。这是非常危险的攻击。例如：</p>
+<pre><code class="language-html">&lt;script&gt;
+var name = decodeURIComponent(window.location.search.substring(1)) || &quot;&quot;;
+document.write(&quot;Hello &quot; + name);
+&lt;/script&gt;
+</code></pre>
+<p>这样就可以在站点上执行远端脚本，从而进行一些入侵。</p>
+<h3 id="window-对象">window 对象</h3>
+<p><code>window</code>对象有着很多浏览器的 API。</p>
+<h4 id="浏览器和屏幕信息">浏览器和屏幕信息</h4>
+<p>通过<code>window</code>的<code>navigator</code>和<code>screen</code>两个对象可以获取到相关的信息。</p>
+<h4 id="打开和关闭窗口">打开和关闭窗口</h4>
+<p><code>window.open</code>载入指定的 URL 到新的或已经存在的窗口中，并且返回代表那个窗口的<code>window</code>对象。</p>
+<p><code>open</code>的第一个参数是 URL，第二个参数时新打开的窗口的名字。如果是一个已经存在的窗口的名字，那么就会直接使用已经存在的窗口。否则，会打开新的窗口。需要注意的是，脚本无法通过猜测窗口的名字来操控窗口中的 Web 应用。一般来说，只有文档是来自同源的，或者确实是由同一个脚本打开的才会生效。</p>
+<p><code>windows.open</code>是广告商用来弹窗的手段，所以一般来说如果不是用户点击导致的弹窗，会被浏览器所屏蔽。</p>
+<p><code>window.close</code>可以关闭一个窗口。</p>
+<h3 id="indexeddb">IndexedDB</h3>
+<p>可以认为 <code>IndexedDB</code>是一个浏览器环境下内置的 NoSQL。<code>IndexedDB</code>限制只有同源的网站可以相互访问内容，不同源的就不可以。每个源可以有任意数目的数据库，但是名字在当前源内需要是唯一的。</p>
+<p><code>IndexedDB</code>提供原子性保证，也就是对数据库的 CURD 操作是包含在一个事务内部的。这个数据库内，所有操作都是异步的，当成功或者失败的时候，会触发<code>success</code>和<code>error</code>事件。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JavaScript 笔记（一）：内存模型]]></title>
+        <id>https://wzhzzmzzy.github.io/post/2019-5-31-JavaScript内存模型</id>
+        <link href="https://wzhzzmzzy.github.io/post/2019-5-31-JavaScript内存模型">
+        </link>
+        <updated>2019-05-30T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="js-原始数据类型的变量声明和赋值">JS 原始数据类型的变量声明和赋值</h3>
+<pre><code class="language-js">let num = 23;
+</code></pre>
+<p>当我们创建了这么一个变量的时候，JS 会</p>
+<ol>
+<li>为变量创建一个唯一标识符，</li>
+<li>在内存里分配一个地址，</li>
+<li>将值 23 存储在分配的地址。</li>
+</ol>
+<pre><code class="language-js">let newNum = num;
+</code></pre>
+<p>此时，<code>num</code>和<code>newNum</code>指向的地址是相同的。</p>
+<pre><code class="language-js">num = num + 1;
+</code></pre>
+<p>这样会导致<code>num</code>和<code>newNum</code>指向不同的地址，因为 JS 中原始数据类型不可变，当<code>num + 1</code>解析为<code>24</code>的时候，JS 会在内存中分配一个新地址，将<code>24</code>作为其值存储，<code>num</code>指向新地址。</p>
+<p>字符串也是一样，当修改了字符串之后，不会在原来的内存位置对原串进行修改，而是重新分配一个内存地址用于存放新串。</p>
+<h3 id="调用堆栈和堆">调用堆栈和堆</h3>
+<p>“JS 中，原始数据类型放在调用栈中，而引用类型放在内存堆中。”</p>
+<p>这句话基本是正确的，但是有一些小小的地方需要纠正：引用类型的变量本身也是放在栈中的。</p>
+<h3 id="js-引用类型的变量声明和赋值">JS 引用类型的变量声明和赋值</h3>
+<p>让我们从一个简单的例子开始。下面，我们声明一个名为<code>myArray</code>的变量，并用一个空数组初始化它。</p>
+<pre><code class="language-js">let myArray = [];
+</code></pre>
+<p>当你声明变量“<code>myArray</code>”并为其指定非原始数据类型（如“[]”）时，以下是在内存中发生的情况：</p>
+<ol>
+<li>为变量创建唯一标识符（“<code>myArray</code>”）</li>
+<li>在内存中分配一个地址（将在运行时分配）</li>
+<li>存储在堆上分配的内存地址的值（将在运行时分配）</li>
+<li>堆上的内存地址存储分配的值（空数组<code>[]</code>）</li>
+</ol>
+<h3 id="let-vs-const"><code>let</code> vs. <code>const</code></h3>
+<p>一般来说，我们应该尽可能多地使用<code>const</code>，只有当我们知道某个变量将发生改变时才使用<code>let</code>。</p>
+<p>事实上，<code>const</code>的意义是：不允许更改变量的内存地址，<code>let</code>则允许。所以可以使用<code>const</code>来声明引用类型，只要不更改其指向即可。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Webpack 基础]]></title>
+        <id>https://wzhzzmzzy.github.io/post/2019-5-28-Webpack基础</id>
+        <link href="https://wzhzzmzzy.github.io/post/2019-5-28-Webpack基础">
+        </link>
+        <updated>2019-05-27T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="webpack-基础">Webpack 基础</h2>
+<h3 id="webpack-entry">Webpack Entry</h3>
+<p>Webpack根据入口文件（<code>entry</code>）构建依赖树，添加到依赖图中，遍历依赖图来对资源进行打包。</p>
+<p>Webpack Entry 可以有两种用法，单入口或多入口：</p>
+<pre><code class="language-js">module.exports = {
+    entry: './path/to/entry.js'
+}
+
+module.exports = {
+    entry: {
+        app: './path/app.js',
+        adminApp: './path/admin.js'
+    }
+}
+</code></pre>
+<h3 id="webpack-output">Webpack Output</h3>
+<p>Webpack 通过 Output 将编译后的文件输出到磁盘。</p>
+<p>单入口配置方式：</p>
+<pre><code class="language-js">const path = require('path');
+
+module.exports = {
+    entry: './path/to/entry.js',
+    output: {
+        filename: 'bundle.js',
+        path: path.join(__dirname, 'dist')
+    }
+};
+</code></pre>
+<p>多入口配置方式：</p>
+<pre><code class="language-js">const path = require('path');
+
+module.exports = {
+    entry: {
+        app: './path/app.js',
+        adminApp: './path/admin.js'
+    },
+    output: {
+        filename: '[name].js',
+        path: path.join(__dirname, 'dist')
+    }
+};
+</code></pre>
+<h3 id="webpack-loader">Webpack Loader</h3>
+<p>Webpack 默认只支持 JS 和 JSON 两种文件类型，通过 Loaders 去支持其他文件类型并且把他们转为有效的模块，并且可以添加到依赖图中。</p>
+<p>Loader 本身是一个函数，读取源文件内容，返回转换的结果。</p>
+<h4 id="常用-loaders">常用 Loaders</h4>
+<ul>
+<li><code>babel-loader</code></li>
+<li><code>css-loader</code></li>
+<li><code>less-loader</code></li>
+<li><code>ts-loader</code></li>
+<li><code>file-loader</code>：图片、字体打包。</li>
+<li><code>raw-loader</code>：字符串形式导入文本。</li>
+<li><code>thread-loader</code>：多进程打包 JS 和 CSS</li>
+</ul>
+<h4 id="使用语法">使用语法</h4>
+<pre><code class="language-js">const path = require('path');
+
+module.exports = {
+    output: {
+        filename: 'bundle.js',
+        path: path.join(__dirname, 'dist')
+    },
+    module: {
+        rules: [
+            { text: /\.txt$/, use: 'raw-loader' }
+        ]
+    }
+};
+</code></pre>
+<h3 id="webpack-plugins">Webpack Plugins</h3>
+<p>插件用于对 Webpack 功能进行增强：bundle 文件优化、资源管理、环境变量注入。插件作用于整个构建的过程。</p>
+<h4 id="常用的-plugins">常用的 Plugins</h4>
+<ul>
+<li><code>CommonsChunkPlugin</code>：多页面打包，将共同引用的模块代码提取成公共 JS。</li>
+<li><code>CleanWebpackPlugin</code>：清理构建目录。</li>
+<li><code>ExtractTextWebpackPlugin</code>：将 CSS 提取成独立的 CSS 文件。</li>
+<li><code>CopyWebpackPlugin</code>：将文件或者文件夹拷贝到构建的输出目录。</li>
+<li><code>HtmlWebpackPlugin</code>：创建 HTML 文件，用于承载<code>bundle</code>。</li>
+<li><code>UglifyjsWebpackPlugin</code>：压缩代码。</li>
+<li><code>ZipWebpackPlugin</code>：压缩为 Zip。</li>
+</ul>
+<h4 id="使用语法-2">使用语法</h4>
+<pre><code class="language-js">const path = require('path');
+
+module.exports = {
+    output: {
+        filename: 'bundle.js',
+        path: path.join(__dirname, 'dist')
+    },
+    plugins: [
+        new HtmlWebpackPlugin({template: './src/index.html'})
+    ]
+};
+</code></pre>
+<h3 id="webpack-mode">Webpack Mode</h3>
+<p>Mode 用于指定当前的构建环境，<code>production</code>、<code>development</code>、<code>none</code>。</p>
+<p>针对于构建环境，Webpack 会自动对插件做一些配置。可以通过<code>NODE_ENV</code>环境变量来指定。</p>
+<h2 id="解析指定文件">解析指定文件</h2>
+<h3 id="es6-和-react-jsx">ES6 和 React JSX</h3>
+<p>babel-loader 依赖 babel-core，因此需要添加配置文件：<code>.babelrc</code>。</p>
+<pre><code class="language-json">{
+    &quot;presets&quot;: [
+        &quot;@babel/preset-env&quot;
+    ]
+}
+</code></pre>
+<p>并需要安装依赖：</p>
+<pre><code>yarn add -D @babel/core @babel/preset-env babel-loader
+</code></pre>
+<p>这样就可以使用 babel-loader 编译 ES6 代码了：</p>
+<pre><code class="language-js">const path = require('path');
+
+module.exports = {
+    entry: {
+        main: './src/main.js',
+        search: './src/search.js'
+    },
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].js'
+    },
+    mode: 'production',
+    module: {
+        rules: [{
+            test: /.js$/,
+            use: 'babel-loader'
+        }]
+    }
+}
+</code></pre>
+<p>解析 React 需要添加<code>@babel/preset-react</code>，别的没有任何差别。</p>
+<h3 id="css-less">CSS、Less</h3>
+<p>解析CSS需要使用<code>css-loader</code>和<code>style-loader</code>：</p>
+<pre><code>yarn add -D style-loader css-loader
+</code></pre>
+<pre><code class="language-js">const path = require('path');
+
+module.exports = {
+    entry: {
+		// ...
+    },
+    output: {
+		// ...
+    },
+    mode: 'production',
+    module: {
+        rules: [{
+            test: /.css$/,
+            use: ['style-loader', 'css-loader']
+        }]
+    }
+}
+</code></pre>
+<blockquote>
+<p>loader 在一个 rule 中是链式调用的，并且顺序从右到左，所以需要将<code>style-loader</code>写在前面。</p>
+</blockquote>
+<p><code>less-loader</code>用于将 Less 转为 CSS。</p>
+<pre><code>yarn add -D less less-loader
+</code></pre>
+<pre><code class="language-js">const path = require('path');
+
+module.exports = {
+    entry: {
+		// ...
+    },
+    output: {
+		// ...
+    },
+    mode: 'production',
+    module: {
+        rules: [{
+            test: /.css$/,
+            use: ['style-loader', 'css-loader']
+        }, {
+            test: /.less$/,
+            use: ['style-loader', 'css-loader', 'less-loader']
+        }]
+    }
+}
+</code></pre>
+<h3 id="图片和字体">图片和字体</h3>
+<p>使用<code>file-loader</code>或者<code>url-loader</code>可以处理文件：</p>
+<pre><code>yarn add -D file-loader url-loader
+</code></pre>
+<pre><code class="language-js">const path = require('path');
+
+module.exports = {
+    entry: {
+		// ...
+    },
+    output: {
+		// ...
+    },
+    mode: 'production',
+    module: {
+        rules: [{
+            test: /.(png|jpg|jpeg|svg|gif)$/,
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: 10240
+                }
+            }]
+        }, {
+            test: /.(otf|woff|woff2|eot|ttf)$/,
+            use: 'file-loader'
+        }]
+    }
+}
+</code></pre>
+<h2 id="webpack-文件监听">Webpack 文件监听</h2>
+<p>Webpack 当然也可以使用文件监听，当源码发生变化时自动重新构建。缺陷在于需要每次刷新浏览器。只需要在<code>webpack</code>命令后添加<code>--watch</code>即可。</p>
+<p>可以添加一些相关的配置：</p>
+<pre><code class="language-js">module.export = {
+    watch: true,
+    watchOptions: {
+        ignored: /node_modules/
+        aggregateTimeout: 300,
+        pool: 1000 // 查询修改间隔时间
+    }
+}
+</code></pre>
+<h3 id="热更新">热更新</h3>
+<p>使用<code>webpack-dev-server</code>可以获得热更新功能。WDS 不会导致浏览器刷新，也不会输出文件，而是全部放在内存当中，这也提高了速度。以下就是可以打开 WDS 的命令：</p>
+<pre><code class="language-js">webpack-dev-server --open
+</code></pre>
+<p>当然，首先需要安装它：</p>
+<pre><code>yarn add -D webpack-dev-server
+</code></pre>
+<p>然后需要添加一些配置：</p>
+<pre><code class="language-js">const path = require('path');
+
+module.exports = {
+    entry: {
+        main: './src/main.js',
+        search: './src/search.js'
+    },
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].js'
+    },
+    mode: 'development',
+	// ...
+    devServer: {
+        contentBase: './dist',
+        hot: true
+    }
+}
+</code></pre>
+<p>为了实现更加多样的测试，可以使用<code>webpack-dev-middleware</code>。</p>
+<h4 id="原理分析">原理分析</h4>
+<p>Webpack 热更新首先需要将 JS 编译为 Bundle，然后将热更新的文件输出到 HMR Runtime，Bundle Server 提供浏览器内的文件访问，HMR Runtime 则会被注入到浏览器中，用于更新后续的变化。</p>
+<h2 id="文件指纹">文件指纹</h2>
+<p>为了让更新的文件不会与之前的缓存文件冲突，导致新修改的文件不会被下载，使用文件指纹来标识文件内容。添加了文件指纹后，浏览器就可以知道需要下载哪些新文件，而之前的未修改的缓存还会继续使用。</p>
+<p>有三种文件指纹哈希：</p>
+<ul>
+<li><code>Hash</code>：与整个项目的构建相关，一旦有文件发生改变，整个项目的构建hash就会改变，</li>
+<li><code>ChunkHash</code>：与 Webpack 打包的 Chunk 有关，不同的 Entry 有不同的 ChunkHash，只有 Chunk 改变了才会改变，</li>
+<li><code>ContentHash</code>：根据文件内容来定义 hash，文件内容不变，则 ContentHash 不变。</li>
+</ul>
+<p>输出文件名要携带 Hash 只需要修改 Output字段即可：</p>
+<pre><code class="language-js">const path = require('path');
+
+module.exports = {
+    entry: {
+        main: './src/main.js',
+        search: './src/search.js'
+    },
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].[chunkhash:8].js'
+    },
+	// ...
+}
+</code></pre>
+<p>对于 CSS 文件指纹，我们会需要使用一个插件：<code>MiniCssExtrackPlugin</code>。</p>
+<pre><code class="language-js">module.exports = {
+    // ...
+    module: {
+        rules: [{
+            test: /.css$/,
+            use: [
+                MiniCssExtractPlugin.loader,
+                'css-loader'
+            ]
+        }, {
+            test: /.less$/,
+            use: [
+                MiniCssExtractPlugin.loader,
+                'css-loader',
+                'less-loader'
+            ]
+        }]
+    }
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: `[name]:[content:8]:css`
+        })
+    ]
+}
+</code></pre>
+<p>图片文件指纹设置一般使用<code>[hash]</code>，这个<code>hash</code>与图片文件本身的 MD5 相关。</p>
+<pre><code class="language-js">const path = require('path');
+
+module.exports = {
+	// ...
+    moduls: {
+        rules: [{
+            test: /.(png|jpg|jpeg|svg|gif)$/,
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: 10240,
+                    name: '[name].[hash:8].[ext]'
+                }
+            }]
+        }, {
+            test: /.(otf|woff|woff2|eot|ttf)$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[hash:8].[ext]'
+                }
+            }]
+        }]
+    }
+}
+</code></pre>
+<h2 id="代码压缩">代码压缩</h2>
+<p>对于JS文件，Webpack 内置了<code>uglifyjs-webpack-plugin</code>；CSS 使用<code>optimize-css-assets-webpack-plugin</code>，同时使用 cssnano；HTML文件使用<code>html-webpack-plugin</code>。</p>
+<pre><code class="language-js">const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+module.exports = {
+    plugins: [
+        new OptimizeCSSAssetsPlugin({
+            assetNameRegExp: /\.css$/g,
+            cssProcessor: require('cssnano')
+        }),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'src/search.html'),
+            filename: 'search.html',
+            chunks: ['search'],
+            inject: true,
+            minify: {
+                html5: true,
+                collapseWhitespace: true,
+                preseveLineBreaks: false,
+                minifyCSS: true,
+                minifyJS: true,
+                removeComments: false
+            }
+        }),
+    ]
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Webpack Tricks]]></title>
+        <id>https://wzhzzmzzy.github.io/post/2019-6-14-Webpack进阶</id>
+        <link href="https://wzhzzmzzy.github.io/post/2019-6-14-Webpack进阶">
+        </link>
+        <updated>2019-05-27T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="自动清理构建目录">自动清理构建目录</h2>
+<h3 id="通过-npm-scripts-清理构建目录">通过 npm scripts 清理构建目录</h3>
+<pre><code>rm -rf ./dist &amp;&amp; webpack
+</code></pre>
+<h3 id="webpack-清理">Webpack 清理</h3>
+<p>避免构建前每次都要手动删除<code>dist</code>目录。首先我们需要安装<code>clean-webpack-plugin</code>，默认删除<code>output</code>指定的输出目录。</p>
+<pre><code class="language-js">plugins: [
+    new CleanWebpackPlugin();
+]
+</code></pre>
+<h2 id="postcss-插件-autoprefixer">PostCSS 插件  autoprefixer</h2>
+<p>由于浏览器对于 CSS 属性的支持不同，所以有时会需要添加前缀：</p>
+<pre><code class="language-css">.box {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+</code></pre>
+<p>我们可以通过插件<code>autoprefixer</code>来自动补全这些前缀。与之前用到的预处理不同的是，它是一个后置处理器。</p>
+<pre><code>npm i postcss-loader autoprefixer -D
+</code></pre>
+<p>然后我们可以修改一下之前对LESS的配置：</p>
+<pre><code class="language-js">{
+	test: /.less$/,
+    use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'less-loader',
+        {
+            loader: 'postcss-loader',
+            options: {
+                plugins: () =&gt; [
+                    require('autoprefixer')({
+                        browsers: ['last 2 version', '&gt;1%', 'ios 7']
+                    })
+                ]
+            }
+        }
+    ]
+}
+</code></pre>
+<h2 id="移动端-css-px自动换算rem">移动端 CSS px自动换算rem</h2>
+<p>使用 CSS 媒体查询实现响应式布局，缺点在于需要写多套适配的样式代码。</p>
+<pre><code class="language-css">@media screen and (max-width: 980px) {
+    .header {
+        width: 900px;
+    }
+}
+</code></pre>
+<p>使用 rem(font-size of the root element) 可以减少代码量。</p>
+<p>使用<code>px2rem-loader</code>自动将 CSS px换算成rem，可以使用<code>lib-flexible</code>自动在页面渲染时计算根元素的<code>font-size</code>。</p>
+<pre><code class="language-js">{
+    test: /.less$/,
+    use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'less-loader',
+        {
+            loader: 'postcss-loader',
+            options: {
+                plugins: () =&gt; [
+                    require('autoprefixer')({
+                        browsers: ['last 2 version', '&gt;1%', 'ios 7']
+                    })
+                ]
+            }
+        },
+        {
+            loader: 'px2rem-loader',
+            options: {
+                remUnit: 75, // 1 rem == 75 px
+                remPrecision: 8 // 保留小数
+            }
+        }
+    ]
+}
+</code></pre>
+<p>下面讲解如何便捷地引入内联 JS 代码。</p>
+<h2 id="静态资源内联">静态资源内联</h2>
+<p>使用<code>raw-loader</code>即可内联 HTML 和 JS：</p>
+<pre><code class="language-html">&lt;script&gt;${require('raw-loader!babel-loader!./meta.html')}&lt;/script&gt;
+&lt;script&gt;${require('raw-loader!babel-loader!../node_modules/lib-flexible')}&lt;/script&gt;
+</code></pre>
+<p>内联 CSS 比较复杂，有两种做法：<code>style-loader</code>和<code>html-inline-css-webpack-plugin</code>：</p>
+<ul>
+<li>使用<code>style-loader</code>时，<code>options</code>中设置<code>singleton: true</code>即可。</li>
+</ul>
+<h2 id="多页面应用打包通用方案">多页面应用打包通用方案</h2>
+<p>多页面应用对 SEO 更加友好，天然解耦。</p>
+<p>利用<code>glob.sync</code>可以动态获取<code>entry</code>，设置<code>html-webpack-plugin</code>数量：</p>
+<pre><code class="language-js">const setMPA = () =&gt; {
+    const entry = {};
+    const htmlWebpackPlugins = [];
+    const entryFiles = glob.sync(path.join(__dirname, 'src/*/index.js'))
+    Object.keys(entryFiles).map((index) =&gt; {
+        const entryFile = entryFiles[index];
+        const match = entryFiles.match(/src\/(.*)\/index\.js/);
+        const pageName = match &amp;&amp; match[1];
+        entryFile[pageName] = entryFile;
+        htmlWebpackPlugins.push(
+            new HtmlWebpackPlugin({
+                template: path.join(__dirname, `src/${pageName}/index.html`),
+                filename: `${pageName}.html`,
+                chunks: [pageName],
+                inject: true,
+                minify: {
+                    html5: true,.
+                    collapseWhitespace: true,
+                    preserveLineBreaks: false,
+                    minifyCSS: true,
+                    minifyJS: true,
+                    removeComments: false
+                }
+            })
+        );
+    })
+    return {
+        entry,
+        htmlWebpackPlugins
+    }
+}
+
+const { entry, htmlWebpackPlugins } = setMPA();
+
+module.exports = {
+    entry,
+    plugins: [
+        //...
+    ].concat(htmlWebpackPlugins)
+}
+</code></pre>
+<h2 id="source-map">Source Map</h2>
+<p>用于发生错误时定位代码段。一般只在开发环境使用，线上生产环境排查问题时可以将 SourceMap 上传到错误监控系统。</p>
+<h3 id="关键字">关键字</h3>
+<ul>
+<li><code>eval</code>：使用<code>eval</code>包裹模块代码；</li>
+<li><code>source map</code>：产生<code>.map</code>文件；</li>
+<li><code>cheap</code>：不包含列信息，只能定位到行号；</li>
+<li><code>inline</code>：将<code>.map</code>作为 DataURI 嵌入，不单独生成<code>.map</code>文件；</li>
+<li><code>module</code>：包含<code>loader</code>的 Source Map。</li>
+</ul>
+<p>通过这些关键字的排列组合可以拼接出不同的 Source Map 类型。</p>
+<h3 id="例子">例子</h3>
+<p>使用<code>eval</code>，不会生成<code>.map</code>文件。</p>
+<pre><code class="language-js">module.exports = {
+    mode: 'none',
+    devtools: 'source-map|eval|...'
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vue 的双向绑定]]></title>
+        <id>https://wzhzzmzzy.github.io/post/2019-5-25-Vue双向绑定</id>
+        <link href="https://wzhzzmzzy.github.io/post/2019-5-25-Vue双向绑定">
+        </link>
+        <updated>2019-05-24T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="发布-订阅模式的数据双向绑定">发布 - 订阅模式的数据双向绑定</h3>
+<p>这是最简单有效的途径，让所有 JavaScript对象和 DOM元素都订阅一个发布者对象，任何时候如果 JavaScript 对象或者一个输入字段被侦测到发生了变化，就后反过来广播并传播到所有绑定的对象和元素。</p>
+<h4 id="实现">实现</h4>
+<p>实现一个简单的发布订阅模式非常简单，下面是一个用 jQuery 实现的例子。</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;简单的数据双向绑定&lt;/title&gt;
+    &lt;script
+  src=&quot;https://code.jquery.com/jquery-3.4.1.min.js&quot;
+  integrity=&quot;sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=&quot;
+  crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+      $(function() {
+        //发布订阅原型
+        function PubSub() {
+          //存储事件名与回调函数
+          var eventContainer = {};
+          //订阅 存储事件
+          this.subscribe = function(eventName, callback) {
+            var callbacks = eventContainer[eventName] || [];
+            callbacks.push(callback);
+            eventContainer[eventName] = callbacks;
+          }
+          //发布 调用相应事件
+          this.publish = function() {
+            var eventName = [].shift.call(arguments);
+            var callbacks = eventContainer[eventName];
+ 
+            if (!callbacks || callbacks.length == 0) {
+              return false;
+            }
+            for(var i = 0; i &lt; callbacks.length; i++) {
+              var callback = callbacks[i];
+              callback.apply(this, arguments);
+            }
+          }
+        }
+        //实例化发布订阅原型
+        function InstancePubSub() {
+          var pubSub = new PubSub;
+ 
+          //监听model变化
+          pubSub.subscribe(&quot;model-change&quot;, function(key, newVal) {
+            //model变化更新视图
+            $(&quot;[data-bind=&quot; + key + &quot;]&quot;).each(function() {
+              if ($(this).is(&quot;input, textarea, select&quot;)) {
+                $(this).val(newVal);
+              } else {
+                $(this).html(newVal);
+              }
+            })
+ 
+            $(&quot;#modelView&quot;).html(newVal)
+          });
+ 
+          //对视图层元素进行change事件绑定
+          $(document).on(&quot;input&quot;, &quot;[data-bind]&quot;, function(evt) {
+              //一旦view发生变化通知调用回调函数更新model
+              pubSub.publish(&quot;view-change&quot;, $(this).attr(&quot;data-bind&quot;), $(this).val());
+          });
+ 
+          return pubSub;
+        }
+ 
+        function User() {
+          var pubSubInstance = new InstancePubSub;
+ 
+          var user = {
+            properties : {},
+            _set : function(key, value) {
+              this.properties[key] = value;
+              //model变化通知更新view
+              pubSubInstance.publish(&quot;model-change&quot;, key, value);
+            },
+            _get : function(key) {
+              return this.properties[key];
+            }
+          };
+          pubSubInstance.subscribe(&quot;view-change&quot;, function(key, newVal) {
+            //视图变化 更新model
+            user._set(key, newVal);
+          });
+          return user;
+        }
+ 
+        var user = new User;
+ 
+        //设置model值
+        user._set(&quot;age&quot;, 1);
+ 
+        //绑定model到view
+        $(&quot;#modelView&quot;).html(user._get(&quot;age&quot;))
+ 
+        //测试model变化引起view变化
+        $(&quot;#btn&quot;).click(function() {
+          user._set(&quot;age&quot;, parseInt(user._get(&quot;age&quot;)) + 1);
+        })
+      })
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;input type=&quot;number&quot; data-bind=&quot;age&quot; /&gt;
+    &lt;div id=&quot;modelView&quot;&gt;&lt;/div&gt;
+    &lt;button id=&quot;btn&quot;&gt;+1&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>这种方式虽然简单，但是毕竟并不快捷，修改数据时必须使用<code>vm.set('property', value)</code>，我们更希望使用<code>vm.property = value</code>这种方式进行更新。</p>
+<h3 id="脏值检查">脏值检查</h3>
+<p>Angular.js 通过脏值检测来比对数据是否有变更。最简单的方式就是使用<code>setInterval()</code>进行定期轮询。当然，不会真的这么无脑，Angular 只有在指定事件触发的时候才会进入脏值检测：</p>
+<ul>
+<li>DOM 事件，例如用户输入文本，点击按钮。</li>
+<li>XHR 响应事件。</li>
+<li>浏览器 Location 变更事件。</li>
+<li>Timer 事件。</li>
+<li>执行<code>$digest()</code>或者<code>$apply()</code>。</li>
+</ul>
+<h3 id="数据劫持">数据劫持</h3>
+<p>下面我们就来详细介绍一下 Vue 的做法。Vue.js 通过<code>Object.definProperty()</code>来劫持各个属性的<code>setter</code>或者<code>getter</code>。查看 MDN 文档中对<code>defineProperty</code>的解释：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty"><code>Object.defineProperty()</code></a></p>
+<p>为了实现MVVM的数据双向绑定，就需要实现以下几点：</p>
+<ol>
+<li>数据监听，如果数据发生变动可以拿到最新的值并通知订阅者。</li>
+<li>指令解析器，对每个元素节点的指令进行扫描和解析，通过指令模板替换数据，以及绑定相应的更新函数。</li>
+<li><code>watcher</code>，连接监听器和解析器，订阅并收到所有属性变动的通知，执行指令绑定的相应回调。</li>
+<li>MVVM 入口函数。</li>
+</ol>
+<p>下面是流程图：</p>
+<figure data-type="image" tabindex="1"><img src="132184689-57b310ea1804f_articlex.png" alt="" loading="lazy"></figure>
+<h4 id="实现-observer">实现 Observer</h4>
+<pre><code class="language-js">var data = {name: 'foo'};
+observe(data);
+data.name = 'bar'; // for --&gt; bar
+
+function observe(data) {
+    if (!data || typeof data !== 'object') return;
+    Object.keys(data).forEach(function(key) {
+        defineReactive(data, key, data[key]);
+    });
+};
+
+function defineReactive(data, key, val) {
+    observe(val); // 递归监听子属性
+    Object.defineProperty(data, key, {
+        enumerable: true, // 可枚举
+        configurable: false, // 不能再define
+        get: () =&gt; val,
+        set: function(newVal) {
+            console.log(val, ' --&gt; ', newVal);
+            val = newVal;
+        }
+    });
+}
+</code></pre>
+<p>这样我们就可以监听每个数据的变化了。监听到变化之后，需要通知订阅者，所以我们需要实现一个消息订阅器。很简单，只需要维护一个数组，用来收集订阅者，数据变动触发<code>notify</code>，然后调用订阅者的<code>update</code>即可。</p>
+<p>我们将<code>defineReactive</code>中的<code>set</code>方法修改一下：</p>
+<pre><code class="language-js">function defineReactive(data, key, val) {
+    var dep = new Dep();
+    observe(val);
+
+    Object.defineProperty(data, key, {
+        // ...
+        set: function(newVal) {
+            if (val === newVal) return;
+            console.log(val, ' --&gt; ', newVal);
+            val = newVal;
+            dep.notify(); // 通知所有订阅者
+        }
+    });
+}
+
+function Dep() {
+    this.subs = [];
+}
+
+Dep.prototype = {
+    addSub: function(sub) {
+        this.subs.push(sub);
+    },
+    notify: function() {
+        this.subs.forEach(function(sub) {
+            sub.update();
+        });
+    }
+};
+</code></pre>
+<p>那么还有一个问题，如何添加订阅呢？由于<code>dep</code>是私有的，我们不能直接将订阅者添加到其中。上面思路整理中，我们明确了订阅者应该是Watcher，我们可以在<code>getter</code>里面动手，这样就可以在闭包内操作了。</p>
+<pre><code class="language-js">// Observer.js
+// ...
+Object.defineProperty(data, key, {
+    get: function() {
+        // 由于需要在闭包内添加watcher，所以通过Dep定义一个全局target属性，暂存watcher, 添加完移除
+        Dep.target &amp;&amp; dep.addSub(Dep.target);
+        return val;
+    }
+    // ...
+});
+
+// Watcher.js
+Watcher.prototype = {
+    get: function(key) {
+        Dep.target = this;
+        this.value = data[key];    // 这里会触发属性的getter，从而添加订阅者
+        Dep.target = null;
+    }
+}
+</code></pre>
+<p>这里就实现了一个 Observer 了，我们可以使用它监听数据、通知订阅者。接下来需要实现 Compiler。</p>
+<h4 id="实现-compiler">实现 Compiler</h4>
+<p>由于我们需要操作多次 DOM 节点，为了提高性能，我们可以把节点换回文档碎片进行解析编译操作，解析完成再将<code>fragment</code>添加到原来真实的 DOM 节点当中。</p>
+<pre><code class="language-js">function Compile(el) {
+    this.$el = this.isElementNode(el) ? el : document.querySelector(el);
+    if (this.$el) {
+        this.$fragment = this.node2Fragment(this.$el);
+        this.init();
+        this.$el.appendChild(this.$fragment);
+    }
+}
+Compile.prototype = {
+    init: function() { this.compileElement(this.$fragment); },
+    node2Fragment: function(el) {
+        var fragment = document.createDocumentFragment(), child;
+        // 将原生节点拷贝到fragment
+        while (child = el.firstChild) {
+            fragment.appendChild(child); // 会将第一个元素从 el 移动到 fragment
+        }
+        return fragment;
+    }
+};
+</code></pre>
+<p><code>complieElement</code>方法将遍历所有节点和其子节点，进行扫描解析编译，调用对应的指令渲染函数进行数据渲染，并调用对应的指令更新函数进行绑定：</p>
+<pre><code class="language-js">Compile.prototype = {
+    // ...
+    compileElement: function(el) {
+        var childNodes = el.childNodes, me = this;
+        [].slice.call(childNodes).forEach(function(node) {
+            var text = node.textContent;
+            var reg = /\{\{(.*)\}\}/;    // 表达式文本
+            // 按元素节点方式编译
+            if (me.isElementNode(node)) {
+                me.compile(node);
+            } else if (me.isTextNode(node) &amp;&amp; reg.test(text)) {
+                me.compileText(node, RegExp.$1);
+            }
+            // 递归编译子节点
+            if (node.childNodes &amp;&amp; node.childNodes.length) {
+                me.compileElement(node);
+            }
+        });
+    },
+
+    compile: function(node) {
+        var nodeAttrs = node.attributes, me = this;
+        [].slice.call(nodeAttrs).forEach(function(attr) {
+            // 规定：指令以 v-xxx 命名
+            // 如 &lt;span v-text=&quot;content&quot;&gt;&lt;/span&gt; 中指令为 v-text
+            var attrName = attr.name;    // v-text
+            if (me.isDirective(attrName)) {
+                var exp = attr.value; // 属性值
+                var dir = attrName.substring(2); // 指令
+                if (me.isEventDirective(dir)) {
+                    // 事件指令, 如 v-on:click
+                    compileUtil.eventHandler(node, me.$vm, exp, dir);
+                } else {
+                    // 普通指令
+                    compileUtil[dir] &amp;&amp; compileUtil[dir](node, me.$vm, exp);
+                }
+            }
+        });
+    }
+};
+
+// 指令处理集合
+var compileUtil = {
+    text: function(node, vm, exp) {
+        this.bind(node, vm, exp, 'text');
+    },
+    // ...
+    bind: function(node, vm, exp, dir) {
+        var updaterFn = updater[dir + 'Updater'];
+        // 第一次初始化视图
+        updaterFn &amp;&amp; updaterFn(node, vm[exp]);
+        // 实例化订阅者，此操作会在对应的属性消息订阅器中添加了该订阅者watcher
+        new Watcher(vm, exp, function(value, oldValue) {
+            // 一旦属性值有变化，会收到通知执行此更新函数，更新视图
+            updaterFn &amp;&amp; updaterFn(node, value, oldValue);
+        });
+    }
+};
+
+// 更新函数
+var updater = {
+    textUpdater: function(node, value) {
+        node.textContent = typeof value == 'undefined' ? '' : value;
+    }
+    // ...
+};
+</code></pre>
+<p>这里递归编译节点树，指令的声明规定是通过特定前缀的节点属性来标记，如<code>&lt;span v-text=&quot;content&quot; other-attr</code>中<code>v-text</code>便是指令，而<code>other-attr</code>不是指令，只是普通的属性。监听数据、绑定更新函数的处理是在<code>compileUtil.bind()</code>这个方法中，通过<code>new Watcher()</code>添加回调来接收数据变化的通知</p>
+<h4 id="实现-watcher">实现 Watcher</h4>
+<p>Watcher 是 Observer 和 Compile 之间通信的桥梁，主要的工作有：</p>
+<ol>
+<li>把自己添加到属性订阅器当中；</li>
+<li>需要有<code>update()</code>方法；</li>
+<li>属性变动时，调用自己的<code>update()</code>方法，出发<code>Compile</code>中绑定的回调。</li>
+</ol>
+<pre><code class="language-js">function Watcher(vm, exp, callback) {
+    this.cb = callback;
+    this.vm = vm;
+    this.exp = exp;
+    // 此处为了触发属性的getter，从而在dep添加自己，结合Observer更易理解
+    this.value = this.get(); 
+}
+Watcher.prototype = {
+    update: function() {
+        this.run();    // 属性值变化收到通知
+    },
+    run: function() {
+        var value = this.get(); // 取到最新值
+        var oldVal = this.value;
+        if (value !== oldVal) {
+            this.value = value;
+            this.cb.call(this.vm, value, oldVal); // 执行Compile中绑定的回调，更新视图
+        }
+    },
+    get: function() {
+        Dep.target = this;    // 将当前订阅者指向自己
+        var value = this.vm[exp];    // 触发getter，添加自己到属性订阅器中
+        Dep.target = null;    // 添加完毕，重置
+        return value;
+    }
+};
+// 这里再次列出Observer和Dep，方便理解
+Object.defineProperty(data, key, {
+    get: function() {
+        // 由于需要在闭包内添加watcher，所以可以在Dep定义一个全局target属性，暂存watcher, 添加完移除
+        Dep.target &amp;&amp; dep.addDep(Dep.target);
+        return val;
+    }
+    // ... 省略
+});
+Dep.prototype = {
+    notify: function() {
+        this.subs.forEach(function(sub) {
+            sub.update(); // 调用订阅者的update方法，通知变化
+        });
+    }
+};
+</code></pre>
+<p>实例化<code>Watcher</code>的时候，调用<code>get()</code>方法，通过<code>Dep.target = watcherInstance</code>标记订阅者是当前 watcher 实例，强行触发属性定义的<code>getter</code>方法，<code>getter</code>方法执行的时候，就会在属性的订阅器<code>dep</code>添加当前 watcher 实例，从而在属性值有变化的时候，watcherInstance 就能收到更新通知。</p>
+<p>ok, Watcher 也已经实现了，<a href="https://github.com/DMQ/mvvm/blob/master/js/watcher.js">完整代码</a>。<br>
+基本上 vue 中数据绑定相关比较核心的几个模块也是这几个，猛戳<a href="https://github.com/vuejs/vue">这里</a>, 在<code>src</code> 目录可找到 vue 源码。</p>
+<p>最后来讲讲 MVVM 入口文件的相关逻辑和实现吧，相对就比较简单了~</p>
+<h4 id="实现-mvvm">实现 MVVM</h4>
+<p>MVVM 作为数据绑定的入口，整合 Observer、Compile 和 Watcher 三者，通过 Observer 来监听自己的 model 数据变化，通过 Compile 来解析编译模板指令，最终利用 Watcher 搭起 Observer 和 Compile 之间的通信桥梁，达到数据变化 -&gt; 视图更新；视图交互变化 (input) -&gt; 数据 model 变更的双向绑定效果。</p>
+<p>一个简单的 MVVM 构造器是这样子：</p>
+<pre><code class="language-js">function MVVM(options) {
+    this.$options = options;
+    var data = this._data = this.$options.data;
+    observe(data, this);
+    this.$compile = new Compile(options.el || document.body, this)
+}
+</code></pre>
+<p>但是这里有个问题，从代码中可看出监听的数据对象是<code>options.data</code>，每次需要更新视图，则必须通过<code>var vm = new MVVM({data:{name: 'foo'}}); vm._data.name = 'bar';</code>这样的方式来改变数据。</p>
+<p>显然不符合我们一开始的期望，我们所期望的调用方式应该是这样的：<br>
+<code>var vm = new MVVM({data: {name: 'foo'}}); vm.name = 'bar';</code></p>
+<p>所以这里需要给 MVVM 实例添加一个属性代理的方法，使访问<code>vm</code>的属性代理为访问<code>vm._data</code>的属性，改造后的代码如下：</p>
+<pre><code class="language-js">function MVVM(options) {
+    this.$options = options;
+    var data = this._data = this.$options.data, me = this;
+    // 属性代理，实现 vm.xxx -&gt; vm._data.xxx
+    Object.keys(data).forEach(function(key) {
+        me._proxy(key);
+    });
+    observe(data, this);
+    this.$compile = new Compile(options.el || document.body, this)
+}
+
+MVVM.prototype = {
+    _proxy: function(key) {
+        var me = this;
+        Object.defineProperty(me, key, {
+            configurable: false,
+            enumerable: true,
+            get: function proxyGetter() {
+                return me._data[key];
+            },
+            set: function proxySetter(newVal) {
+                me._data[key] = newVal;
+            }
+        });
+    }
+};
+</code></pre>
+<p>这里主要还是利用了<code>Object.defineProperty()</code>这个方法来劫持了<code>vm</code>实例对象的属性的读写权，使读写<code>vm</code>实例的属性转成读写了<code>vm._data</code>的属性值。</p>
+<p>这里有一个在线的示例：<a href="https://link.juejin.im/?target=https%3A%2F%2Fcodepen.io%2Fxiaomuzhu%2Fpen%2FjxBRgj%2F">双向绑定实现---无漏洞版</a> by Iwobi (<a href="https://link.juejin.im/?target=https%3A%2F%2Fcodepen.io%2Fxiaomuzhu">@xiaomuzhu</a>) on <a href="https://link.juejin.im/?target=https%3A%2F%2Fcodepen.io">CodePen</a>.</p>
+<h4 id="细节与弊端">细节与弊端</h4>
+<p>Vue.js 2.0 的数据劫持是通过使用<code>Object.defineProperty</code>并辅以发布订阅模式，实现了双向绑定核心与业务代码之间的解耦合。</p>
+<p>但是有一些缺陷，首先第一个缺陷：无法监听数组变化。Vue 文档里也提到，Vue 是可以检测数组变化的，但是只支持<code>push</code>、<code>pop</code>、<code>shift</code>、<code>unshift</code>、<code>splice</code>、<code>sort</code>、<code>reverse</code>八种方法。</p>
+<p>并且，我们在上面的代码中，多次遍历方法遍历对象的属性，这就引出了第二个缺陷：只能劫持对象的属性。所以要对对象的属性进行递归深度遍历。显然劫持一个完整的对象会是更好的选择。</p>
+<h3 id="proxy-实现双向绑定">Proxy 实现双向绑定</h3>
+<p>在 ES2015 中规范中正式发布了 Proxy，它可以在目标对象之外添加一层拦截，外界对这个对象的访问都需要通过拦截层。我们可以认为 Proxy 是更好的<code>Object.defineProperty</code>。</p>
+<h4 id="直接监听对象而非属性">直接监听对象而非属性</h4>
+<p>我们还是以上文中用<code>Object.defineProperty</code>实现的极简版双向绑定为例,用Proxy进行改写。</p>
+<pre><code class="language-js">const input = document.getElementById('input');
+const p = document.getElementById('p');
+const obj = {};
+
+const newObj = new Proxy(obj, {
+  get: function(target, key, receiver) {
+    console.log(`getting ${key}!`);
+    return Reflect.get(target, key, receiver);
+  },
+  set: function(target, key, value, receiver) {
+    console.log(target, key, value, receiver);
+    if (key === 'text') {
+      input.value = value;
+      p.innerHTML = value;
+    }
+    return Reflect.set(target, key, value, receiver);
+  },
+});
+
+input.addEventListener('keyup', function(e) {
+  newObj.text = e.target.value;
+});
+</code></pre>
+<p>在线示例 <a href="https://link.juejin.im?target=https%3A%2F%2Fcodepen.io%2Fxiaomuzhu%2Fpen%2FKRmwRE%2F">Proxy版</a> by Iwobi (<a href="https://link.juejin.im?target=https%3A%2F%2Fcodepen.io%2Fxiaomuzhu">@xiaomuzhu</a>) on <a href="https://link.juejin.im?target=https%3A%2F%2Fcodepen.io">CodePen</a>.</p>
+<p>我们可以看到,Proxy直接可以劫持整个对象,并返回一个新对象,不管是操作便利程度还是底层功能上都远强于<code>Object.defineProperty</code>。</p>
+<h4 id="监听数组的变化">监听数组的变化</h4>
+<p>当我们对数组进行操作(push、shift、splice等)时，会触发对应的方法名称和<em>length</em>的变化，我们可以借此进行操作,以上文中<code>Object.defineProperty</code>无法生效的列表渲染为例。</p>
+<pre><code class="language-js">const list = document.getElementById('list');
+const btn = document.getElementById('btn');
+
+// 渲染列表
+const Render = {
+  // 初始化
+  init: function(arr) {
+    const fragment = document.createDocumentFragment();
+    for (let i = 0; i &lt; arr.length; i++) {
+      const li = document.createElement('li');
+      li.textContent = arr[i];
+      fragment.appendChild(li);
+    }
+    list.appendChild(fragment);
+  },
+  // 我们只考虑了增加的情况,仅作为示例
+  change: function(val) {
+    const li = document.createElement('li');
+    li.textContent = val;
+    list.appendChild(li);
+  },
+};
+
+// 初始数组
+const arr = [1, 2, 3, 4];
+
+// 监听数组
+const newArr = new Proxy(arr, {
+  get: function(target, key, receiver) {
+    console.log(key);
+    return Reflect.get(target, key, receiver);
+  },
+  set: function(target, key, value, receiver) {
+    console.log(target, key, value, receiver);
+    if (key !== 'length') {
+      Render.change(value);
+    }
+    return Reflect.set(target, key, value, receiver);
+  },
+});
+
+// 初始化
+window.onload = function() {
+    Render.init(arr);
+}
+
+// push数字
+btn.addEventListener('click', function() {
+  newArr.push(6);
+});
+</code></pre>
+<p>在线示例 <a href="https://link.juejin.im?target=https%3A%2F%2Fcodepen.io%2Fxiaomuzhu%2Fpen%2FzjwGoN%2F">Proxy列表渲染</a> by Iwobi (<a href="https://link.juejin.im?target=https%3A%2F%2Fcodepen.io%2Fxiaomuzhu">@xiaomuzhu</a>) on <a href="https://link.juejin.im?target=https%3A%2F%2Fcodepen.io">CodePen</a>.</p>
+<p>很显然，Proxy不需要那么多hack（即使hack也无法完美实现监听）就可以无压力监听数组的变化,我们都知道,标准永远优先于hack。</p>
+<h4 id="其他优势">其他优势</h4>
+<p>Proxy有多达13种拦截方法,不限于<code>apply</code>、<code>ownKeys</code>、<code>deleteProperty</code>、<code>has</code>等等是<code>Object.defineProperty</code>不具备的。</p>
+<p>Proxy返回的是一个新对象,我们可以只操作新的对象达到目的,而<code>Object.defineProperty</code>只能遍历对象属性直接修改。</p>
+<p>Proxy作为新标准将受到浏览器厂商重点持续的性能优化，也就是传说中的新标准的性能红利。</p>
+<p>当然,Proxy 的劣势就是兼容性问题,而且无法用<code>polyfill</code>磨平,因此 Vue 的作者才声明需要等到下个大版本（3.0）才能用Proxy重写。</p>
+<h3 id="参考资料">参考资料</h3>
+<ol>
+<li><a href="https://juejin.im/post/5acd0c8a6fb9a028da7cdfaf">面试官系列(4): 实现双向绑定Proxy比defineproperty优劣如何?</a></li>
+<li><a href="https://github.com/DMQ/mvvm">剖析Vue实现原理 - 如何实现双向绑定mvvm</a></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[浏览器工作原理]]></title>
+        <id>https://wzhzzmzzy.github.io/post/2019-5-24-How-Browsers-Work</id>
+        <link href="https://wzhzzmzzy.github.io/post/2019-5-24-How-Browsers-Work">
+        </link>
+        <updated>2019-05-23T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p><a href="http://taligarsiel.com/Projects/howbrowserswork1.htm">How Browsers Work</a></p>
+</blockquote>
+<h2 id="浏览器的高层结构">浏览器的高层结构</h2>
+<figure data-type="image" tabindex="1"><img src="layers.png" alt="浏览器的主要组件" loading="lazy"></figure>
+<p>浏览器的主要构件有：</p>
+<ul>
+<li>UI —— 地址栏、前后按钮、书签栏等。</li>
+<li>浏览器引擎 —— 控制渲染引擎的接口。</li>
+<li>渲染引擎 —— 负责显示请求到的内容。例如请求到的内容是 HTML，那么渲染引擎就需要负责解析 HTML 和CSS，并且在屏幕上显示解析到的内容。</li>
+<li>网络 —— 用于发起 HTTP 请求。</li>
+<li>UI 后端 —— 使用操作系统底层 API 渲染 UI。</li>
+<li>JS 解释器 —— 用于解析并运行 JavaScript 代码。</li>
+<li>数据存储 —— 持久化层，用于将所有的数据存储在硬盘上，例如 Cookies。</li>
+</ul>
+<p>顺便提一下，Chrome的渲染引擎策略与其他主流浏览器不同，每一个标签页都有一个独立的渲染引擎实例。</p>
+<h2 id="渲染引擎">渲染引擎</h2>
+<p>这里，我们只提及用于显示 HTML 和图片，以及 CSS的渲染引擎。</p>
+<h3 id="渲染引擎类型">渲染引擎类型</h3>
+<p>Firefox 使用 Mozilla 自研的 Gecko，Safari 和 Chrome 使用 Webkit。Webkit是一个开源的渲染引擎，最初是用于 Linux，后被 Apple 修改用于支持 Mac 和 Windows。</p>
+<h3 id="核心工作流">核心工作流</h3>
+<figure data-type="image" tabindex="2"><img src="flow.png" alt="Rendering engine basic flow" loading="lazy"></figure>
+<p>渲染引擎从网络层获取到请求得到的文档，一般文档以 8K 大小的块组成。</p>
+<p>渲染引擎从 HTML 中解析出 DOM 元素，组织为 Content Tree，然后从 HTML 标签样式以及 CSS 中解析出样式信息，最终组成 Render Tree。</p>
+<p>Render Tree 由许多可视矩形组成，这些矩形有着颜色、尺寸的属性。这些矩形会以正确的顺序显示在屏幕上。</p>
+<p>Render Tree 构建完成之后，就可以开始布局。也就是给每一个节点一个特定的坐标，以便于它能够在屏幕上显示。下一步是绘图，UI 后端会将Render Tree的每一个节点渲染出来。</p>
+<p>为了用户体验考虑，整个流程是一个渐进的过程，也就是说，渲染引擎不会等待整个 HTML 文档被解析完成，而是解析一部分渲染一部分，然后继续处理文档剩余的部分，或是等待网络加载。</p>
+<p>以下是 Webkit 和 Gecko 的工作流程：</p>
+<figure data-type="image" tabindex="3"><img src="webkitflow.png" alt="Webkit Main Flow" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="image008.jpg" alt="Gecko Rendering Enging Main Flow" loading="lazy"></figure>
+<p>从上面两张图可以看出，除了术语之外，基本流程都大致相同。</p>
+<h4 id="通用解析原理">通用解析原理</h4>
+<p>一般而言，从代码文档到解析树，需要经历语法分析和词法分析。词法分析会辨识出哪些是有效的代码，哪些是无效的。</p>
+<p>整个解析过程是迭代进行的，解析器通常会与词法分析器协同工作，辨识语法和标识符，进行匹配。如果匹配成功，解析树上就会多出一个与标识符相关的节点，然后进行下一个标识符的解析。如果匹配失败，解析器会在内部保存这个标识符，然后不停地询问词法分析器，直到完全匹配。如果无法匹配，那么就会报错。</p>
+<p>解析树也不是最终产物，需要转化为机器码才可以被执行。一个常见的例子就是编译。编译器将源代码编译为机器码文档。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TypeScript 基础语法]]></title>
+        <id>https://wzhzzmzzy.github.io/post/2019-5-16-TypeScript基础</id>
+        <link href="https://wzhzzmzzy.github.io/post/2019-5-16-TypeScript基础">
+        </link>
+        <updated>2019-05-15T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="基础类型">基础类型</h2>
+<p>TS 支持与 JS 几乎完全相同的基本数据类型，还添加了枚举类型。</p>
+<ul>
+<li>
+<p>布尔值（<code>boolean</code>）</p>
+</li>
+<li>
+<p>数字（<code>number</code>）</p>
+</li>
+<li>
+<p>字符串（<code>string</code>）</p>
+</li>
+<li>
+<p>数组（<code>number[]</code>、<code>Array&lt;number&gt;</code>）</p>
+</li>
+<li>
+<p>元组（<code>[string, number]</code>）</p>
+</li>
+<li>
+<p>枚举：默认情况下，从<code>0</code>开始为元素编号。 你也可以手动的指定成员的数值。</p>
+<pre><code class="language-typescript">enum Color {Red, Green, Blue}
+enum Color {Red = 1, Green = 2, Blue = 4}
+</code></pre>
+</li>
+<li>
+<p>Any（<code>any</code>）</p>
+</li>
+<li>
+<p>Void（<code>void</code>)</p>
+</li>
+<li>
+<p>Null 和 Undefined（<code>null / undefined</code>）</p>
+</li>
+<li>
+<p>Never（<code>never</code>）：表示永不存在值的类型</p>
+</li>
+<li>
+<p>Object（<code>object</code>）：非原始类型</p>
+</li>
+</ul>
+<h3 id="类型断言">类型断言</h3>
+<p>可以在编码时给代码动态添加类型，可以看做是类型转换。类型断言语法有两种，但是在 JSX 中只有 <code>as</code> 是被允许的。</p>
+<pre><code class="language-typescript">let s: any = &quot;test string&quot;;
+let s_len: number = (&lt;string&gt;s).length;
+let s_len2: number = (s as string).length;
+</code></pre>
+<h2 id="变量声明">变量声明</h2>
+<h3 id="var"><code>var</code></h3>
+<p>过去 JavaScript 中最常见的变量声明符号。他的特点在于作用域：<code>var</code>声明可以在包含它的函数，模块，命名空间或全局作用域内部任何位置被访问。</p>
+<p>还有一点会导致一些难以被发现的错误：变量被重复声明不会报错。</p>
+<h3 id="let"><code>let</code></h3>
+<p>为了解决<code>var</code>所存在的问题，ES6 提出了<code>let</code>关键字。<code>let</code>的不同之处在于，它的作用域是块作用域，也称为此法作用域。并且，<code>let</code>变量重定义是不允许的，</p>
+<p><code>let</code>还有一个特性是屏蔽，即在内部块作用域内可以声明同名变量，不会影响到外部变量。</p>
+<h3 id="const"><code>const</code></h3>
+<p><code>const</code>关键字用于声明常量，不能被修改。</p>
+<h3 id="解构">解构</h3>
+<p>ES6中添加的解构赋值在 TypeScript 中也可以使用：</p>
+<pre><code class="language-typescript">// 数组解构
+let input = [1, 2];
+let [first, second] = input;
+[second, first] = [first, second];
+
+function foo([first, second]: [number, number]) { }
+foo(input);
+
+let [a] = [1, 2] // a === 1
+let [, b, , c] = [1, 2, 3, 4] // b === 2 &amp;&amp; c == 4
+
+// 对象解构
+let o = {a: &quot;foo&quot;, b: &quot;bar&quot;};
+let { c, d } = o;
+({ d, e } = {a: &quot;foo&quot;, b: &quot;bar&quot;});
+let {f, ...g} = o;
+</code></pre>
+<h4 id="属性重命名">属性重命名</h4>
+<p>这是一个混乱的语法，不太建议去使用。</p>
+<pre><code class="language-typescript">let { a: newName1, b: newName2 }= o;
+let {a, b}: {a: string, b: number} = o;
+</code></pre>
+<h4 id="默认值">默认值</h4>
+<p>当属性为<code>undefine</code>时给予默认值。函数参数默认值使用也是如此。</p>
+<pre><code class="language-typescript">function foo(o: { a: string, b?: number }) {
+    let { a, b = 1001 } = o;
+}
+</code></pre>
+<h4 id="函数声明">函数声明</h4>
+<p>解构当然也可以用于函数声明。当存在深层嵌套解构的时候，就算这时没有堆叠在一起的重命名，默认值和类型注解，也是令人难以理解的。</p>
+<pre><code class="language-typescript">type C = { a: string, b?: number }
+function f1({ a, b }: C): void { }
+function f2({ a=&quot;&quot;, b=0 } = {}): void { }
+f();
+</code></pre>
+<h3 id="展开">展开</h3>
+<p>展开操作符正与解构相反。 它允许你将一个数组展开为另一个数组，或将一个对象展开为另一个对象。</p>
+<pre><code class="language-typescript">let first = [1, 2];
+let second = [3, 4];
+let bothPlus = [0, ...first, ...second, 5];
+
+let defaults = { food: &quot;spicy&quot;, price: &quot;$$&quot;, ambiance: &quot;noisy&quot; };
+let search = { ...defaults, food: &quot;rich&quot; };
+</code></pre>
+<p>注意，展开时后面的属性会覆盖前面的属性。另外，展开时对象本身的方法会丢失。</p>
+<h2 id="接口">接口</h2>
+<p>TypeScript 的核心原则之一是<code>Duck Typing</code>。也就是，编译器检查类型时，并不会严格地给变量打上一个“实现了这个接口”的标记，而是判断他的是否具备了接口的所有要求，如果具备了，那就可以算是该接口的类型。</p>
+<pre><code class="language-typescript">interface LabelledValue {
+  label: string;
+}
+
+function printLabel(labelledObj: LabelledValue) {
+  console.log(labelledObj.label);
+}
+
+let myObj = {size: 10, label: &quot;Size 10 Object&quot;};
+printLabel(myObj);
+</code></pre>
+<h3 id="可选属性">可选属性</h3>
+<p>声明接口时可以声明可选属性，只需要带一个<code>?</code>即可。</p>
+<pre><code class="language-typescript">interface SquareConfig {
+  color?: string;
+  width?: number;
+}
+</code></pre>
+<h3 id="只读属性">只读属性</h3>
+<p>可以给对象创建只读属性。</p>
+<pre><code class="language-typescript">interface Point {
+    readonly x: number;
+    readonly y: number;
+}
+</code></pre>
+<p>TypeScript 添加了 <code>ReadonlyArray&lt;T&gt;</code>，与<code>Array&lt;T&gt;</code>相似，只是把所有的可变方法都去掉了，因此可以确保数组创建后再也不能被修改。<code>ReadonlyArray</code>不可以被整个赋值为一个普通数组，但是可以用类型断言重写。</p>
+<h3 id="额外的属性检查">额外的属性检查</h3>
+<p>在使用接口时，有时会出现一些问题，比如将可选属性与接收接口指定类型的函数结合，你可能认为传入一个包含其他属性的对象也没问题，但是事实上，这是无法成功的。</p>
+<pre><code class="language-typescript">interface SquareConfig {
+    color?: string;
+    width?: number;
+}
+
+function createSquare(config: SquareConfig): { color: string; area: number } {
+    // ...
+}
+
+// error: 'colour' not expected in type 'SquareConfig'
+let mySquare = createSquare({ colour: &quot;red&quot;, width: 100 });
+
+// 这样可以绕开检查
+let mySquare = createSquare({ width: 100, opacity: 0.5 } as SquareConfig);
+
+// 最好的方法是给接口添加一个字符串索引签名
+interface SquareConfig {
+    color?: string;
+    width?: number;
+    [propName: string]: any;
+}
+</code></pre>
+<h3 id="函数类型">函数类型</h3>
+<p>函数当然也具有类型，也可以在接口声明，以下是一个函数接口的声明：</p>
+<pre><code class="language-typescript">interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+// 对于函数，不会检查其中形参的名称是否符合声明，只要求对应位置上的参数类型是兼容的
+let mySearch: SearchFunc = function(src: string, subStr: string) {
+  let result = source.search(subString);
+  return result &gt; -1;
+}
+</code></pre>
+<h3 id="可索引的类型">可索引的类型</h3>
+<p>与使用接口描述函数类型差不多，我们也可以描述那些能够“通过索引得到”的类型，比如<code>a[10]</code>或<code>ageMap[&quot;daniel&quot;]</code>。 可索引类型具有一个索引签名，它描述了对象索引的类型，还有相应的索引返回值类型。</p>
+<pre><code class="language-typescript">interface StringArray {
+  [index: number]: string;
+}
+
+let myArray: StringArray;
+myArray = [&quot;Bob&quot;, &quot;Fred&quot;];
+
+let myStr: string = myArray[0];
+</code></pre>
+<p>这里有个需要注意的地方：TypeScript 支持字符串和数字索引。可以同时使用两种类型，但是数字索引必须是字符串索引返回值的子类型。这是因为当使用 <code>number</code>来索引时，JavaScript会将它转换成<code>string</code>然后再去索引对象。 也就是说用 <code>100</code>（一个<code>number</code>）去索引等同于使用<code>&quot;100&quot;</code>（一个<code>string</code>）去索引，因此两者需要保持一致。</p>
+<h3 id="类类型">类类型</h3>
+<h4 id="实现接口">实现接口</h4>
+<p>与C#或Java里接口的基本作用一样。</p>
+<pre><code class="language-typescript">interface ClockInterface {
+    currentTime: Date;
+    setTime(d: Date);
+}
+
+class Clock implements ClockInterface {
+    currentTime: Date;
+    setTime(d: Date) {
+        this.currentTime = d;
+    }
+    constructor(h: number, m: number) { }
+}
+</code></pre>
+<p>接口描述了类的公共部分，而不是公共和私有两部分。 它不会帮你检查类是否具有某些私有成员。</p>
+<p>当我们想要用接口去描述一个类的构造函数的时候，我们可以将类描述为一个只包含构造函数的接口：</p>
+<pre><code class="language-typescript">interface ClockConstructor {
+    new (hour: number, minute: number): ClockInterface;
+}
+interface ClockInterface {
+    tick();
+}
+
+function createClock(ctor: ClockConstructor, hour: number, minute: number): ClockInterface {
+    return new ctor(hour, minute);
+}
+class DigitalClock implements ClockInterface {
+    constructor(h: number, m: number) { }
+    tick() {
+        console.log(&quot;beep beep&quot;);
+    }
+}
+</code></pre>
+<h3 id="继承接口">继承接口</h3>
+<p>和类一样，接口也可以相互继承。一个接口可以继承多个接口，创建出多个接口的合成接口。</p>
+<h3 id="混合类型">混合类型</h3>
+<p>当需要描述混合类型的时候，接口也是可以胜任的。</p>
+<pre><code class="language-typescript">interface Counter {
+    (start: number): string;
+    interval: number;
+    reset(): void;
+}
+</code></pre>
+<h3 id="接口继承类">接口继承类</h3>
+<p>当接口继承了一个类类型时，它会继承类的成员但不包括其实现。</p>
+<h2 id="类">类</h2>
+<h3 id="类-2">类</h3>
+<p>下面看一个使用类的例子。</p>
+<pre><code class="language-typescript">class Greeter {
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return &quot;Hello, &quot; + this.greeting;
+    }
+}
+
+let greeter = new Greeter(&quot;world&quot;);
+</code></pre>
+<h3 id="继承">继承</h3>
+<p>在构造函数里访问 <code>this</code>的属性之前，我们 <em>一定</em>要调用 <code>super()</code>。 这个是TypeScript强制执行的一条重要规则。</p>
+<pre><code class="language-typescript">class Animal {
+    name: string;
+    constructor(theName: string) { this.name = theName; }
+    move(distanceInMeters: number = 0) {
+        console.log(`${this.name} moved ${distanceInMeters}m.`);
+    }
+}
+
+class Snake extends Animal {
+    constructor(name: string) { super(name); }
+    move(distanceInMeters = 5) {
+        console.log(&quot;Slithering...&quot;);
+        super.move(distanceInMeters);
+    }
+}
+
+class Horse extends Animal {
+    constructor(name: string) { super(name); }
+    move(distanceInMeters = 45) {
+        console.log(&quot;Galloping...&quot;);
+        super.move(distanceInMeters);
+    }
+}
+</code></pre>
+<h3 id="公共-私有-受保护-只读">公共、私有、受保护、只读</h3>
+<p>默认为<code>public</code>，当然也可以明确标记；标记为<code>private</code>时，不可以在类外部访问；<code>protected</code>可以在派生类内访问。</p>
+<p>属性还可以多一个<code>readonly</code>修饰符，必须有默认值或者在构造函数里赋值。</p>
+<h3 id="存取器">存取器</h3>
+<p>TypeScript 中当然有<code>getter/setters</code>。</p>
+<pre><code class="language-typescript">let passcode = &quot;secret passcode&quot;;
+
+class Employee {
+    private _fullName: string;
+
+    get fullName(): string {
+        return this._fullName;
+    }
+
+    set fullName(newName: string) {
+        if (passcode &amp;&amp; passcode == &quot;secret passcode&quot;) {
+            this._fullName = newName;
+        }
+        else {
+            console.log(&quot;Error: Unauthorized update of employee!&quot;);
+        }
+    }
+}
+</code></pre>
+<h3 id="静态属性">静态属性</h3>
+<p>访问静态属性前面要加类名。</p>
+<pre><code class="language-typescript">class Grid {
+    static origin = {x: 0, y: 0};
+    calculateDistanceFromOrigin(point: {x: number; y: number;}) {
+        let xDist = (point.x - Grid.origin.x);
+        let yDist = (point.y - Grid.origin.y);
+        return Math.sqrt(xDist * xDist + yDist * yDist) / this.scale;
+    }
+    constructor (public scale: number) { }
+}
+</code></pre>
+<h3 id="抽象类">抽象类</h3>
+<p>抽象类不可以被实例化。</p>
+<pre><code class="language-typescript">abstract class Animal {
+    abstract makeSound(): void;
+    move(): void {
+        console.log('roaming the earch...');
+    }
+}
+</code></pre>
+<h3 id="构造函数的本质">构造函数的本质</h3>
+<p>在声明一个类的时候，事实上是声明了一个构造函数：</p>
+<pre><code class="language-typescript">class Greeter {
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return &quot;Hello, &quot; + this.greeting;
+    }
+}
+
+let greeter: Greeter;
+greeter = new Greeter(&quot;world&quot;);
+console.log(greeter.greet());
+
+// 编译后的 JavaScript
+let Greeter = (function () {
+    function Greeter(message) {
+        this.greeting = message;
+    }
+    Greeter.prototype.greet = function () {
+        return &quot;Hello, &quot; + this.greeting;
+    };
+    return Greeter;
+})();
+
+let greeter;
+greeter = new Greeter(&quot;world&quot;);
+console.log(greeter.greet());
+</code></pre>
+<h3 id="把类当做接口使用">把类当做接口使用</h3>
+<p>你可以在任何使用接口的地方使用类。</p>
+<h2 id="函数">函数</h2>
+<p>在 TypeScript 中可以使用命名函数和匿名函数。函数可以使用函数外定义的变量。</p>
+<h3 id="函数类型-2">函数类型</h3>
+<p>函数类型包含两部分：参数类型和返回值类型。 当写出完整函数类型的时候，这两部分都是需要的。只要参数类型是匹配的，那么就认为它是有效的函数类型，而不在乎参数名是否正确。</p>
+<pre><code class="language-typescript">let myAdd: (x: number, y: number) =&gt; number =
+    function(x: number, y: number): number { return x + y; };
+</code></pre>
+<h3 id="可选参数和默认参数">可选参数和默认参数</h3>
+<p>TypeScript里的每个函数参数都是必须的。，但是你可以传入<code>null</code>或者<code>undefined</code>。可选参数是指可以在参数名旁边添加<code>?</code>。默认值可以在无默认值的参数之前，如果要这样的话，就需要使用传入<code>undefined</code>来获取参数的默认值。</p>
+<h3 id="剩余参数">剩余参数</h3>
+<p>在TypeScript里，你可以把所有参数收集到一个变量里：</p>
+<pre><code class="language-typescript">function buildName(firstName: string, ...restOfName: string[]) {
+  return firstName + &quot; &quot; + restOfName.join(&quot; &quot;);
+}
+
+let employeeName = buildName(&quot;Joseph&quot;, &quot;Samuel&quot;, &quot;Lucas&quot;, &quot;MacKinzie&quot;);
+</code></pre>
+<h3 id="this"><code>this</code></h3>
+<p>如果你想了解JavaScript里的 <code>this</code>是如何工作的，那么首先阅读Yehuda Katz写的<a href="http://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/">Understanding JavaScript Function Invocation and &quot;this&quot;</a>。TypeScript能通知你错误地使用了<code>this</code>的地方。</p>
+<p>JavaScript里，<code>this</code>的值在函数被调用的时候才会指定。为了解决这个问题，我们可以在函数被返回时就绑好正确的<code>this</code>。箭头函数能保存函数创建时的 <code>this</code>值，而不是调用时的值。</p>
+<pre><code class="language-javascript">let deck = {
+    suits: [&quot;hearts&quot;, &quot;spades&quot;, &quot;clubs&quot;, &quot;diamonds&quot;],
+    cards: Array(52),
+    createCardPicker: function() {
+        // NOTE: the line below is now an arrow function, allowing us to capture 'this' right here
+        return () =&gt; {
+            let pickedCard = Math.floor(Math.random() * 52);
+            let pickedSuit = Math.floor(pickedCard / 13);
+
+            return {suit: this.suits[pickedSuit], card: pickedCard % 13};
+        }
+    }
+}
+
+let cardPicker = deck.createCardPicker();
+let pickedCard = cardPicker();
+
+alert(&quot;card: &quot; + pickedCard.card + &quot; of &quot; + pickedCard.suit);
+</code></pre>
+<p>更好事情是，TypeScript会警告你犯了一个错误，如果你给编译器设置了<code>--noImplicitThis</code>标记。 它会指出<code>this.suits[pickedSuit]</code>里的<code>this</code>的类型为<code>any</code>。这是因为 <code>this</code>来自对象字面量里的函数表达式。 修改的方法是，提供一个显式的 <code>this</code>参数。 <code>this</code>参数是个假的参数，它出现在参数列表的最前面：</p>
+<blockquote>
+<p><code>this: void</code> means that <code>addClickListener</code> expects <code>f</code> to be a function that does not require a <code>this</code> type.</p>
+</blockquote>
+<pre><code class="language-typescript">function f(this: void) {
+    // make sure `this` is unusable in this standalone function
+}
+</code></pre>
+<p>我们往例子里加一些接口，代码就会变得更加清晰：</p>
+<pre><code class="language-typescript">interface Card {
+    suit: string;
+    card: number;
+}
+interface Deck {
+    suits: string[];
+    cards: number[];
+    createCardPicker(this: Deck): () =&gt; Card;
+}
+let deck: Deck = {
+    suits: [&quot;hearts&quot;, &quot;spades&quot;, &quot;clubs&quot;, &quot;diamonds&quot;],
+    cards: Array(52),
+    // NOTE: The function now explicitly specifies that its callee must be of type Deck
+    createCardPicker: function(this: Deck) {
+        return () =&gt; {
+            let pickedCard = Math.floor(Math.random() * 52);
+            let pickedSuit = Math.floor(pickedCard / 13);
+
+            return {suit: this.suits[pickedSuit], card: pickedCard % 13};
+        }
+    }
+}
+
+let cardPicker = deck.createCardPicker();
+let pickedCard = cardPicker();
+
+alert(&quot;card: &quot; + pickedCard.card + &quot; of &quot; + pickedCard.suit);
+</code></pre>
+<p>现在TypeScript知道<code>createCardPicker</code>期望在某个<code>Deck</code>对象上调用。 也就是说 <code>this</code>是<code>Deck</code>类型的，而非<code>any</code>，因此<code>--noImplicitThis</code>不会报错了。</p>
+<p>如果你想要把一个函数作为参数传入一个库函数，而库函数所定义的函数类型中有<code>this: void</code>，那么意味着你需要修复你函数中<code>this</code>的类型，否则会报错。或者你可以直接传入一个箭头函数。</p>
+<h3 id="函数重载">函数重载</h3>
+<p>TypeScript使用严格函数定义的另一个好处是可以使用函数重载。为了让编译器能够选择正确的检查类型，它与JavaScript里的处理流程相似。 它查找重载列表，尝试使用第一个重载定义。 如果匹配的话就使用这个。 因此，在定义重载的时候，一定要把最精确的定义放在最前面。</p>
+<h2 id="泛型">泛型</h2>
+<p>TypeScript的泛型和其他语言的泛型非常相似。使用泛型的好处是不会像使用<code>any</code>一样丢失类型信息。</p>
+<pre><code class="language-typescript">function identity&lt;T&gt;(arg: T): T {
+    return arg;
+}
+</code></pre>
+<h3 id="泛型函数的类型">泛型函数的类型</h3>
+<pre><code class="language-typescript">interface GenericIdentityFn {
+    &lt;T&gt;(arg: T): T;
+}
+</code></pre>
+<h3 id="泛型类">泛型类</h3>
+<p>我们在<a href="https://www.tslang.cn/docs/handbook/classes.html">类</a>那节说过，类有两部分：静态部分和实例部分。 泛型类指的是实例部分的类型，所以类的静态属性不能使用这个泛型类型。</p>
+<pre><code class="language-typescript">class GenericNumber&lt;T&gt; {
+    zeroValue: T;
+    add: (x: T, y: T) =&gt; T;
+}
+
+</code></pre>
+<h3 id="泛型约束">泛型约束</h3>
+<p>由于泛型本身没有任何类型，所以这就弱化了编译器的功能。编译器会十分严格地要求泛型，所以我们无法调用泛型上的方法。我们可以给泛型添加约束来让泛型可以被更好地使用。</p>
+<pre><code class="language-typescript">function loggingIdentity&lt;T extends Lengthwise&gt;(arg: T): T {
+    console.log(arg.length);  // Now we know it has a .length property, so no more error
+    return arg;
+}
+</code></pre>
+<h3 id="在泛型约束中使用类型参数">在泛型约束中使用类型参数</h3>
+<p>你可以声明一个类型参数，且它被另一个类型参数所约束。 比如，现在我们想要用属性名从对象里获取这个属性。 并且我们想要确保这个属性存在于对象 <code>obj</code>上，因此我们需要在这两个类型之间使用约束。</p>
+<pre><code class="language-typescript">function getProperty(obj: T, key: K) {
+    return obj[key];
+}
+
+let x = { a: 1, b: 2, c: 3, d: 4 };
+
+getProperty(x, &quot;a&quot;); // okay
+getProperty(x, &quot;m&quot;); // error: Argument of type 'm' isn't assignable to 'a' | 'b' | 'c' | 'd'.
+</code></pre>
+<h3 id="在泛型里使用类类型">在泛型里使用类类型</h3>
+<p>在TypeScript使用泛型创建工厂函数时，需要引用构造函数的类类型。比如，</p>
+<pre><code class="language-ts">function create&lt;T&gt;(c: {new(): T; }): T {
+    return new c();
+}
+</code></pre>
+<p>一个更高级的例子，使用原型属性推断并约束构造函数与类实例的关系。</p>
+<pre><code class="language-ts">class BeeKeeper {
+    hasMask: boolean;
+}
+
+class ZooKeeper {
+    nametag: string;
+}
+
+class Animal {
+    numLegs: number;
+}
+
+class Bee extends Animal {
+    keeper: BeeKeeper;
+}
+
+class Lion extends Animal {
+    keeper: ZooKeeper;
+}
+
+function createInstance&lt;A extends Animal&gt;(c: new () =&gt; A): A {
+    return new c();
+}
+
+createInstance(Lion).keeper.nametag;  // typechecks!
+createInstance(Bee).keeper.hasMask;   // typechecks!
+</code></pre>
+<h2 id="symbol">Symbol</h2>
+<p>自ECMAScript 2015起，<code>symbol</code>成为了一种新的原生类型，就像<code>number</code>和<code>string</code>一样。</p>
+<p><code>symbol</code>类型的值是通过<code>Symbol</code>构造函数创建的。</p>
+<pre><code class="language-ts">let sym1 = Symbol();
+
+let sym2 = Symbol(&quot;key&quot;); // 可选的字符串key
+</code></pre>
+<p>Symbols是不可改变且唯一的。</p>
+<pre><code class="language-ts">let sym2 = Symbol(&quot;key&quot;);
+let sym3 = Symbol(&quot;key&quot;);
+
+sym2 === sym3; // false, symbols是唯一的
+</code></pre>
+<p>像字符串一样，symbols也可以被用做对象属性的键。</p>
+<pre><code class="language-ts">let sym = Symbol();
+
+let obj = {
+    [sym]: &quot;value&quot;
+};
+
+console.log(obj[sym]); // &quot;value&quot;
+</code></pre>
+<p>Symbols也可以与计算出的属性名声明相结合来声明对象的属性和类成员。</p>
+<pre><code class="language-ts">const getClassNameSymbol = Symbol();
+
+class C {
+    [getClassNameSymbol](){
+       return &quot;C&quot;;
+    }
+}
+
+let c = new C();
+let className = c[getClassNameSymbol](); // &quot;C&quot;
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[魔盒挑战第二期判题系统制作日志]]></title>
+        <id>https://wzhzzmzzy.github.io/post/2019-5-20-Pandora-2nd-记录</id>
+        <link href="https://wzhzzmzzy.github.io/post/2019-5-20-Pandora-2nd-记录">
+        </link>
+        <updated>2019-05-15T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>Github Repo：</p>
+<ul>
+<li><a href="https://github.com/SUMSC/Pandora-2nd-Competition">题面 - Flask</a></li>
+<li><a href="https://github.com/SUMSC/Pandora-2nd-FE">前端页面 - VueElementAdmin</a></li>
+<li><a href="https://github.com/LionTao/Pandora-2nd-BE">后端 - Tornado</a></li>
+</ul>
+</blockquote>
+<h2 id="遇到的坑">遇到的坑</h2>
+<h3 id="python-http-service-异步">Python HTTP Service 异步</h3>
+<p>由于 eForm-Auth 在处理一个请求时会同步阻塞，并等待远端服务器的响应，直观的表现就是占用了过多的 Worker，无法处理之后过来的请求。因此，使用经典的同步 HTTP 框架，例如 Flask，就会让之后的请求超时。</p>
+<p>之后我们选用了 tornado 的 AsyncHTTPClient 处理这个问题，也就导致了下面这个问题的发生。</p>
+<h3 id="tornado-async-fetch-的缺陷">Tornado Async Fetch 的缺陷</h3>
+<p>由于 eForm-Auth 是通过向学校的统一认证服务器发送 HTTP 模拟请求进行用户登录的，所以我们需要使用 tornado AsyncHTTPClient Fetch 对这个环节进行异步处理。由于对服务器发送请求会发生两次连续的需要通过 Cookie 鉴权的重定向，而 tornado Fetch 没有对重定向保持 Credential，而之前，当我们使用 Python 发送 HTTP 请求最主流的<code>requests</code>包对学校的统一认证服务进行访问时，则和浏览器会有相同的表现。</p>
+<p>解决方法：手动处理 tornado Redirect</p>
+<pre><code class="language-python">async def post(self):
+    ...
+    http_client = AsyncHTTPClient()
+    try:
+        response = await http_client.fetch(url,
+            method=&quot;POST&quot;, headers=headers,
+            body=urlencode({&quot;IDToken1&quot;: id_tag, &quot;IDToken2&quot;: token}),
+            follow_redirects=False
+        )
+    except HTTPClientError as e:
+        cookie = next(filter(lambda s: s.startswith(
+            'iPlanetDirectoryPro'),
+            e.response.headers.get_list('Set-Cookie'))
+        )
+        request = HTTPRequest(
+            url=&quot;...&quot;,
+            method='GET',
+            headers={
+                &quot;Cookie&quot;: cookie,
+            },
+        )
+        response = await http_client.fetch(request)
+        res = json.loads(response.body).get('data')
+        ...
+        self.finish()
+    else:
+        self.set_status(status_code=400)
+        ...
+        self.finish()
+</code></pre>
+<h3 id="github-personal-authorization-key-与-gitee-私人令牌使用差异">Github Personal Authorization Key 与 Gitee 私人令牌使用差异</h3>
+<p>当在 Azure Pipeline 中使用 Git 进行操作时，不可避免会需要使用 Github 或 Gitee 的 OpenAPI。这两者的私人令牌使用有差异，以<code>git push</code>为例：</p>
+<pre><code class="language-shell"># Github PAT
+git push -f &quot;https://$(github-pat)@github.com/&lt;USER&gt;/&lt;REPO&gt;.git&quot;
+
+# Gitee 私人令牌
+git push -f &quot;https://$(gitee-username):$(gitee-pat)@github.com/&lt;USER&gt;/&lt;REPO&gt;.git&quot;
+</code></pre>
+<h3 id="sqlite3-的奇妙错误待解决">SQLite3 的奇妙错误（待解决）</h3>
+<p>我们需要一个查询所有用户的成绩单的接口：<code>GET /inspect</code>。</p>
+<pre><code class="language-python">@app.route('/inspect', methods=['POST', 'GET'])
+def inspect():
+    if request.method == 'GET':
+        db = get_db()
+        try:
+            test_grade = db.execute(
+                '''
+                SELECT *
+                FROM (
+                    SELECT user.id_tag, user.username, test.test_status, test.test_grade
+                    FROM
+                        main.test,
+                        main.user
+                    WHERE test.user_id = user.id
+                    ORDER BY test_grade ASC
+                )
+                GROUP BY id_tag
+                ''').fetchall()
+            return jsonify(list(map(
+                lambda item: dict(zip(item.keys(), tuple(item))),
+                test_grade)))
+
+        except Exception as e:
+            tb = sys.exc_info()[2]
+            logging.error(e, exc_info=True)
+            return jsonify({&quot;error&quot;: str(e.with_traceback(tb))})
+    if request.method == 'POST':
+        ...
+</code></pre>
+<p>这里的问题发生在 SQL 语句里，我们在 PyCharm 中使用其 DATABASE 功能进行测试时，使用<code>ORDER BY ... DESC</code>可以查询到用户的历史最好成绩，但是使用 Python3 sqlite3 包时，表现截然相反：<code>ORDER BY ... DESC</code>获取的结果是用户的最坏成绩，使用<code>ORDER BY ... ASC</code>则能获得最好成绩。我们猜测是 Python3 的 sqlite3 实现问题。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TypeScript 类型系统]]></title>
+        <id>https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript类型系统</id>
+        <link href="https://wzhzzmzzy.github.io/post/2019-5-21-TypeScript类型系统">
+        </link>
+        <updated>2019-05-15T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="类型推论">类型推论</h2>
+<p>TypeScript中的类型是在哪里、如何被推断的呢？理解这个有助于我们在编写代码时更好地预测编译器的行为，避免一些难以被发现的Bug的出现。</p>
+<h3 id="简单例子">简单例子</h3>
+<p>没有明确指出类型的地方，类型推论会帮助提供类型：</p>
+<pre><code class="language-typescript">let x = 3; // x: Int
+</code></pre>
+<p>这种推断发生在初始化变量和成员，设置默认参数值和决定函数返回值时。大多数情况下，类型推论是直截了当地。后面我们来看一些细微的差别。</p>
+<h3 id="最佳通用类型">最佳通用类型</h3>
+<p>我们很多时候会写出类型有些难以推断的混合表达式，最简单的例子就是同时包含的不同类型的元素的列表：</p>
+<pre><code class="language-typescript">let x = [0, 1, null];
+</code></pre>
+<p>由于需要推断<code>x</code>的类型，编译器会检查列表中所有元素的类型，然后选择能覆盖所有类型的选项。没有找到最佳通用类型的情况下，类型推断的结果是联合数组类型。</p>
+<h3 id="上下文类型">上下文类型</h3>
+<p>TypeScript类型推论也可能按照相反的方向进行。 这被叫做“按上下文归类”。按上下文归类会发生在表达式的类型与所处的位置相关时。比如：</p>
+<pre><code class="language-typescript">window.onmousedown = function(mouseEvent) {
+    console.log(mouseEvent.button);  //&lt;- Error
+};
+</code></pre>
+<p>这里，编译器会抛出一个类型错误。TypeScript 通过<code>window.onmousedown</code>来判断了<code>mouseEvent</code>的类型。你可以手动指定<code>mouseEvent: Any</code>，这样就不会报错了。</p>
+<pre><code class="language-typescript">window.onmousedown = function(mouseEvent: any) {
+    console.log(mouseEvent.button);  //&lt;- Now, no error is given
+};
+</code></pre>
+<p>这个函数表达式有明确的参数类型注解，上下文类型被忽略。 这样的话就不报错了，因为这里不会使用到上下文类型。</p>
+<h2 id="类型兼容性">类型兼容性</h2>
+<p>TypeScript 的类型兼容是基于结构中的子类型的，而不是基于类型名义的。也就是说，只要结构子类型相同或包含，就可以使用。TypeScript的结构性子类型是根据JavaScript代码的典型写法来设计的。 因为JavaScript里广泛地使用匿名对象，例如函数表达式和对象字面量，所以使用结构类型系统来描述这些类型比使用名义类型系统更好。</p>
+<pre><code class="language-typescript">interface Named {
+    name: string;
+}
+
+class Person {
+    name: string;
+}
+
+let p: Named;
+// OK, because of structural typing
+p = new Person();
+</code></pre>
+<blockquote>
+<h4 id="关于可靠性的注意事项">关于可靠性的注意事项</h4>
+<p>TypeScript的类型系统允许某些在编译阶段无法确认其安全性的操作。下面会解释何时会发生这种情况，以及它有利的一面。</p>
+</blockquote>
+<h3 id="开始">开始</h3>
+<p>TypeScript 结构化类型系统的基本规则是，如果<code>x</code>要兼容<code>y</code>，那么<code>y</code>至少具有与<code>x</code>相同的属性。</p>
+<pre><code class="language-typescript">interface Named {
+    name: string;
+}
+
+let x: Named;
+// y's inferred type is { name: string; location: string; }
+let y = { name: 'Alice', location: 'Seattle' };
+x = y;
+</code></pre>
+<p>这里要检查<code>y</code>是否能赋值给<code>x</code>，编译器检查<code>x</code>中的每个属性，看是否能在<code>y</code>中也找到对应属性。 在这个例子中，<code>y</code>必须包含名字是<code>name</code>的<code>string</code>类型成员。<code>y</code>满足条件，因此赋值正确。检查函数参数时也会使用相同的规则。</p>
+<p>这个比较过程是递归进行的，检查每个成员及子成员。</p>
+<h3 id="比较两个函数">比较两个函数</h3>
+<p>相对来讲，在比较原始类型和对象类型的时候是比较容易理解的，问题是如何判断两个函数是兼容的。 下面我们从两个简单的函数入手，它们仅是参数列表略有不同：</p>
+<pre><code class="language-ts">let x = (a: number) =&gt; 0;
+let y = (b: number, s: string) =&gt; 0;
+
+y = x; // OK
+x = y; // Error
+</code></pre>
+<p>要查看<code>x</code>是否能赋值给<code>y</code>，首先看它们的参数列表。 <code>x</code>的每个参数必须能在<code>y</code>里找到对应类型的参数。 注意的是参数的名字相同与否无所谓，只看它们的类型。 这里，<code>x</code>的每个参数在<code>y</code>中都能找到对应的参数，所以允许赋值。</p>
+<p>第二个赋值错误，因为<code>y</code>有个必需的第二个参数，但是<code>x</code>并没有，所以不允许赋值。</p>
+<p>你可能会疑惑为什么允许<code>忽略</code>参数，像例子<code>y = x</code>中那样。 原因是忽略额外的参数在JavaScript里是很常见的。 例如，<code>Array#forEach</code>给回调函数传3个参数：数组元素，索引和整个数组。 尽管如此，传入一个只使用第一个参数的回调函数也是很有用的：</p>
+<pre><code class="language-ts">let items = [1, 2, 3];
+
+// Don't force these extra arguments
+items.forEach((item, index, array) =&gt; console.log(item));
+
+// Should be OK!
+items.forEach((item) =&gt; console.log(item));
+</code></pre>
+<p>下面来看看如何处理返回值类型，创建两个仅是返回值类型不同的函数：</p>
+<pre><code class="language-ts">let x = () =&gt; ({name: 'Alice'});
+let y = () =&gt; ({name: 'Alice', location: 'Seattle'});
+
+x = y; // OK
+y = x; // Error, because x() lacks a location property
+</code></pre>
+<p>类型系统强制源函数的返回值类型必须是目标函数返回值类型的子类型。</p>
+<h4 id="函数参数双向协变">函数参数双向协变</h4>
+<p>当比较函数参数类型时，只有当源函数参数能够赋值给目标函数或者反过来时才能赋值成功。 这是不稳定的，因为调用者可能传入了一个具有更精确类型信息的函数，但是调用这个传入的函数的时候却使用了不是那么精确的类型信息。 实际上，这极少会发生错误，并且能够实现很多JavaScript里的常见模式。</p>
+<h4 id="可选参数及剩余参数">可选参数及剩余参数</h4>
+<p>比较函数兼容性的时候，可选参数与必须参数是可互换的。 源类型上有额外的可选参数不是错误，目标类型的可选参数在源类型里没有对应的参数也不是错误。</p>
+<p>当一个函数有剩余参数时，它被当做无限个可选参数。</p>
+<p>这对于类型系统来说是不稳定的，但从运行时的角度来看，可选参数一般来说是不强制的，因为对于大多数函数来说相当于传递了一些<code>undefinded</code>。</p>
+<p>有一个好的例子，常见的函数接收一个回调函数并用对于程序员来说是可预知的参数但对类型系统来说是不确定的参数来调用：</p>
+<pre><code class="language-ts">function invokeLater(args: any[], callback: (...args: any[]) =&gt; void) {
+    /* ... Invoke callback with 'args' ... */
+}
+
+// Unsound - invokeLater &quot;might&quot; provide any number of arguments
+invokeLater([1, 2], (x, y) =&gt; console.log(x + ', ' + y));
+
+// Confusing (x and y are actually required) and undiscoverable
+invokeLater([1, 2], (x?, y?) =&gt; console.log(x + ', ' + y));
+</code></pre>
+<h4 id="函数重载">函数重载</h4>
+<p>对于有重载的函数，源函数的每个重载都要在目标函数上找到对应的函数签名。 这确保了目标函数可以在所有源函数可调用的地方调用。</p>
+<h3 id="枚举">枚举</h3>
+<p>不同类型的枚举不兼容。枚举类型与数字类型兼容。</p>
+<h3 id="类">类</h3>
+<p>类与对象字面量和接口差不多，但有一点不同：类有静态部分和实例部分的类型。比较两个类类型的对象时，只有实例的成员会被比较。 静态成员和构造函数不在比较的范围内。</p>
+<h4 id="类的私有成员和受保护成员">类的私有成员和受保护成员</h4>
+<p>类的私有成员和受保护成员会影响兼容性。 当检查类实例的兼容时，如果目标类型包含一个私有成员，那么源类型必须包含来自同一个类的这个私有成员。 同样地，这条规则也适用于包含受保护成员实例的类型检查。 这允许子类赋值给父类，但是不能赋值给其它有同样类型的类。</p>
+<h3 id="泛型">泛型</h3>
+<p>因为TypeScript是结构性的类型系统，类型参数只影响使用其做为类型一部分的结果类型。比如，</p>
+<pre><code class="language-ts">interface Empty&lt;T&gt; {
+}
+let x: Empty&lt;number&gt;;
+let y: Empty&lt;string&gt;;
+
+x = y;  // OK, because y matches structure of x
+</code></pre>
+<p>上面代码里，<code>x</code>和<code>y</code>是兼容的，因为它们的结构使用类型参数时并没有什么不同。 把这个例子改变一下，增加一个成员，就能看出是如何工作的了：</p>
+<pre><code class="language-ts">interface NotEmpty&lt;T&gt; {
+    data: T;
+}
+let x: NotEmpty&lt;number&gt;;
+let y: NotEmpty&lt;string&gt;;
+
+x = y;  // Error, because x and y are not compatible
+</code></pre>
+<p>在这里，泛型类型在使用时就好比不是一个泛型类型。</p>
+<p>对于没指定泛型类型的泛型参数时，会把所有泛型参数当成<code>any</code>比较。 然后用结果类型进行比较，就像上面第一个例子。</p>
+<h2 id="高级类型">高级类型</h2>
+<h3 id="交叉类型intersection-types">交叉类型（Intersection Types）</h3>
+<p>交叉类型是将多个类型合并为一个类型。 例如， <code>Person &amp; Serializable &amp; Loggable</code>同时是 <code>Person</code> <em>和</em><code>Serializable</code> <em>和</em> <code>Loggable</code>。 就是说这个类型的对象同时拥有了这三种类型的成员。我们大多是在混入（mixins）或其它不适合典型面向对象模型的地方看到交叉类型的使用。</p>
+<h3 id="联合类型union-types">联合类型（Union Types）</h3>
+<p>联合类型与交叉类型很有关联，但是使用上却完全不同。联合类型表示一个值可以是几种类型之一。 我们用竖线（ <code>|</code>）分隔每个类型，所以 <code>number | string | boolean</code>表示一个值可以是 <code>number</code>， <code>string</code>，或 <code>boolean</code>。</p>
+<p>如果一个值是联合类型，我们只能访问此联合类型的所有类型里共有的成员。</p>
+<pre><code class="language-ts">interface Bird {
+    fly();
+    layEggs();
+}
+
+interface Fish {
+    swim();
+    layEggs();
+}
+
+function getSmallPet(): Fish | Bird {
+    // ...
+}
+
+let pet = getSmallPet();
+pet.layEggs(); // okay
+pet.swim();    // errors
+</code></pre>
+<p>这里的联合类型可能有点复杂，但是你很容易就习惯了。 如果一个值的类型是 <code>A | B</code>，我们能够 <em>确定</em>的是它包含了 <code>A</code> <em>和</em> <code>B</code>中共有的成员。 这个例子里， <code>Bird</code>具有一个 <code>fly</code>成员。 我们不能确定一个<code>Bird | Fish</code>类型的变量是否有 <code>fly</code>方法。 如果变量在运行时是 <code>Fish</code>类型，那么调用<code>pet.fly()</code>就出错了。</p>
+<h3 id="类型保护与区分类型type-guards-and-differentiating-types">类型保护与区分类型（Type Guards and Differentiating Types）</h3>
+<p>联合类型适合于那些值可以为不同类型的情况。但当我们想确切地了解是否为 <code>Fish</code>时怎么办？ 使用类型断言：</p>
+<pre><code class="language-ts">let pet = getSmallPet();
+
+if ((&lt;Fish&gt;pet).swim) {
+    (&lt;Fish&gt;pet).swim();
+}
+else {
+    (&lt;Bird&gt;pet).fly();
+}
+</code></pre>
+<h4 id="用户自定义的类型保护">用户自定义的类型保护</h4>
+<p>我们不得不多次使用类型断言去判断类型。如果我们只需要检查一次，在两个分支中都能知道类型就好了。这里可以使用类型保护机制：</p>
+<pre><code class="language-ts">function isFish(pet: Fish | Bird): pet is Fish {
+    return (&lt;Fish&gt;pet).swim !== undefined;
+}
+
+if (isFish(pet)) {
+    pet.swim();
+}
+else {
+    pet.fly();
+}
+</code></pre>
+<p>每当使用一些变量调用 <code>isFish</code>时，TypeScript会将变量缩减为那个具体的类型，只要这个类型与变量的原始类型是兼容的。注意TypeScript不仅知道在 <code>if</code>分支里 <code>pet</code>是 <code>Fish</code>类型； 它还清楚在 <code>else</code>分支里，一定 <em>不是</em><code>Fish</code>类型，一定是 <code>Bird</code>类型。</p>
+<h4 id="typeof与instanceof类型保护"><code>typeof</code>与<code>instanceof</code>类型保护</h4>
+<p>这两个关键字 JavaScript 中常用的判断类型的关键字，在使用联合类型与类型保护时也有用途。</p>
+<pre><code class="language-ts">// typeof
+function padLeft(value: string, padding: string | number) {
+    if (typeof padding === &quot;number&quot;) {
+        return Array(padding + 1).join(&quot; &quot;) + value;
+    }
+    if (typeof padding === &quot;string&quot;) {
+        return padding + value;
+    }
+    throw new Error(`Expected string or number, got '${padding}'.`);
+}
+
+// instanceof
+// 类型为 XObject | YObject
+let padder: Padder = getRandomObject();
+
+if (padder instanceof XObject) {
+    padder; // 类型细化为'XObject'
+}
+if (padder instanceof YObject) {
+    padder; // 类型细化为'YObject'
+}
+</code></pre>
+<h3 id="可以为null的类型">可以为<code>null</code>的类型</h3>
+<p>TypeScript具有两种特殊的类型， <code>null</code>和 <code>undefined</code>。默认情况下，类型检查器认为 <code>null</code>与 <code>undefined</code>可以赋值给任何类型。这也意味着，你阻止不了将它们赋值给其它类型，就算是你想要阻止这种情况也不行。 <code>null</code>的发明者，Tony Hoare，称它为 <a href="https://en.wikipedia.org/wiki/Null_pointer#History">价值亿万美金的错误</a>。</p>
+<p><code>--strictNullChecks</code>标记可以解决此错误：当你声明一个变量时，它不会自动地包含 <code>null</code>或 <code>undefined</code>。 你可以使用联合类型明确的包含它们：</p>
+<pre><code class="language-ts">let s = &quot;foo&quot;;
+s = null; // 错误, 'null'不能赋值给'string'
+let sn: string | null = &quot;bar&quot;;
+sn = null; // 可以
+
+sn = undefined; // error, 'undefined'不能赋值给'string | null'
+</code></pre>
+<p>注意，按照JavaScript的语义，TypeScript会把 <code>null</code>和 <code>undefined</code>区别对待。 <code>string | null</code>， <code>string | undefined</code>和 <code>string | undefined | null</code>是不同的类型。</p>
+<h4 id="可选参数和可选属性">可选参数和可选属性</h4>
+<p>使用了 <code>--strictNullChecks</code>，可选参数会被自动地加上 <code>| undefined</code>:</p>
+<pre><code class="language-ts">function f(x: number, y?: number) {
+    return x + (y || 0);
+}
+f(1, 2);
+f(1);
+f(1, undefined);
+f(1, null); // error, 'null' is not assignable to 'number | undefined'
+</code></pre>
+<p>可选属性也会有同样的处理：</p>
+<pre><code class="language-ts">class C {
+    a: number;
+    b?: number;
+}
+let c = new C();
+c.a = 12;
+c.a = undefined; // error, 'undefined' is not assignable to 'number'
+c.b = 13;
+c.b = undefined; // ok
+c.b = null; // error, 'null' is not assignable to 'number | undefined'
+</code></pre>
+<h4 id="类型保护和类型断言">类型保护和类型断言</h4>
+<p>由于可以为null的类型是通过联合类型实现，那么你需要使用类型保护来去除 <code>null</code>。 幸运地是这与在JavaScript里写的代码一致：</p>
+<pre><code class="language-ts">function f(sn: string | null): string {
+    if (sn == null) {
+        return &quot;default&quot;;
+    }
+    else {
+        return sn;
+    }
+}
+</code></pre>
+<p>这里很明显地去除了 <code>null</code>，你也可以使用短路运算符：</p>
+<pre><code class="language-ts">function f(sn: string | null): string {
+    return sn || &quot;default&quot;;
+}
+</code></pre>
+<p>如果编译器不能够去除 <code>null</code>或 <code>undefined</code>，你可以使用类型断言手动去除。 语法是添加 <code>!</code>后缀：<code>identifier!</code>从 <code>identifier</code>的类型里去除了 <code>null</code>和 <code>undefined</code>：</p>
+<pre><code class="language-ts">function broken(name: string | null): string {
+  function postfix(epithet: string) {
+    return name.charAt(0) + '.  the ' + epithet; // error, 'name' is possibly null
+  }
+  name = name || &quot;Bob&quot;;
+  return postfix(&quot;great&quot;);
+}
+
+function fixed(name: string | null): string {
+  function postfix(epithet: string) {
+    return name!.charAt(0) + '.  the ' + epithet; // ok
+  }
+  name = name || &quot;Bob&quot;;
+  return postfix(&quot;great&quot;);
+}
+</code></pre>
+<p>本例使用了嵌套函数，因为编译器无法去除嵌套函数的null（除非是立即调用的函数表达式）。 因为它无法跟踪所有对嵌套函数的调用，尤其是你将内层函数做为外层函数的返回值。 如果无法知道函数在哪里被调用，就无法知道调用时 <code>name</code>的类型。</p>
+<h3 id="类型别名">类型别名</h3>
+<p>类型别名会给一个类型起个新名字。 类型别名有时和接口很像，但是可以作用于原始值，联合类型，元组以及其它任何你需要手写的类型。起别名不会新建一个类型 - 它创建了一个新 <em>名字</em>来引用那个类型。 给原始类型起别名通常没什么用，尽管可以做为文档的一种形式使用。</p>
+<p>同接口一样，类型别名也可以是泛型 - 我们可以添加类型参数并且在别名声明的右侧传入：</p>
+<pre><code class="language-ts">type Container&lt;T&gt; = { value: T };
+</code></pre>
+<p>我们也可以使用类型别名来在属性里引用自己：</p>
+<pre><code class="language-ts">type Tree&lt;T&gt; = {
+    value: T;
+    left: Tree&lt;T&gt;;
+    right: Tree&lt;T&gt;;
+}
+</code></pre>
+<p>与交叉类型一起使用，我们可以创建出一些十分稀奇古怪的类型。</p>
+<pre><code class="language-ts">type LinkedList&lt;T&gt; = T &amp; { next: LinkedList&lt;T&gt; };
+
+interface Person {
+    name: string;
+}
+
+var people: LinkedList&lt;Person&gt;;
+var s = people.name;
+var s = people.next.name;
+var s = people.next.next.name;
+var s = people.next.next.next.name;
+</code></pre>
+<p>然而，类型别名不能出现在声明右侧的任何地方。</p>
+<pre><code class="language-ts">type Yikes = Array&lt;Yikes&gt;; // error
+</code></pre>
+<h4 id="接口-vs-类型别名">接口 vs. 类型别名</h4>
+<p>类型别名可以像接口一样；然而，仍有一些细微差别。</p>
+<p>其一，接口创建了一个新的名字，可以在其它任何地方使用。其二，类型别名不能被 <code>extends</code>和 <code>implements</code>（自己也不能 <code>extends</code>和<code>implements</code>其它类型）。</p>
+<p>另一方面，如果你无法通过接口来描述一个类型并且需要使用联合类型或元组类型，这时通常会使用类型别名。</p>
+<h3 id="字符串字面量类型">字符串字面量类型</h3>
+<p>字符串字面量类型允许你指定字符串必须的固定值。</p>
+<pre><code class="language-ts">type Easing = &quot;ease-in&quot; | &quot;ease-out&quot; | &quot;ease-in-out&quot;;
+</code></pre>
+<p>你只能从三种允许的字符中选择其一来做为参数传递，传入其它值则会产生错误。</p>
+<pre><code class="language-text">Argument of type '&quot;uneasy&quot;' is not assignable to parameter of type '&quot;ease-in&quot; | &quot;ease-out&quot; | &quot;ease-in-out&quot;'
+</code></pre>
+<p>字符串字面量类型还可以用于区分函数重载：</p>
+<pre><code class="language-ts">function createElement(tagName: &quot;img&quot;): HTMLImageElement;
+function createElement(tagName: &quot;input&quot;): HTMLInputElement;
+// ... more overloads ...
+function createElement(tagName: string): Element {
+    // ... code goes here ...
+}
+</code></pre>
+<h3 id="数字字面量类型">数字字面量类型</h3>
+<p>TypeScript还具有数字字面量类型。</p>
+<pre><code class="language-ts">function rollDie(): 1 | 2 | 3 | 4 | 5 | 6 {
+    // ...
+}
+</code></pre>
+<p>我们很少直接这样使用，但它们可以用在缩小范围调试bug的时候：</p>
+<pre><code class="language-ts">function foo(x: number) {
+    if (x !== 1 || x !== 2) {
+        //         ~~~~~~~
+        // Operator '!==' cannot be applied to types '1' and '2'.
+    }
+}
+</code></pre>
+<p>换句话说，当 <code>x</code>与 <code>2</code>进行比较的时候，它的值必须为 <code>1</code>，这就意味着上面的比较检查是非法的。</p>
+<h3 id="可辨识联合discriminated-unions">可辨识联合（Discriminated Unions）</h3>
+<p>你可以合并单例类型，联合类型，类型保护和类型别名来创建一个叫做 <em>可辨识联合</em>的高级模式，它也称做 <em>标签联合</em>或 <em>代数数据类型</em>。 可辨识联合在函数式编程很有用处。 一些语言会自动地为你辨识联合；而TypeScript则基于已有的JavaScript模式。 它具有3个要素：</p>
+<ol>
+<li>具有普通的单例类型属性— <em>可辨识的特征</em>。</li>
+<li>一个类型别名包含了那些类型的联合— <em>联合</em>。</li>
+<li>此属性上的类型保护。</li>
+</ol>
+<pre><code class="language-ts">interface Square {
+    kind: &quot;square&quot;;
+    size: number;
+}
+interface Rectangle {
+    kind: &quot;rectangle&quot;;
+    width: number;
+    height: number;
+}
+interface Circle {
+    kind: &quot;circle&quot;;
+    radius: number;
+}
+</code></pre>
+<p>首先我们声明了将要联合的接口。 每个接口都有 <code>kind</code>属性但有不同的字符串字面量类型。 <code>kind</code>属性称做 <em>可辨识的特征</em>或 <em>标签</em>。 其它的属性则特定于各个接口。 注意，目前各个接口间是没有联系的。 下面我们把它们联合到一起：</p>
+<pre><code class="language-ts">type Shape = Square | Rectangle | Circle;
+</code></pre>
+<p>现在我们使用可辨识联合:</p>
+<pre><code class="language-ts">function area(s: Shape) {
+    switch (s.kind) {
+        case &quot;square&quot;: return s.size * s.size;
+        case &quot;rectangle&quot;: return s.height * s.width;
+        case &quot;circle&quot;: return Math.PI * s.radius ** 2;
+    }
+}
+</code></pre>
+]]></content>
+    </entry>
+</feed>

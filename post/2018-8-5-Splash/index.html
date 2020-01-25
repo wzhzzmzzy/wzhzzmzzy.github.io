@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Scrapy-Splash 使用教程
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2018-08-05</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">6.3 mins</a></span>
+                                <span class="post-words">words:<a href="#">1485</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/r3vOBLKWP7">HTML5</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/9GxOyscbPh">Linux</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2018-08-05</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">6.3 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">1485</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/r3vOBLKWP7">HTML5</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/9GxOyscbPh">Linux</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="scrapy-splash">Scrapy-Splash</h2>
+<p>Splash 是一个模拟浏览器操作的框架，相比较 Selenium 需要实体浏览器而言，Splash 可以作为一个服务使用，更加方便一些。</p>
+<h3 id="部署">部署</h3>
+<p>一般直接使用 Docker 来运行 Splash。</p>
+<pre><code class="language-shell">docker run -d -p 8050:8050 scrapinghub/splash
+</code></pre>
+<p>这样就在本地局域网内打开了 Splash 的 Docker 容器。可以将它挂到云服务器上：</p>
+<pre><code class="language-shell">docker run -d -p 0.0.0.0:8050:8050 scrapinghub/splash
+</code></pre>
+<p>然后直接 HTTP 访问服务器的 8050 端口即可。</p>
+<h3 id="使用">使用</h3>
+<p>进入 Splash 的 Web APP，我们会发现有这样一段代码：</p>
+<pre><code class="language-lua">function main(splash, args)
+  assert(splash:go(args.url))
+  assert(splash:wait(0.5))
+  return {
+    html = splash:html(),
+    png = splash:png(),
+    har = splash:har(),
+  }
+end
+</code></pre>
+<p>这是一段 Lua 代码，用于限定发起访问的行为。执行上面的<code>main</code>函数后，会获取指定网页的截图、HTML 文档以及网络请求记录。</p>
+<h4 id="lua-脚本">Lua 脚本</h4>
+<ul>
+<li>入口和返回值</li>
+</ul>
+<p>我们来了解一下 Lua 脚本的入口和执行方式。</p>
+<pre><code class="language-lua">function main(splash, args)
+    splash:go(&quot;https://www.baidu.com&quot;)
+    splash:wait(0.5)
+    local title = splash:evaljs(&quot;document.title&quot;)
+    return {title=title}
+end
+</code></pre>
+<p><code>main</code>函数是 Splash 固定执行的函数名词，<code>evaljs</code>可以执行 JavaScript 脚本。</p>
+<ul>
+<li>异步处理</li>
+</ul>
+<pre><code class="language-luash">function main(splash, args)
+    local example_urls = {&quot;www.baidu.com&quot;, &quot;www.taobao.com&quot;, &quot;www.zhihu.com&quot;}
+    local urls = args.urls or example_urls
+    local results = {}
+    for index, url in ipairs(urls) do
+        local ok, reason = splash:go('https://' .. url)
+        if ok then
+            splash:wait(2)
+        	results[url] = splash:png()
+        end
+    end
+    return results
+end
+</code></pre>
+<p>Splash 内置了异步机制，比如对于<code>wait</code>函数，Splash 会转而执行其他工作。这里还做了一场检测，<code>ok</code>变量是<code>go</code>函数检测页面访问是否正常的标志，如果获取到 4xx 或 5xx 状态码，会跳过下面的访问。</p>
+<h3 id="splash-对象属性">Splash 对象属性</h3>
+<p>我们会注意到<code>main</code>函数有两个参数，<code>splash</code>类似于 Selenium 中的 WebDriver 对象，可以调用其方法和数学来控制过程。</p>
+<ul>
+<li><code>args</code></li>
+</ul>
+<p>用于获取加载时配置的参数，如 URL，如果是 GET 请求，可以获取 GET 请求参数。如果为 POST 请求，可以获取表单提交的数据。<code>main</code>函数的第二个参数也就是它。</p>
+<ul>
+<li><code>js_enabled</code></li>
+</ul>
+<p>控制是否可以执行 JavaScript 脚本代码，默认为<code>true</code>。</p>
+<ul>
+<li><code>resource_timeout</code></li>
+</ul>
+<p>设置加载的超时时间，如果设置为<code>0</code>或者<code>nil</code>则不检测超时。</p>
+<ul>
+<li><code>images_enabled</code></li>
+</ul>
+<p>这个属性可以设置图片是否加载，默认加载。可以加快加载速度。需要注意的是，这样可能会影响到网页脚本的执行。</p>
+<ul>
+<li><code>plugins_enabled</code></li>
+</ul>
+<p>可以控制浏览器插件（如 Flash）是否开启，默认不开启。</p>
+<ul>
+<li><code>scroll_position</code></li>
+</ul>
+<p>这个属性控制页面上下左右滚动，是个很常用的属性。</p>
+<h3 id="splash-对象方法">Splash 对象方法</h3>
+<ul>
+<li><code>go()</code></li>
+</ul>
+<p>这个方法用来请求某个链接，还可以模拟 GET 和 POST 请求，同时支持传入请求头、表单等数据。</p>
+<pre><code class="language-lua">ok, reason = splash:go{url, bashurl=nil, headers=nil, http_method=&quot;GET&quot;, body=nil, formdata=nil}
+</code></pre>
+<p>其中<code>body</code>参数用于以 JSON 发送参数，<code>formdata</code>用<code>content-type: application/x-www.form-urlencoded</code>发送参数。</p>
+<ul>
+<li><code>wait()</code></li>
+</ul>
+<p>控制页面等待时间。</p>
+<pre><code class="language-lua">ok, reason = splash:wait{time, cancel_on_redirect=false, cancel_on_error=true}
+</code></pre>
+<p>其中，后两个参数表示是否在重定向/错误时停止等待。</p>
+<ul>
+<li><code>jsfunc()</code></li>
+</ul>
+<p>直接用 JavaScript 声明函数，JavaScript 代码需要用双中括号包围。</p>
+<pre><code class="language-lua">function main(splash, args)
+    local func = splash:jsfunc([[
+    function () {
+        var body = document.body;
+        var divs = body.getElementsByTagName('div');
+        return divs.length;
+    }
+    ]])
+    splash:go(&quot;https://www.baidu.com&quot;)
+    return (&quot;There are %s DIVs&quot;):format(func())
+</code></pre>
+<ul>
+<li><code>evaljs()</code></li>
+</ul>
+<p>执行 JavaScript 代码，返回最后一条 JavaScript 语句的执行结果。</p>
+<pre><code class="language-lua">result = splash:evaljs(js)
+</code></pre>
+<ul>
+<li><code>runjs()</code></li>
+</ul>
+<p>与<code>evaljs</code>相似，更偏向于执行某些动作或者声明某些方法。</p>
+<ul>
+<li><code>autoload()</code></li>
+</ul>
+<p>负责当之后的每个页面请求时自动加载 JavaScript 代码或库，不执行任何操作。可以调用<code>evaljs</code>或<code>runjs</code>来执行操作。</p>
+<pre><code class="language-lua">ok, reason = splash:autoload{source_or_url, source=nil, url=nil}
+</code></pre>
+<ul>
+<li><code>call_later()</code></li>
+</ul>
+<p>此方法用于设定定时任务，设定定时任务后，Splash 会在页面请求之后自动为你执行。</p>
+<ul>
+<li><code>http_get()</code></li>
+</ul>
+<p>模拟 HTTP 发送 GET 请求。</p>
+<pre><code class="language-lua">response = splash:http_get{url, headers=nil, follow_redirects=true}
+</code></pre>
+<ul>
+<li><code>http_post()</code></li>
+</ul>
+<pre><code class="language-lua">response = splash:http_post{url, headers=nil, follow_redirects=true, body=nil}
+</code></pre>
+<ul>
+<li><code>set_content()</code></li>
+</ul>
+<p>用来直接设置页面内容。</p>
+<ul>
+<li><code>html()</code></li>
+</ul>
+<p>此方法用来获取当前访问的网页源码。</p>
+<ul>
+<li><code>png()</code></li>
+</ul>
+<p>获取 PNG 格式的网页截图。</p>
+<ul>
+<li><code>jpeg()</code></li>
+</ul>
+<p>获取 JPEG 格式的网页截图。</p>
+<ul>
+<li><code>har()</code></li>
+</ul>
+<p>用于获取页面加载过程的网络访问描述。</p>
+<ul>
+<li><code>url()</code></li>
+</ul>
+<p>获取当前正在访问的 URL。</p>
+<ul>
+<li><code>get_cookies()</code></li>
+</ul>
+<p>获取当前页面的 Cookies。</p>
+<ul>
+<li><code>add_cookie()</code></li>
+</ul>
+<p>添加 Cookie。</p>
+<ul>
+<li><code>clear_cookies()</code></li>
+</ul>
+<p>清除所有的 Cookies。</p>
+<ul>
+<li><code>get_viewport_size()</code></li>
+</ul>
+<p>获取当前浏览器页面的大小。</p>
+<ul>
+<li><code>set_viewport_size()</code></li>
+</ul>
+<p>设置浏览器页面大小。</p>
+<ul>
+<li><code>set_user_agent()</code></li>
+</ul>
+<p>设置浏览器的 UA。</p>
+<ul>
+<li><code>set_custom_headers()</code></li>
+</ul>
+<p>设置请求头。</p>
+<pre><code class="language-lua">function main(splash)
+    splash:set_custom_headers({
+    	[&quot;User-Agent&quot;] = &quot;Splash&quot;,
+        [&quot;Site&quot;] = &quot;Splash&quot;
+    })
+    splash:go(&quot;http://httpbin.org/get&quot;)
+    return splash:html()
+end
+</code></pre>
+<ul>
+<li><code>select()</code></li>
+</ul>
+<p>使用 CSS 选择器选择节点并操作。</p>
+<ul>
+<li><code>select_all()</code></li>
+</ul>
+<p>选中所有符合条件的节点，参数是 CSS 选择器。</p>
+<ul>
+<li><code>mouse_click()</code></li>
+</ul>
+<p>模拟鼠标点击，可以传入坐标，也可以选中某个节点然后直接调用。</p>
+<h3 id="splash-api-调用">Splash API 调用</h3>
+<p>上面说的方法都是使用 Splash 运行 Lua 脚本，但是这些脚本都是在 Splash 页面中测试运行的，Splash 同样提供了 HTTP API 接口，请求这些接口，传递相应参数即可获得信息。</p>
+<ul>
+<li><code>render.html</code></li>
+</ul>
+<pre><code>http://localhost:8050/render.html?url=https://www.baidu.com&amp;wait=2
+</code></pre>
+<ul>
+<li><code>render.png/render.jpeg</code></li>
+</ul>
+<pre><code>http://localhost:8050/render.png?url=http://www.jd.com&amp;wait=5&amp;width=1600&amp;height=900
+</code></pre>
+<blockquote>
+<p>JPEG 多了一个<code>quality</code>参数，设置图片质量。</p>
+</blockquote>
+<ul>
+<li><code>render.har</code></li>
+</ul>
+<p>返回 JSON 格式数据，包含页面加载过程中的 HAR 数据。</p>
+<ul>
+<li><code>render.json</code></li>
+</ul>
+<p>支持前面的所有功能，以 JSON 格式返回所有数据。需要启用的 API 就传入相应的参数。</p>
+<pre><code>http:;//localhost:8050/render.json?url=http://www.jd.com&amp;png=1
+</code></pre>
+<ul>
+<li><code>execute</code></li>
+</ul>
+<p>这才是最强大的接口，可以直接和 Lua 脚本对接。</p>
+<pre><code class="language-python">from urllib import parse, request
+
+lua_source = &quot;&quot;&quot;
+function main(splash)
+    return &quot;hello&quot;
+end
+&quot;&quot;&quot;
+res = request.urlopen(&quot;http://118.25.193.162:8050/execute?&quot;+parse.urlencode({
+    'lua_source': lua_source
+}))
+print(res.read().decode('utf8')) # hello
+</code></pre>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#scrapy-splash">Scrapy-Splash</a>
+<ul>
+<li><a href="#%E9%83%A8%E7%BD%B2">部署</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8">使用</a>
+<ul>
+<li><a href="#lua-%E8%84%9A%E6%9C%AC">Lua 脚本</a></li>
+</ul>
+</li>
+<li><a href="#splash-%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7">Splash 对象属性</a></li>
+<li><a href="#splash-%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95">Splash 对象方法</a></li>
+<li><a href="#splash-api-%E8%B0%83%E7%94%A8">Splash API 调用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2018-8-5-Splash">https://wzhzzmzzy.github.io/post/2018-8-5-Splash</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2018-8-5-Splash">https://wzhzzmzzy.github.io/post/2018-8-5-Splash</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/r3vOBLKWP7"># HTML5</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/9GxOyscbPh"># Linux</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/r3vOBLKWP7"># HTML5</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/9GxOyscbPh"># Linux</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2019-3-13-Vue聊天室">
+                                    WebSocket聊天室（Vue + Tornado）
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2018-7-30-模拟 HTTP 请求">
+                                            模拟 HTTP 请求
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Webpack Tricks
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2019-05-28</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">3.2 mins</a></span>
+                                <span class="post-words">words:<a href="#">713</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/HHs8rBvHi6">JavaScript</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-05-28</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">3.2 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">713</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/HHs8rBvHi6">JavaScript</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="自动清理构建目录">自动清理构建目录</h2>
+<h3 id="通过-npm-scripts-清理构建目录">通过 npm scripts 清理构建目录</h3>
+<pre><code>rm -rf ./dist &amp;&amp; webpack
+</code></pre>
+<h3 id="webpack-清理">Webpack 清理</h3>
+<p>避免构建前每次都要手动删除<code>dist</code>目录。首先我们需要安装<code>clean-webpack-plugin</code>，默认删除<code>output</code>指定的输出目录。</p>
+<pre><code class="language-js">plugins: [
+    new CleanWebpackPlugin();
+]
+</code></pre>
+<h2 id="postcss-插件-autoprefixer">PostCSS 插件  autoprefixer</h2>
+<p>由于浏览器对于 CSS 属性的支持不同，所以有时会需要添加前缀：</p>
+<pre><code class="language-css">.box {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+</code></pre>
+<p>我们可以通过插件<code>autoprefixer</code>来自动补全这些前缀。与之前用到的预处理不同的是，它是一个后置处理器。</p>
+<pre><code>npm i postcss-loader autoprefixer -D
+</code></pre>
+<p>然后我们可以修改一下之前对LESS的配置：</p>
+<pre><code class="language-js">{
+	test: /.less$/,
+    use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'less-loader',
+        {
+            loader: 'postcss-loader',
+            options: {
+                plugins: () =&gt; [
+                    require('autoprefixer')({
+                        browsers: ['last 2 version', '&gt;1%', 'ios 7']
+                    })
+                ]
+            }
+        }
+    ]
+}
+</code></pre>
+<h2 id="移动端-css-px自动换算rem">移动端 CSS px自动换算rem</h2>
+<p>使用 CSS 媒体查询实现响应式布局，缺点在于需要写多套适配的样式代码。</p>
+<pre><code class="language-css">@media screen and (max-width: 980px) {
+    .header {
+        width: 900px;
+    }
+}
+</code></pre>
+<p>使用 rem(font-size of the root element) 可以减少代码量。</p>
+<p>使用<code>px2rem-loader</code>自动将 CSS px换算成rem，可以使用<code>lib-flexible</code>自动在页面渲染时计算根元素的<code>font-size</code>。</p>
+<pre><code class="language-js">{
+    test: /.less$/,
+    use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'less-loader',
+        {
+            loader: 'postcss-loader',
+            options: {
+                plugins: () =&gt; [
+                    require('autoprefixer')({
+                        browsers: ['last 2 version', '&gt;1%', 'ios 7']
+                    })
+                ]
+            }
+        },
+        {
+            loader: 'px2rem-loader',
+            options: {
+                remUnit: 75, // 1 rem == 75 px
+                remPrecision: 8 // 保留小数
+            }
+        }
+    ]
+}
+</code></pre>
+<p>下面讲解如何便捷地引入内联 JS 代码。</p>
+<h2 id="静态资源内联">静态资源内联</h2>
+<p>使用<code>raw-loader</code>即可内联 HTML 和 JS：</p>
+<pre><code class="language-html">&lt;script&gt;${require('raw-loader!babel-loader!./meta.html')}&lt;/script&gt;
+&lt;script&gt;${require('raw-loader!babel-loader!../node_modules/lib-flexible')}&lt;/script&gt;
+</code></pre>
+<p>内联 CSS 比较复杂，有两种做法：<code>style-loader</code>和<code>html-inline-css-webpack-plugin</code>：</p>
+<ul>
+<li>使用<code>style-loader</code>时，<code>options</code>中设置<code>singleton: true</code>即可。</li>
+</ul>
+<h2 id="多页面应用打包通用方案">多页面应用打包通用方案</h2>
+<p>多页面应用对 SEO 更加友好，天然解耦。</p>
+<p>利用<code>glob.sync</code>可以动态获取<code>entry</code>，设置<code>html-webpack-plugin</code>数量：</p>
+<pre><code class="language-js">const setMPA = () =&gt; {
+    const entry = {};
+    const htmlWebpackPlugins = [];
+    const entryFiles = glob.sync(path.join(__dirname, 'src/*/index.js'))
+    Object.keys(entryFiles).map((index) =&gt; {
+        const entryFile = entryFiles[index];
+        const match = entryFiles.match(/src\/(.*)\/index\.js/);
+        const pageName = match &amp;&amp; match[1];
+        entryFile[pageName] = entryFile;
+        htmlWebpackPlugins.push(
+            new HtmlWebpackPlugin({
+                template: path.join(__dirname, `src/${pageName}/index.html`),
+                filename: `${pageName}.html`,
+                chunks: [pageName],
+                inject: true,
+                minify: {
+                    html5: true,.
+                    collapseWhitespace: true,
+                    preserveLineBreaks: false,
+                    minifyCSS: true,
+                    minifyJS: true,
+                    removeComments: false
+                }
+            })
+        );
+    })
+    return {
+        entry,
+        htmlWebpackPlugins
+    }
+}
+
+const { entry, htmlWebpackPlugins } = setMPA();
+
+module.exports = {
+    entry,
+    plugins: [
+        //...
+    ].concat(htmlWebpackPlugins)
+}
+</code></pre>
+<h2 id="source-map">Source Map</h2>
+<p>用于发生错误时定位代码段。一般只在开发环境使用，线上生产环境排查问题时可以将 SourceMap 上传到错误监控系统。</p>
+<h3 id="关键字">关键字</h3>
+<ul>
+<li><code>eval</code>：使用<code>eval</code>包裹模块代码；</li>
+<li><code>source map</code>：产生<code>.map</code>文件；</li>
+<li><code>cheap</code>：不包含列信息，只能定位到行号；</li>
+<li><code>inline</code>：将<code>.map</code>作为 DataURI 嵌入，不单独生成<code>.map</code>文件；</li>
+<li><code>module</code>：包含<code>loader</code>的 Source Map。</li>
+</ul>
+<p>通过这些关键字的排列组合可以拼接出不同的 Source Map 类型。</p>
+<h3 id="例子">例子</h3>
+<p>使用<code>eval</code>，不会生成<code>.map</code>文件。</p>
+<pre><code class="language-js">module.exports = {
+    mode: 'none',
+    devtools: 'source-map|eval|...'
+}
+</code></pre>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%87%AA%E5%8A%A8%E6%B8%85%E7%90%86%E6%9E%84%E5%BB%BA%E7%9B%AE%E5%BD%95">自动清理构建目录</a>
+<ul>
+<li><a href="#%E9%80%9A%E8%BF%87-npm-scripts-%E6%B8%85%E7%90%86%E6%9E%84%E5%BB%BA%E7%9B%AE%E5%BD%95">通过 npm scripts 清理构建目录</a></li>
+<li><a href="#webpack-%E6%B8%85%E7%90%86">Webpack 清理</a></li>
+</ul>
+</li>
+<li><a href="#postcss-%E6%8F%92%E4%BB%B6-autoprefixer">PostCSS 插件  autoprefixer</a></li>
+<li><a href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF-css-px%E8%87%AA%E5%8A%A8%E6%8D%A2%E7%AE%97rem">移动端 CSS px自动换算rem</a></li>
+<li><a href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%86%85%E8%81%94">静态资源内联</a></li>
+<li><a href="#%E5%A4%9A%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E6%89%93%E5%8C%85%E9%80%9A%E7%94%A8%E6%96%B9%E6%A1%88">多页面应用打包通用方案</a></li>
+<li><a href="#source-map">Source Map</a>
+<ul>
+<li><a href="#%E5%85%B3%E9%94%AE%E5%AD%97">关键字</a></li>
+<li><a href="#%E4%BE%8B%E5%AD%90">例子</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-6-14-Webpack进阶">https://wzhzzmzzy.github.io/post/2019-6-14-Webpack进阶</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-6-14-Webpack进阶">https://wzhzzmzzy.github.io/post/2019-6-14-Webpack进阶</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/HHs8rBvHi6"># JavaScript</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/HHs8rBvHi6"># JavaScript</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2019-5-28-Webpack基础">
+                                    Webpack 基础
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2019-5-25-Vue双向绑定">
+                                            Vue 的双向绑定
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

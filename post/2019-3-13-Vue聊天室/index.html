@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    拭微
+</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://wzhzzmzzy.github.io">
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Amber">
+<meta name="description" content="一直尝试变得更有趣的阿宅">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
+<!--<link rel="stylesheet" href="https://wzhzzmzzy.github.io/media/css/style.min.css" />
+<link rel="stylesheet" href="https://wzhzzmzzy.github.io/styles/main.css" />-->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    
+        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--<script src="https://wzhzzmzzy.github.io/media/script/tocbot.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/script.min.js"></script>
+        <script src="https://wzhzzmzzy.github.io/media/script/icon.min.js"></script>-->
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://wzhzzmzzy.github.io">
+                    拭微
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://wzhzzmzzy.github.io">
+                            拭微
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1579927857513" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                WebSocket聊天室（Vue + Tornado）
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2019-03-13</a>
+                            </span>
+                                <span class="post-readtime">Reading Time:<a href="#">6.2 mins</a></span>
+                                <span class="post-words">words:<a href="#">1581</a></span>
+                                
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/qH6ZJ0B_ag">Vue</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX">Python</a>
+                                
+                            </span>
+                                    
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    拭微
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-03-13</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">6.2 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">1581</a></span>
+                                
+                                    <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY">前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/qH6ZJ0B_ag">Vue</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX">Python</a>
+                                
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <h2 id="对前端的一点想法">对前端的一点想法</h2>
+<p>这个项目基本上是用 Vue + Vuex + Vue Router 三件套加上 Element-UI 完成的。用 Element 是因为我的CSS能力有点弱……坑不少，也是因为我对这方面的代码不太了解。前端代码完全和服务器端和中间件不一样，后端和中间件专注于数据的处理和网络通信，所以算法的分量会更重一点，前端在我看来就有更多的小 Tips，如果你没有见过前人巧妙的写法，或是你不够聪明，你是很难想到可以这样写的。</p>
+<p>我没有完全了解Vue的API和教程里深入理解的所有内容，因为我觉得现有的内容足够让我写出一个完整的APP。顺便，作为单Vue文件组件来说，JSX是个非常好用的东西。完全了解一个框架或是一门语言我觉得是有一些益处的，这样可以帮助你理解别人（大佬）的代码，也可以让你触类旁通，或是理解有些地方为什么如此设计，或是对其内部工作原理得到一些自己的猜想。</p>
+<p>不多说这个，先讲讲项目架构好了。</p>
+<p>NPM项目的通用结构，因为没有用 TS 和 Jest，因为还没有仔细看过文档和实践过。不提 Webpack 和 Yarn 的配置，因为我只是大概了解一点，所以用了<code>vue-cli</code>一键建好。下一个项目会用上TS去感受一下，因为确实在写代码的时候发生了很多无意的小错误。</p>
+<h3 id="vuex">Vuex</h3>
+<p>在<code>src/store</code>中放置了 Vuex 的代码：</p>
+<pre><code>- store
+	- index.js
+	- actions.js
+	- mutations.js
+</code></pre>
+<p>需要在<code>index.js</code>中导入 Vuex ，并且<code>Vue.use(Vuex)</code>。Vuex 和 Flux 和 Redux 还是有一些不同的，最明显的不同就是你可以在<code>mutations</code>中直接对<code>state</code>进行修改，<code>Redux</code>则是需要一个个<code>Pure Function</code>，不去对状态做任何修改。</p>
+<p>为了在其他组件中显示登录和创建房间的对话框、控制顶部导航栏的标签显示正确，我将控制显示的一些 Flag 变量放在了全局<code>state</code>中，不知道这是不是最佳实践。另外，我也不太理解要如何在一个<code>mutation</code>中调用另一个<code>mutation</code>。</p>
+<p>总的来说，Vuex 的体验还是非常棒的。</p>
+<h3 id="vue-router">Vue Router</h3>
+<p>Vue 全家桶还不错，只是中文文档用词过于简略以至于有点无法理解，需要Google的帮助。Router 作为一个插件可以直接放到 Vue 中，这个不提，大家都是这样。在刚接触它时，只是知道可以这样写，看了<a href="https://github.com/youzan/vant-demo">Vant的H5 Demo</a>之后，才发现原来 router.js 还有这种写法，也是这个Demo帮我了解了什么是导航守卫，以下是他的示例：</p>
+<pre><code class="language-js">// vant-demo/base/src/router.js
+import Vue from 'vue';
+import Router from 'vue-router';
+
+Vue.use(Router);
+
+const routes = [
+  {
+    path: '*',
+    redirect: '/goods'
+  },
+  {
+    name: 'user',
+    component: () =&gt; import('./view/user'),
+    meta: {
+      title: '会员中心'
+    }
+  },
+  {
+    name: 'cart',
+    component: () =&gt; import('./view/cart'),
+    meta: {
+      title: '购物车'
+    }
+  }
+];
+
+// add route path
+routes.forEach(route =&gt; {
+  route.path = route.path || '/' + (route.name || '');
+});
+
+const router = new Router({ routes });
+
+router.beforeEach((to, from, next) =&gt; {
+  const title = to.meta &amp;&amp; to.meta.title;
+  if (title) {
+    document.title = title;
+  }
+  next();
+});
+
+export {
+  router
+};
+</code></pre>
+<p>全局重定向和后面统一添加<code>route path</code>的方法还是让我有点惊奇，当然也是我大惊小怪了。总之这样的做法确实会高效和清晰很多。</p>
+<p>由于聊天室的路由跳转都放在了顶部导航栏上，页面也少，所以十分简单。我更喜欢用命名路由跳转而不是使用URL。一开始使用Element还没有注意到他的<code>navmenu</code>是提供了对 Vue Router 的支持的，后来就直接在<code>menu-item</code>上添加需要导向的地方了。其他在 Element 上遇到的坑点之后再说。</p>
+<pre><code class="language-jsx">&lt;template&gt;
+    &lt;el-menu
+            :default-active=&quot;navbarIndex&quot;
+            mode=&quot;horizontal&quot;
+            :router=&quot;true&quot;
+            :collapse-transition=&quot;true&quot;
+    &gt;
+        &lt;!--Logo--&gt;
+        &lt;img class=&quot;favicon&quot; src=&quot;https://picture-1256456369.cos.ap-shanghai.myqcloud.com/logo.2e928116.png&quot; alt=&quot;Logo&quot;&gt;
+        &lt;el-menu-item index=&quot;1&quot; :route=&quot;{ name: 'lobby'} &quot;&gt;
+            大厅
+        &lt;/el-menu-item&gt;
+        &lt;el-menu-item index=&quot;2&quot; :route=&quot;{ name: 'chatroom' }&quot;&gt;
+            房间
+        &lt;/el-menu-item&gt;
+        &lt;!--右侧显示用户名--&gt;
+        &lt;div class=&quot;userinfo&quot;&gt;&lt;span&gt;{{username}}&lt;/span&gt;&lt;/div&gt;
+    &lt;/el-menu&gt;
+&lt;/template&gt;
+</code></pre>
+<p>本来想着可以使用一下命名视图，想想还是算了。</p>
+<p>由于使用了Vuex，所以感觉路由传参似乎也是可有可无了，不过也不能这样说，如果参数较少，或是只有一个简单的 Flag，那么使用路由传参显然是代价比较小的方式。这里我没有用过，所以就不提了。</p>
+<h3 id="css-的一些小-tips">CSS 的一些小 Tips</h3>
+<p>一开始写的时候发现了一些奇怪的地方，比如我的<code>el-container</code>总是没有办法贴着浏览器的边缘，在Chrome中看到总有<code>8px</code>的<code>margin</code>存在，百度之后发现这是浏览器给的默认样式，可以通过全局样式把它消除掉：</p>
+<pre><code class="language-css">* {
+    margin: 0;
+    padding: 0;
+}
+</code></pre>
+<p>第二个问题，我的侧边栏无法保持和页面等高，总是缩成一小团，很奇怪，这个需要嵌套添加<code>height: 100%</code>样式才能解决，我没有找到更好的方法：</p>
+<pre><code class="language-css">html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+#app {
+    height: 100%;
+}
+</code></pre>
+<p>第三个问题，我想要让聊天室里面的信息保持在一个高度不变的框里，避免当你信息太多的时候整个页面会刷的很长很长，也就是个滚动条的问题，只要对那个<code>div</code>设置固定的高度，然后设置<code>overflow: auto</code>即可，为了保证信息区域能覆盖页面的剩余区域，只要记得获取一下页面的高度信息即可：</p>
+<pre><code class="language-vue">chatAreaStyle: {
+    marginBottom: '20px',
+        overflowX: 'hidden',
+        height: ''
+}
+
+mounted() {
+this.chatAreaStyle.height = (document.body.clientHeight - 280) + &quot;px&quot;;
+},
+</code></pre>
+<p>第四个问题，我想要让聊天室获得新消息的时候直接将聊天信息区域滑动到新消息的位置，即最底部，这里出现了一些小问题：因为我是使用<code>&lt;el-tabs&gt;</code>来显示多个聊天界面，而显示聊天信息的组件<code>&lt;MessageArea&gt;</code>是同一个，此问题至今未解决……</p>
+
+                        </div>
+                        <div class="post-toc">
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%AF%B9%E5%89%8D%E7%AB%AF%E7%9A%84%E4%B8%80%E7%82%B9%E6%83%B3%E6%B3%95">对前端的一点想法</a>
+<ul>
+<li><a href="#vuex">Vuex</a></li>
+<li><a href="#vue-router">Vue Router</a></li>
+<li><a href="#css-%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F-tips">CSS 的一些小 Tips</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-3-13-Vue聊天室">https://wzhzzmzzy.github.io/post/2019-3-13-Vue聊天室</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>拭微</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://wzhzzmzzy.github.io/post/2019-3-13-Vue聊天室">https://wzhzzmzzy.github.io/post/2019-3-13-Vue聊天室</a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/qH6ZJ0B_ag"># Vue</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX"># Python</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/Fe1sGRJRY"># 前端</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/qH6ZJ0B_ag"># Vue</a>
+                                
+                                <a href="https://wzhzzmzzy.github.io/tag/51IC-yyFuX"># Python</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                <a class="prev" rel="prev" href="https://wzhzzmzzy.github.io/post/2019-3-19-GraphQL">
+                                    初试 GraphQL
+                                </a>
+                                
+                                    
+                                        <a class="next" rel="next" href="https://wzhzzmzzy.github.io/post/2018-8-5-Splash">
+                                            Scrapy-Splash 使用教程
+                                        </a>
+                                        
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+
+            <div class="copyright">
+                <!-- <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                    </div>
+                </div> -->
+                
+                    <b id="hitokoto"></b><br>
+                    <!-- <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg> -->
+                    拭微 &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        <!-- | Powered by <a href="https://coding.net" target="_blank">Coding.net</a> -->
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.6.2
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var audio_name = 'きっとまたいつか';
+                        var audio_artist = 'DEPAPEPE';
+                        var audio_url = 'http://music.163.com/song/media/outer/url?id=22688472.mp3';
+                        var audio_cover = 'https://p3fx.kgimg.com/stdmusic/20150718/20150718063022611128.jpg';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    // hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>
